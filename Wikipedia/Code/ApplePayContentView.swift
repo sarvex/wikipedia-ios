@@ -211,7 +211,7 @@ struct ApplePayCheckmarkStackView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            ApplePayTransactionFeeView(checked: $canAddTransactionFee, transactionFee: $transactionFee, text: "I’ll generously add $2 to cover the transaction fees so you can keep 100% of my donation.", maxTransactionFee: maxTransactionFee, totalDisplayAmount: $totalDisplayAmount, totalAmount: $totalAmount)
+            ApplePayTransactionFeeView(checked: $canAddTransactionFee, transactionFee: $transactionFee, text: "I’ll generously add \(ApplePayFormatters.currencyFormatterShort.string(from: maxTransactionFee as NSNumber) ?? ApplePayUtilities.initialDisplayAmount) to cover the transaction fees so you can keep 100% of my donation.", maxTransactionFee: maxTransactionFee, totalDisplayAmount: $totalDisplayAmount, totalAmount: $totalAmount)
             ApplePayTappableCheckmarkView(checked: $canSendMeEmail, text: "Yes, the Wikimedia Foundation can send me an occasional email.")
         }
         
