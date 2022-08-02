@@ -32,4 +32,6 @@
 
 - (void)applyTheme:(WMFTheme *)theme;
 
+- (void)setIconName:(NSString *)iconName isSystemIcon: (BOOL)isSystemIcon;
+
 @end

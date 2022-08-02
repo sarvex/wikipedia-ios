@@ -12,7 +12,6 @@ public struct FeatureFlags {
     
     public static var needsApplePay: Bool {
         // TODO: Apple Pay logging
-        // TODO: Apple Pay icon name
         #if WMF_STAGING
             return true
         #else

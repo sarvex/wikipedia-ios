@@ -31,10 +31,10 @@
     [self.subtitleLabel setHidden:![self.subtitleLabel wmf_hasNonWhitespaceText]];
 }
 
-- (void)setIconName:(NSString *)iconName {
+- (void)setIconName:(NSString *)iconName isSystemIcon: (BOOL)isSystemIcon {
     _iconName = iconName;
     if (_iconName) {
-        self.titleIcon.image = [[UIImage imageNamed:iconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.titleIcon.image = isSystemIcon ? [[UIImage systemImageNamed:iconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] : [[UIImage imageNamed:iconName] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.titleIcon.hidden = NO;
         self.titleLabelLeadingWidth.constant = self.titleLabelLeadingWidthForVisibleImage;
     } else {
@@ -42,6 +42,10 @@
         self.titleLabelLeadingWidth.constant = self.imageLeadingWidth.constant;
         self.separatorInset = UIEdgeInsetsZero;
     }
+}
+
+- (void)setIconName:(NSString *)iconName {
+    [self setIconName:iconName isSystemIcon:NO];
 }
 
 - (void)setDisclosureText:(NSString *)disclosureText {

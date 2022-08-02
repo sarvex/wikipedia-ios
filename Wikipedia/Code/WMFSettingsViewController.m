@@ -153,7 +153,7 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
         cell.iconColor = [UIColor whiteColor];
         cell.iconBackgroundColor = menuItem.iconColor;
     }
-    cell.iconName = menuItem.iconName;
+    [cell setIconName:menuItem.iconName isSystemIcon:menuItem.isSystemIcon];
     cell.disclosureType = menuItem.disclosureType;
     cell.disclosureText = menuItem.disclosureText;
     [cell.disclosureSwitch setOn:menuItem.isSwitchOn];

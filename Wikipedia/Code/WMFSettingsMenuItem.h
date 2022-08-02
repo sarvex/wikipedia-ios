@@ -41,6 +41,8 @@ typedef NS_ENUM(NSUInteger, WMFSettingsMenuItemType) {
 
 @property (nonatomic, copy, readonly) UIColor *iconColor;
 
+@property (nonatomic, assign, readonly) BOOL isSystemIcon;
+
 @property (nonatomic, assign, readonly) WMFSettingsMenuItemDisclosureType disclosureType;
 
 @property (nonatomic, copy, readonly) NSString *disclosureText;
@@ -53,6 +55,7 @@ typedef NS_ENUM(NSUInteger, WMFSettingsMenuItemType) {
                        title:(NSString *)title
                     iconName:(NSString *)iconName
                    iconColor:(UIColor *)iconColor
+                   isSystemIcon:(BOOL)isSystemIcon
               disclosureType:(WMFSettingsMenuItemDisclosureType)disclosureType
               disclosureText:(NSString *)disclosureText
                   isSwitchOn:(BOOL)isSwitchOn;
