@@ -3,6 +3,7 @@ import Adyen
 import AdyenNetworking
 import PassKit
 import AdyenComponents
+import WMF
 
 // Note: A lot of this stuff is faked for now, DemoCheckoutAPI's should flow through Wikimedia server instead.
 internal struct DemoAPIContext: AnyAPIContext {
@@ -107,7 +108,7 @@ class AdyenApplePayHandler: NSObject {
     
     func start(amount: Decimal) {
         
-        guard let countryCode = Locale.current.regionCode, // TODO: needs to be "Country where Apple Pay is supported"
+        guard let countryCode = Locale.current.regionCode, // TODO: needs to be "Country where Apple Pay is supported" and "The code of the country in which the payment is made."
         let currencyCode = Locale.current.currencyCode else {
             // TODO: ERROR
             return
@@ -180,7 +181,8 @@ extension AdyenApplePayHandler: PaymentComponentDelegate {
                 print(response.resultCode)
 
                 DispatchQueue.main.async {
-                    component.finalizeIfNeeded(with: true)
+                    let didSucceed = response.resultCode == .authorised
+                    component.finalizeIfNeeded(with: didSucceed)
                 }
 
             case let .failure(error):
