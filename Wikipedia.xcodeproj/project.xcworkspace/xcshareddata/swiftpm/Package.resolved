@@ -1,6 +1,42 @@
 {
   "pins" : [
     {
+      "identity" : "adyen-3ds2-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Adyen/adyen-3ds2-ios",
+      "state" : {
+        "revision" : "54732878afac5eea62bbc8f5ed0c504431bfcebd",
+        "version" : "2.2.6"
+      }
+    },
+    {
+      "identity" : "adyen-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Adyen/adyen-ios",
+      "state" : {
+        "revision" : "ae1e58aad12f1645aa61dbb82b3e9ecb7106f825",
+        "version" : "4.8.0"
+      }
+    },
+    {
+      "identity" : "adyen-networking-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Adyen/adyen-networking-ios",
+      "state" : {
+        "revision" : "9b10df842e774f5c99a2d76b1d950ec4d5d80898",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "adyen-wechatpay-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Adyen/adyen-wechatpay-ios",
+      "state" : {
+        "revision" : "aee9b422f02d3ff75533a3338db45f2f9b9010b0",
+        "version" : "2.1.0"
+      }
+    },
+    {
       "identity" : "cocoalumberjack",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/CocoaLumberjack/CocoaLumberjack.git",

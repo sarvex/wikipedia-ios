@@ -228,7 +228,7 @@ struct ApplePayDonateView: View {
     @SwiftUI.State private var canAddTransactionFee = false
     @SwiftUI.State private var canSendMeEmail = false
     
-    private let paymentHandler = ApplePayPaymentHandler()
+    let paymentHandler: AdyenApplePayHandler
     
     // TODO: pull in from external json file
     private let defaultOptionAmounts: [Decimal] = [10, 20, 30, 50, 100, 300, 500]
@@ -258,9 +258,7 @@ struct ApplePayDonateView: View {
                 .onTapGesture {
                     scrubAmount()
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                    paymentHandler.startPayment(amount: totalAmount) { success in
-                        print(success)
-                    }
+                    paymentHandler.start(amount: totalAmount)
                 }
                 .frame(height: 40)
                 .padding([.leading, .trailing], sizeClassDonateButtonPadding)
@@ -347,10 +345,11 @@ struct ApplePayFooterView: View {
 struct ApplePayContentView: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    let paymentHandler: AdyenApplePayHandler
     
     var body: some View {
         ScrollView {
-            ApplePayDonateView()
+            ApplePayDonateView(paymentHandler: paymentHandler)
             ApplePayFooterView()
                 .padding([.leading, .trailing], ApplePayUtilities.containerPaddingForHorizontalSizeClass(horizontalSizeClass))
             
@@ -364,15 +363,16 @@ extension ApplePayContentView: NavBarKeyboardDismissable {
 
 struct ApplePayContentView_Previews: PreviewProvider {
     static var previews: some View {
+        let paymentHandler = AdyenApplePayHandler()
         Group {
             ScrollView(.vertical, showsIndicators: true) {
-                ApplePayContentView()
+                ApplePayContentView(paymentHandler: paymentHandler)
             }
             .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
             .previewDisplayName("iPhone 13 mini")
             
             ScrollView(.vertical, showsIndicators: true) {
-                ApplePayContentView()
+                ApplePayContentView(paymentHandler: paymentHandler)
             }
             .environment(\.sizeCategory, .large)
             .previewDevice("iPhone SE (3rd generation)")
@@ -381,7 +381,7 @@ struct ApplePayContentView_Previews: PreviewProvider {
             
             if #available(iOS 15.0, *) {
                 ScrollView(.vertical, showsIndicators: true) {
-                    ApplePayContentView()
+                    ApplePayContentView(paymentHandler: paymentHandler)
                 }
                 .previewDevice("iPad Pro (12.9-inch) (5th generation)")
                 .previewDevice(PreviewDevice(rawValue: "iPad 2"))
@@ -393,7 +393,7 @@ struct ApplePayContentView_Previews: PreviewProvider {
             
             if #available(iOS 15.0, *) {
                 ScrollView(.vertical, showsIndicators: true) {
-                    ApplePayContentView()
+                    ApplePayContentView(paymentHandler: paymentHandler)
                 }
                 .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
                 .previewDisplayName("iPhone 13 Pro Max (landscape)")
@@ -401,8 +401,7 @@ struct ApplePayContentView_Previews: PreviewProvider {
             } else {
                 // Fallback on earlier versions
             }
-                                 
-
+                    
         }
     }
 }

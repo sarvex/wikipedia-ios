@@ -543,7 +543,7 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
 #pragma mark - Section structure
 
 - (WMFSettingsTableViewSection *)section_1 {
-    NSArray *items = (WMFFeatureFlags.needsApplePay && WMFApplePayPaymentHandler.isSupported) ? @[[WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_LoginAccount],
+    NSArray *items = (WMFFeatureFlags.needsApplePay && WMFAdyenApplePayHandler.isSupported) ? @[[WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_LoginAccount],
                                                          [WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_ApplePay],
                                                          [WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_Support]] :
                                                         @[[WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_LoginAccount],

@@ -418,6 +418,20 @@
 		672428982362113900490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
 		672428992362113900490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
 		6724289A2362113A00490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
+		672818602899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
+		672818612899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
+		672818622899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
+		672818632899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
+		6728187C289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
+		6728187D289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
+		6728187E289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
+		6728187F289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
+		6728189A289A475100CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 67281899289A475100CD69E3 /* Adyen */; };
+		6728189C289A475100CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189B289A475100CD69E3 /* AdyenComponents */; };
+		6728189E289A484900CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189D289A484900CD69E3 /* Adyen */; };
+		672818A0289A484900CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189F289A484900CD69E3 /* AdyenComponents */; };
+		672818A2289A485500CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 672818A1289A485500CD69E3 /* Adyen */; };
+		672818A4289A485500CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 672818A3289A485500CD69E3 /* AdyenComponents */; };
 		67282FBD24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
 		67282FBE24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
 		67282FBF24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
@@ -3988,6 +4002,8 @@
 		672034E227A2531F007DC24F /* RemoteNotificationsReauthenticateOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsReauthenticateOperation.swift; sourceTree = "<group>"; };
 		672034E427A2600C007DC24F /* RemoteNotificationsProjectOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsProjectOperation.swift; sourceTree = "<group>"; };
 		672428962362113400490629 /* DiffFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffFetcher.swift; sourceTree = "<group>"; };
+		6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdyenApplePayPaymentHandler.swift; sourceTree = "<group>"; };
+		6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHostingController.swift; sourceTree = "<group>"; };
 		67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContextMenuPresenting.swift; sourceTree = "<group>"; };
 		672B127722A450F000CC85A5 /* TalkPageHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkPageHeaderView.xib; sourceTree = "<group>"; };
 		672C35EA22D8E7C9007B8D46 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
@@ -5563,7 +5579,9 @@
 			files = (
 				D844D9731D6CB2600042D692 /* WMF.framework in Frameworks */,
 				83AF34F724D3341E000046D6 /* BackgroundTasks.framework in Frameworks */,
+				6728189C289A475100CD69E3 /* AdyenComponents in Frameworks */,
 				D8D553621DF1B63200B90177 /* QuartzCore.framework in Frameworks */,
+				6728189A289A475100CD69E3 /* Adyen in Frameworks */,
 				D4E6D9121A5C65F9004916C1 /* CoreData.framework in Frameworks */,
 				D499143B181D51DE00E6073C /* CoreGraphics.framework in Frameworks */,
 				D499143D181D51DE00E6073C /* UIKit.framework in Frameworks */,
@@ -5635,7 +5653,9 @@
 			files = (
 				D8CE262C1E698E2400DAE2E0 /* WMF.framework in Frameworks */,
 				83AF34F924D33432000046D6 /* BackgroundTasks.framework in Frameworks */,
+				672818A4289A485500CD69E3 /* AdyenComponents in Frameworks */,
 				D8CE26201E698E2400DAE2E0 /* QuartzCore.framework in Frameworks */,
+				672818A2289A485500CD69E3 /* Adyen in Frameworks */,
 				D8CE262B1E698E2400DAE2E0 /* CoreData.framework in Frameworks */,
 				D8CE262E1E698E2400DAE2E0 /* CoreGraphics.framework in Frameworks */,
 				D8CE26321E698E2400DAE2E0 /* UIKit.framework in Frameworks */,
@@ -5650,7 +5670,9 @@
 			files = (
 				D8EC3F2E1E9BDA35006712EB /* WMF.framework in Frameworks */,
 				83AF34F824D33428000046D6 /* BackgroundTasks.framework in Frameworks */,
+				672818A0289A484900CD69E3 /* AdyenComponents in Frameworks */,
 				D8EC3F241E9BDA35006712EB /* QuartzCore.framework in Frameworks */,
+				6728189E289A484900CD69E3 /* Adyen in Frameworks */,
 				D8EC3F2D1E9BDA35006712EB /* CoreData.framework in Frameworks */,
 				D8EC3F301E9BDA35006712EB /* CoreGraphics.framework in Frameworks */,
 				D8EC3F341E9BDA35006712EB /* UIKit.framework in Frameworks */,
@@ -8306,6 +8328,8 @@
 				67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */,
 				67647ACE2878E21A00384488 /* ApplePayDonateButton.swift */,
 				67647AD8287C72AC00384488 /* ApplePayPaymentHandler.swift */,
+				6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */,
+				6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -9759,6 +9783,10 @@
 				676C864A26D40AEB00A704C1 /* PBXTargetDependency */,
 			);
 			name = Wikipedia;
+			packageProductDependencies = (
+				67281899289A475100CD69E3 /* Adyen */,
+				6728189B289A475100CD69E3 /* AdyenComponents */,
+			);
 			productName = "Wikipedia-iOS";
 			productReference = D4991435181D51DE00E6073C /* Wikipedia.app */;
 			productType = "com.apple.product-type.application";
@@ -9913,6 +9941,10 @@
 				676C867526D4170100A704C1 /* PBXTargetDependency */,
 			);
 			name = Experimental;
+			packageProductDependencies = (
+				672818A1289A485500CD69E3 /* Adyen */,
+				672818A3289A485500CD69E3 /* AdyenComponents */,
+			);
 			productName = "Wikipedia-iOS";
 			productReference = D8CE26AF1E698E2400DAE2E0 /* Experimental.app */;
 			productType = "com.apple.product-type.application";
@@ -9938,6 +9970,10 @@
 				676C867226D416FB00A704C1 /* PBXTargetDependency */,
 			);
 			name = Staging;
+			packageProductDependencies = (
+				6728189D289A484900CD69E3 /* Adyen */,
+				6728189F289A484900CD69E3 /* AdyenComponents */,
+			);
 			productName = "Wikipedia-iOS";
 			productReference = D8EC3FB41E9BDA35006712EB /* Staging.app */;
 			productType = "com.apple.product-type.application";
@@ -10216,6 +10252,7 @@
 			mainGroup = D499142C181D51DE00E6073C;
 			packageReferences = (
 				67A770C6251BFE0400F94EF9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */,
 			);
 			productRefGroup = D4991436181D51DE00E6073C /* Products */;
 			projectDirPath = "";
@@ -11235,6 +11272,7 @@
 				D84BF62F1DBE616D00E0C85E /* UIViewController+WMFAlerts.swift in Sources */,
 				83023C1F20E6584F00EC7592 /* SearchTransition.swift in Sources */,
 				67CEF263235110F700D5CA6C /* DiffNetworkModels.swift in Sources */,
+				6728187C289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				7A23CECF211A24FC00441A79 /* FeedFunnel.swift in Sources */,
 				7AC19E322301EF7D00E25B83 /* PageHistoryFilterCountsViewController.swift in Sources */,
 				676070A2227CE60800A81F09 /* TalkPageReplyFooterView.swift in Sources */,
@@ -11674,6 +11712,7 @@
 				8330532923EF0B4200123141 /* ArticleViewController+Media.swift in Sources */,
 				B09705B4236B29D7006FDB5C /* DiffThanker.swift in Sources */,
 				67DAEDD927E8DCBF005CF9B6 /* NotificationsCenterDetailViewModel+TextExtensions.swift in Sources */,
+				672818602899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				B09B03F51CE0FB7700009083 /* ReadingThemesControlsViewController.swift in Sources */,
 				00BCB71D26DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				B0E8036F1C0CD99A0065EBC0 /* TableOfContentsPresentationController.swift in Sources */,
@@ -12168,6 +12207,7 @@
 				7A23CED3211A24FF00441A79 /* FeedFunnel.swift in Sources */,
 				677129A324FFF43000E89CA5 /* ArticleAsLivingDocHorizontallyScrollingCell.swift in Sources */,
 				83DAA9B323FEB611002D5716 /* ReferenceBackLinksViewController.swift in Sources */,
+				6728187F289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D8A42A751E815A9C00D8E281 /* UIViewController+WMFAlerts.swift in Sources */,
 				7A49A20421231510005C574C /* CollectionViewFooter.swift in Sources */,
 				67CEF26C2351111D00D5CA6C /* DiffNetworkModels.swift in Sources */,
@@ -12607,6 +12647,7 @@
 				D8A42B8F1E815A9C00D8E281 /* TableOfContentsPresentationController.swift in Sources */,
 				8330532C23EF0B4200123141 /* ArticleViewController+Media.swift in Sources */,
 				67DAEDDC27E8DCBF005CF9B6 /* NotificationsCenterDetailViewModel+TextExtensions.swift in Sources */,
+				672818632899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				B09705B7236B29D7006FDB5C /* DiffThanker.swift in Sources */,
 				00BCB72026DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				D8A42B921E815A9C00D8E281 /* WMFLoginViewController.swift in Sources */,
@@ -12800,6 +12841,7 @@
 				D8CE25351E698E2400DAE2E0 /* WMFTwoFactorPasswordViewController.swift in Sources */,
 				7AA96D5D21B733A800DE9877 /* TextFormattingProvidingTableViewController.swift in Sources */,
 				B0B423621EF9D6A300D3DC4C /* OnThisDayViewController.swift in Sources */,
+				6728187E289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D818D3871ED750E40076110D /* ArticleCollectionViewController.swift in Sources */,
 				7A203F0C1FDEDCDD00A229EC /* ReadingListHintController.swift in Sources */,
 				D8CE25371E698E2400DAE2E0 /* SavedPagesFunnel.m in Sources */,
@@ -13086,6 +13128,7 @@
 				7A610CBE220A582A00C266AE /* HintController.swift in Sources */,
 				7A2BB1D521F27AC5004C0FDF /* WKWebView+OffsetHack.swift in Sources */,
 				7A9F061A2266432200856321 /* InsertMediaSettingsTextTableViewCell.swift in Sources */,
+				672818622899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				D8CE25EA1E698E2400DAE2E0 /* WMFForgotPasswordViewController.swift in Sources */,
 				67647AD62878E5CC00384488 /* LongTestingListView.swift in Sources */,
 				D8E6FF6824054FA100686272 /* ArticleViewController+LinkPreviewing.swift in Sources */,
@@ -13349,6 +13392,7 @@
 				6771299024FF76AC00E89CA5 /* ArticleAsLivingDocViewController.swift in Sources */,
 				7A0CD24221DFA34100066F68 /* TextFormattingToolbarView.swift in Sources */,
 				D8EC3E251E9BDA35006712EB /* WMFArticleRevisionFetcher.m in Sources */,
+				6728187D289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D8EC3E261E9BDA35006712EB /* WMFArticleLanguagesSectionHeader.m in Sources */,
 				7A29A5CA1F6C405900E8F42B /* HistoryViewController.swift in Sources */,
 				7AA96D5E21B733A800DE9877 /* TextFormattingProvidingTableViewController.swift in Sources */,
@@ -13635,6 +13679,7 @@
 				7A610CBF220A582A00C266AE /* HintController.swift in Sources */,
 				7A9F061B2266432200856321 /* InsertMediaSettingsTextTableViewCell.swift in Sources */,
 				7A2BB1D621F27AC5004C0FDF /* WKWebView+OffsetHack.swift in Sources */,
+				672818612899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				FF92187C252F7EA300C39A8F /* ThanksGiving.swift in Sources */,
 				67647AD52878E5CC00384488 /* LongTestingListView.swift in Sources */,
 				D8E6FF6924054FA100686272 /* ArticleViewController+LinkPreviewing.swift in Sources */,
@@ -20239,6 +20284,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Adyen/adyen-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		67A770C6251BFE0400F94EF9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
@@ -20250,6 +20303,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		67281899289A475100CD69E3 /* Adyen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = Adyen;
+		};
+		6728189B289A475100CD69E3 /* AdyenComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = AdyenComponents;
+		};
+		6728189D289A484900CD69E3 /* Adyen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = Adyen;
+		};
+		6728189F289A484900CD69E3 /* AdyenComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = AdyenComponents;
+		};
+		672818A1289A485500CD69E3 /* Adyen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = Adyen;
+		};
+		672818A3289A485500CD69E3 /* AdyenComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			productName = AdyenComponents;
+		};
 		67A770C7251BFE0400F94EF9 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 67A770C6251BFE0400F94EF9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;

@@ -4,8 +4,9 @@ import PassKit
 
 @objc extension WMFSettingsViewController {
     @objc func showApplePay() {
-        let contentView = ApplePayContentView()
-        let hostingController = CustomUIHostingController(rootView: contentView)
+        let paymentHandler = AdyenApplePayHandler()
+        let contentView = ApplePayContentView(paymentHandler: paymentHandler)
+        let hostingController = ApplePayHostingController(rootView: contentView, paymentHandler: paymentHandler)
         hostingController.title = WMFLocalizedString("apple-pay-title", value: "Donate", comment: "Title of the Apple Pay donation screen")
         navigationController?.pushViewController(hostingController, animated: true)
     }
