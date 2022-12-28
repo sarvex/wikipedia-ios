@@ -84,17 +84,20 @@ class TalkPageTopicComposeViewController: ViewController {
         return view
     }()
     
-    private(set) lazy var bodyTextView: UITextView = {
-        let textView = UITextView(frame: .zero)
-        textView.isScrollEnabled = false
-        textView.textContainer.lineFragmentPadding = 0
-        textView.textContainerInset = .zero
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.delegate = self
-        textView.smartQuotesType = .no
-        textView.accessibilityHint = Self.TopicComposeStrings.bodyPlaceholderAccessibility
-        return textView
-    }()
+    private(set) var bodyTextView: UITextView!
+    var textStorage: SyntaxHighlightTextStorage!
+    
+//    = {
+//        let textView = UITextView(frame: .zero)
+//        textView.isScrollEnabled = false
+//        textView.textContainer.lineFragmentPadding = 0
+//        textView.textContainerInset = .zero
+//        textView.translatesAutoresizingMaskIntoConstraints = false
+//        textView.delegate = self
+//        textView.smartQuotesType = .no
+//        textView.accessibilityHint = Self.TopicComposeStrings.bodyPlaceholderAccessibility
+//        return textView
+//    }()
     
     private lazy var bodyPlaceholderLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -159,10 +162,37 @@ class TalkPageTopicComposeViewController: ViewController {
         
         view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
         
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
+        let attrString = NSAttributedString(string: "", attributes: attrs)
+        textStorage = SyntaxHighlightTextStorage()
+        textStorage.append(attrString)
+          
+        let newTextViewRect = view.bounds
+          
+        // 2
+        let layoutManager = NSLayoutManager()
+          
+        // 3
+        let containerSize = CGSize(width: newTextViewRect.width,
+                                   height: .greatestFiniteMagnitude)
+        let container = NSTextContainer(size: containerSize)
+        container.widthTracksTextView = true
+        container.lineFragmentPadding = .zero
+        layoutManager.addTextContainer(container)
+        textStorage.addLayoutManager(layoutManager)
+          
+        // 4
+        bodyTextView = UITextView(frame: newTextViewRect, textContainer: container)
+        bodyTextView.translatesAutoresizingMaskIntoConstraints = false
+        bodyTextView.textContainerInset = .zero
+        bodyTextView.delegate = self
+        bodyTextView.smartQuotesType = .no
+        
         setupNavigationBar(isPublishing: false)
         setupSafeAreaBackgroundView()
         setupContainerScrollView()
         setupContainerStackView()
+        
         updateFonts()
         apply(theme: theme)
         self.title = Self.TopicComposeStrings.navigationBarTitle
@@ -171,6 +201,13 @@ class TalkPageTopicComposeViewController: ViewController {
     override func accessibilityPerformEscape() -> Bool {
         tappedClose()
         return true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let width = bodyTextView.frame.width
+        bodyTextView.textContainer.size = CGSize(width: width,
+                                                 height: .greatestFiniteMagnitude)
     }
 
     private func setupSafeAreaBackgroundView() {
@@ -335,9 +372,9 @@ class TalkPageTopicComposeViewController: ViewController {
         titleTextField.textColor = theme.colors.primaryText
         titleTextField.attributedPlaceholder = NSAttributedString(string: Self.TopicComposeStrings.titlePlaceholder, attributes: [NSAttributedString.Key.foregroundColor: theme.colors.tertiaryText])
         titleTextField.keyboardAppearance = theme.keyboardAppearance
-        bodyTextView.backgroundColor = theme.colors.paperBackground
-        bodyTextView.textColor = theme.colors.primaryText
-        bodyTextView.keyboardAppearance = theme.keyboardAppearance
+        //bodyTextView?.backgroundColor = theme.colors.paperBackground
+        //bodyTextView?.textColor = theme.colors.primaryText
+        //bodyTextView?.keyboardAppearance = theme.keyboardAppearance
         bodyPlaceholderLabel.textColor = theme.colors.tertiaryText
         divView.backgroundColor = theme.colors.chromeShadow
         
@@ -384,12 +421,12 @@ class TalkPageTopicComposeViewController: ViewController {
         inputContainerView.semanticContentAttribute = semanticContentAttribute
         titleTextField.semanticContentAttribute = semanticContentAttribute
         divView.semanticContentAttribute = semanticContentAttribute
-        bodyTextView.semanticContentAttribute = semanticContentAttribute
+        //bodyTextView.semanticContentAttribute = semanticContentAttribute
         bodyPlaceholderLabel.semanticContentAttribute = semanticContentAttribute
         finePrintTextView.semanticContentAttribute = semanticContentAttribute
         
         titleTextField.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
-        bodyTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        //bodyTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
         bodyPlaceholderLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
         finePrintTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
     }
@@ -465,4 +502,131 @@ extension TalkPageTopicComposeViewController: UITextViewDelegate {
     }
 
     
+}
+
+class SyntaxHighlightTextStorage: NSTextStorage {
+    let backingStore = NSMutableAttributedString()
+    
+    override var string: String {
+      return backingStore.string
+    }
+    
+    override func attributes(
+      at location: Int,
+      effectiveRange range: NSRangePointer?
+    ) -> [NSAttributedString.Key: Any] {
+      return backingStore.attributes(at: location, effectiveRange: range)
+    }
+    
+    override func replaceCharacters(in range: NSRange, with str: String) {
+      print("replaceCharactersInRange:\(range) withString:\(str)")
+        
+      beginEditing()
+      backingStore.replaceCharacters(in: range, with:str)
+      edited(.editedCharacters, range: range,
+             changeInLength: (str as NSString).length - range.length)
+      endEditing()
+    }
+      
+    override func setAttributes(_ attrs: [NSAttributedString.Key: Any]?, range: NSRange) {
+      print("setAttributes:\(String(describing: attrs)) range:\(range)")
+        
+      beginEditing()
+      backingStore.setAttributes(attrs, range: range)
+      edited(.editedAttributes, range: range, changeInLength: 0)
+      endEditing()
+    }
+    
+    func applyStylesToRange(searchRange: NSRange) {
+      // 1
+      let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
+      let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
+      let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic)
+      let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])
+      let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 0)
+      let italicFont = UIFont(descriptor: italicFontDescriptor!, size: 0)
+      let boldItalicFont = UIFont(descriptor: boldItalicFontDescriptor!, size: 0)
+      let normalFont = UIFont.preferredFont(forTextStyle: .body)
+        
+        //(?<!")"{1,2}(?!")
+        
+      // 2
+      let boldItalicRegexStr = "('''''\\w+(\\s\\w+)*''''')"
+      //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
+      let boldRegexStr = "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
+      let italicRegexStr = "((?<!')'{2}\\w+(\\s\\w+)*'{2}(?!'))"
+     
+      let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
+      let boldRegex = try! NSRegularExpression(pattern: boldRegexStr)
+      let italicRegex = try! NSRegularExpression(pattern: italicRegexStr)
+        
+      let boldAttributes = [NSAttributedString.Key.font: boldFont]
+      let italicAttributes = [NSAttributedString.Key.font: italicFont]
+      let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
+        
+      let normalAttributes = [NSAttributedString.Key.font: normalFont]
+        
+        //reset to normal first
+      removeAttribute(NSAttributedString.Key.font, range: searchRange)
+      addAttributes(normalAttributes, range: searchRange)
+        
+      // 3
+      italicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+        match, flags, stop in
+        if let matchRange = match?.range(at: 1) {
+          addAttributes(italicAttributes, range: matchRange)
+          // 4
+            //maybe not needed bc we reset above
+//          let maxRange = matchRange.location + matchRange.length
+//          if maxRange + 1 < length {
+//            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
+//          }
+        }
+      }
+        
+        boldRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+          match, flags, stop in
+          if let matchRange = match?.range(at: 1) {
+            addAttributes(boldAttributes, range: matchRange)
+            // 4
+              //maybe not needed bc we reset above
+  //          let maxRange = matchRange.location + matchRange.length
+  //          if maxRange + 1 < length {
+  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
+  //          }
+          }
+        }
+        
+        boldItalicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+          match, flags, stop in
+          if let matchRange = match?.range(at: 1) {
+            addAttributes(boldItalicAttributes, range: matchRange)
+            // 4
+              //maybe not needed bc we reset above
+  //          let maxRange = matchRange.location + matchRange.length
+  //          if maxRange + 1 < length {
+  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
+  //          }
+          }
+        }
+    }
+
+    func performReplacementsForRange(changedRange: NSRange) {
+      var extendedRange =
+        NSUnionRange(changedRange,
+        NSString(string: backingStore.string)
+          .lineRange(for: NSMakeRange(changedRange.location, 0)))
+      extendedRange =
+        NSUnionRange(changedRange,
+        NSString(string: backingStore.string)
+          .lineRange(for: NSMakeRange(NSMaxRange(changedRange), 0)))
+      applyStylesToRange(searchRange: extendedRange)
+    }
+    
+    override func processEditing() {
+      performReplacementsForRange(changedRange: editedRange)
+      super.processEditing()
+    }
+
+
 }
