@@ -555,7 +555,7 @@ class SyntaxHighlightTextStorage: NSTextStorage {
       //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
       let boldRegexStr = "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))" //"((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
       let italicRegexStr = "((?<!')'{2}\\w+(\\s\\w+)*'{2}(?!'))"
-        let linkRegexStr = "(\\[\\[[^|\\]]*\\|?[^\\]]+\\]\\])"
+        let linkRegexStr = "(\\[\\[\\w+(\\s\\w+)*(\\|\\w+(\\s\\w+)*)*\\]\\])"
      
       let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
       let boldRegex = try! NSRegularExpression(pattern: boldRegexStr)
@@ -571,6 +571,7 @@ class SyntaxHighlightTextStorage: NSTextStorage {
         
         //reset to normal first
       removeAttribute(NSAttributedString.Key.font, range: searchRange)
+        removeAttribute(NSAttributedString.Key.foregroundColor, range: searchRange)
       addAttributes(normalAttributes, range: searchRange)
         
       // 3
