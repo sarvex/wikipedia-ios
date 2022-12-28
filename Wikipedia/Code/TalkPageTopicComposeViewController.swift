@@ -553,16 +553,19 @@ class SyntaxHighlightTextStorage: NSTextStorage {
       // 2
       let boldItalicRegexStr = "('''''\\w+(\\s\\w+)*''''')"
       //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
-      let boldRegexStr = "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
+      let boldRegexStr = "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))" //"((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
       let italicRegexStr = "((?<!')'{2}\\w+(\\s\\w+)*'{2}(?!'))"
+        let linkRegexStr = "(\\[\\[[^|\\]]*\\|?[^\\]]+\\]\\])"
      
       let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
       let boldRegex = try! NSRegularExpression(pattern: boldRegexStr)
       let italicRegex = try! NSRegularExpression(pattern: italicRegexStr)
+        let linkRegex = try! NSRegularExpression(pattern: linkRegexStr)
         
       let boldAttributes = [NSAttributedString.Key.font: boldFont]
       let italicAttributes = [NSAttributedString.Key.font: italicFont]
       let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
+        let linkAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue]
         
       let normalAttributes = [NSAttributedString.Key.font: normalFont]
         
@@ -601,6 +604,19 @@ class SyntaxHighlightTextStorage: NSTextStorage {
           match, flags, stop in
           if let matchRange = match?.range(at: 1) {
             addAttributes(boldItalicAttributes, range: matchRange)
+            // 4
+              //maybe not needed bc we reset above
+  //          let maxRange = matchRange.location + matchRange.length
+  //          if maxRange + 1 < length {
+  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
+  //          }
+          }
+        }
+        
+        linkRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+          match, flags, stop in
+          if let matchRange = match?.range(at: 1) {
+            addAttributes(linkAttributes, range: matchRange)
             // 4
               //maybe not needed bc we reset above
   //          let maxRange = matchRange.location + matchRange.length
