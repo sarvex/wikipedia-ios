@@ -551,10 +551,10 @@ class SyntaxHighlightTextStorage: NSTextStorage {
         //(?<!")"{1,2}(?!")
         
       // 2
-      let boldItalicRegexStr = "('''''\\w+(\\s\\w+)*''''')"
+      let boldItalicRegexStr = "((''''')\\w+(\\s\\w+)*('''''))"
       //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
-      let boldRegexStr = "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))" //"((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
-      let italicRegexStr = "((?<!')'{2}\\w+(\\s\\w+)*'{2}(?!'))"
+      let boldRegexStr = "((?<!')('{3})\\w+(\\s\\w+)*('{3})(?!'))" //"((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
+      let italicRegexStr = "((?<!')('{2})\\w+(\\s\\w+)*('{2})(?!'))"
         let linkRegexStr = "(\\[\\[\\w+(\\s\\w+)*(\\|\\w+(\\s\\w+)*)*\\]\\])"
      
       let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
@@ -566,6 +566,7 @@ class SyntaxHighlightTextStorage: NSTextStorage {
       let italicAttributes = [NSAttributedString.Key.font: italicFont]
       let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
         let linkAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue]
+        let orangeTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]
         
       let normalAttributes = [NSAttributedString.Key.font: normalFont]
         
@@ -586,6 +587,12 @@ class SyntaxHighlightTextStorage: NSTextStorage {
 //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
 //          }
         }
+          
+          if let openingRange = match?.range(at: 2),
+             let closingRange = match?.range(at: 4) {
+              addAttributes(orangeTextAttributes, range: openingRange)
+              addAttributes(orangeTextAttributes, range: closingRange)
+          }
       }
         
         boldRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
@@ -599,6 +606,13 @@ class SyntaxHighlightTextStorage: NSTextStorage {
   //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
   //          }
           }
+            
+            if let openingRange = match?.range(at: 2),
+               let closingRange = match?.range(at: 4) {
+                addAttributes(orangeTextAttributes, range: openingRange)
+                addAttributes(orangeTextAttributes, range: closingRange)
+            }
+            
         }
         
         boldItalicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
@@ -612,6 +626,12 @@ class SyntaxHighlightTextStorage: NSTextStorage {
   //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
   //          }
           }
+            
+            if let openingRange = match?.range(at: 2),
+               let closingRange = match?.range(at: 4) {
+                addAttributes(orangeTextAttributes, range: openingRange)
+                addAttributes(orangeTextAttributes, range: closingRange)
+            }
         }
         
         linkRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
