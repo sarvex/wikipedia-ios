@@ -538,6 +538,9 @@ class SyntaxHighlightTextStorage: NSTextStorage {
     }
     
     func applyStylesToRange(searchRange: NSRange) {
+        
+        //todo: allow for punctuation and spaces on either side of formatted text. maybe format as you write, not once formatter has completed typing. to prevent in-between formatting misfires, maybe flag an opening range as already taken if it's already been formatted, and skip subsequent match formatting if it's already been formatted earlier'.
+        
       // 1
       let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
       let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
@@ -549,7 +552,6 @@ class SyntaxHighlightTextStorage: NSTextStorage {
       let normalFont = UIFont.preferredFont(forTextStyle: .body)
         
         //(?<!")"{1,2}(?!")
-        
       // 2
       let boldItalicRegexStr = "((''''')\\w+(\\s\\w+)*('''''))"
       //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
