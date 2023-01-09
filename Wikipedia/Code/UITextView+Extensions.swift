@@ -138,6 +138,10 @@ extension UITextView {
                 break
             }
             
+            if rangeIsPrecededByFormattingString(range: newRange, formattingString: "\n") {
+                break
+            }
+            
             i = i - 1
         }
         
@@ -150,6 +154,10 @@ extension UITextView {
             if rangeIsFollowedByFormattingString(range: newRange, formattingString: endingFormattingString) {
 
                 finalEnd = newEnd
+                break
+            }
+            
+            if rangeIsFollowedByFormattingString(range: newRange, formattingString: "\n") {
                 break
             }
             

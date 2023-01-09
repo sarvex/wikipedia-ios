@@ -85,7 +85,7 @@ class TalkPageTopicComposeViewController: ViewController {
     }()
     
     private(set) var bodyTextView: UITextView!
-    var textStorage: SyntaxHighlightTextStorage!
+    var textStorage: WMFSyntaxHighlightTextStorage!
     
 //    = {
 //        let textView = UITextView(frame: .zero)
@@ -164,7 +164,7 @@ class TalkPageTopicComposeViewController: ViewController {
         
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         let attrString = NSAttributedString(string: "", attributes: attrs)
-        textStorage = SyntaxHighlightTextStorage()
+        textStorage = WMFSyntaxHighlightTextStorage()
         textStorage.append(attrString)
           
         let newTextViewRect = view.bounds
