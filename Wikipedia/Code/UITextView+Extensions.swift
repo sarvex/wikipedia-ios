@@ -126,6 +126,8 @@ extension UITextView {
             return
         }
         
+        let breakOnOppositeTag = startingFormattingString != endingFormattingString
+        
         // loop backwards to find start
         var i = 0
         var finalStart: UITextPosition?
@@ -139,6 +141,10 @@ extension UITextView {
             }
             
             if rangeIsPrecededByFormattingString(range: newRange, formattingString: "\n") {
+                break
+            }
+            
+            if breakOnOppositeTag && rangeIsPrecededByFormattingString(range: newRange, formattingString: endingFormattingString) {
                 break
             }
             
@@ -158,6 +164,10 @@ extension UITextView {
             }
             
             if rangeIsFollowedByFormattingString(range: newRange, formattingString: "\n") {
+                break
+            }
+            
+            if breakOnOppositeTag && rangeIsFollowedByFormattingString(range: newRange, formattingString: startingFormattingString) {
                 break
             }
             

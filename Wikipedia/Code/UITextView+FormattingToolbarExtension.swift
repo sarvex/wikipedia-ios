@@ -41,7 +41,7 @@ internal extension UITextView {
            let newSelectedRange = textRange(from: start, to: end) {
 
             if let newText = self.text(in: newSelectedRange) {
-                if newText.contains("[") || newText.contains("]") {
+                if newText.contains("[[") || newText.contains("]]") {
                     doesLinkExist = true
                 } else {
                     doesLinkExist = false
