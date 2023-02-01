@@ -17,11 +17,11 @@ class WikidataDescriptionController: ArticleDescriptionControlling {
         self.articleLanguageCode = articleLanguageCode
         self.descriptionSource = descriptionSource
         
-        guard let wikiDataID = article.wikidataID else {
-            return nil
-        }
+//        guard let wikiDataID = article.wikidataID else {
+//            return nil
+//        }
         
-        self.wikiDataID = wikiDataID
+        self.wikiDataID = "Q50236" // wikiDataID
     }
     
     func currentDescription(completion: @escaping (String?, MediaWikiAPIBlockedDisplayError?) -> Void) {

@@ -151,7 +151,7 @@ public struct APIURLComponentsBuilder {
         
         private static func productionBuilder() -> APIURLComponentsBuilder {
             var components = URLComponents()
-            components.host =  "www.\(Configuration.Domain.wikidata)"
+            components.host =  "test.\(Configuration.Domain.wikidata)"
             components.scheme = Configuration.Scheme.https
             return APIURLComponentsBuilder(hostComponents: components, basePathComponents: Configuration.Path.mediaWikiAPIComponents)
         }
