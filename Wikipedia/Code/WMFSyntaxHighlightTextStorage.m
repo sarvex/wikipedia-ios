@@ -72,15 +72,16 @@
     };
     
     NSDictionary *linkAttributes = @{
-        NSForegroundColorAttributeName:[UIColor blueColor]
+        NSForegroundColorAttributeName:self.theme.colors.link
     };
     
     NSDictionary *orangeFontAttributes = @{
-        NSForegroundColorAttributeName:[UIColor orangeColor]
+        NSForegroundColorAttributeName:self.theme.colors.warning
     };
     
     NSDictionary *normalAttributes = @{
-        NSFontAttributeName:normalFont
+        NSFontAttributeName:normalFont,
+        NSForegroundColorAttributeName:self.theme.colors.primaryText
     };
     
     [self removeAttribute:NSFontAttributeName range:searchRange];
@@ -163,6 +164,12 @@
 - (void)processEditing {
     [self performReplacementsForRange:self.editedRange];
     [super processEditing];
+}
+
+- (void)applyTheme:(WMFTheme *)theme {
+    self.theme = theme;
+    NSRange allRange = NSMakeRange(0, self.backingStore.length);
+    [self applyStylesToRange:allRange];
 }
 
 @end

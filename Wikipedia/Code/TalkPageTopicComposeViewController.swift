@@ -165,6 +165,7 @@ class TalkPageTopicComposeViewController: ViewController {
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         let attrString = NSAttributedString(string: "", attributes: attrs)
         textStorage = WMFSyntaxHighlightTextStorage()
+        textStorage.theme = theme
         textStorage.append(attrString)
           
         let newTextViewRect = view.bounds
@@ -372,9 +373,9 @@ class TalkPageTopicComposeViewController: ViewController {
         titleTextField.textColor = theme.colors.primaryText
         titleTextField.attributedPlaceholder = NSAttributedString(string: Self.TopicComposeStrings.titlePlaceholder, attributes: [NSAttributedString.Key.foregroundColor: theme.colors.tertiaryText])
         titleTextField.keyboardAppearance = theme.keyboardAppearance
-        //bodyTextView?.backgroundColor = theme.colors.paperBackground
-        //bodyTextView?.textColor = theme.colors.primaryText
-        //bodyTextView?.keyboardAppearance = theme.keyboardAppearance
+        bodyTextView?.backgroundColor = theme.colors.paperBackground
+        bodyTextView?.keyboardAppearance = theme.keyboardAppearance
+        textStorage?.apply(theme)
         bodyPlaceholderLabel.textColor = theme.colors.tertiaryText
         divView.backgroundColor = theme.colors.chromeShadow
         

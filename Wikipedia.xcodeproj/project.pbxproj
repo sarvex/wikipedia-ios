@@ -594,6 +594,10 @@
 		6754E44922773587005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
 		6754E44A22773587005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
 		6754E44B22773588005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
+		6757649C2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */; };
+		6757649D2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */; };
+		6757649E2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */; };
+		6757649F2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */; };
 		675A7CFE227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A7CFD227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift */; };
 		676070A2227CE60800A81F09 /* TalkPageReplyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676070A1227CE60800A81F09 /* TalkPageReplyFooterView.swift */; };
 		676070A42280987C00A81F09 /* TalkPageTopicNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 676070A32280987C00A81F09 /* TalkPageTopicNewViewController.xib */; };
@@ -4131,6 +4135,8 @@
 		674E8AB82382DEFF0053D206 /* DiffTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffTransformer.swift; sourceTree = "<group>"; };
 		675175DB276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisappearingCallbackNavigationController.swift; sourceTree = "<group>"; };
 		67540CA824D221E3008B2894 /* LocationManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerFactory.swift; sourceTree = "<group>"; };
+		6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMFSyntaxHighlightTextStorage.m; sourceTree = "<group>"; };
+		6757649B2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMFSyntaxHighlightTextStorage.h; sourceTree = "<group>"; };
 		675A7CFD227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTalkPageHeaderView.swift; sourceTree = "<group>"; };
 		676070A1227CE60800A81F09 /* TalkPageReplyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageReplyFooterView.swift; sourceTree = "<group>"; };
 		676070A32280987C00A81F09 /* TalkPageTopicNewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkPageTopicNewViewController.xib; sourceTree = "<group>"; };
@@ -7873,6 +7879,8 @@
 		83C0688C292EEC0200DF1403 /* Formatting Toolbar */ = {
 			isa = PBXGroup;
 			children = (
+				6757649B2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.h */,
+				6757649A2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m */,
 				83C06881292EC85700DF1403 /* TalkPageFormattingToolbarView.swift */,
 				83C06886292EE5C600DF1403 /* TalkPageFormattingToolbarViewDelegate.swift */,
 				83C0688D292EEDAF00DF1403 /* TalkPageViewController+TalkPageFormattingToolbar.swift */,
@@ -11629,6 +11637,7 @@
 				D84692E01D5E1E3F000A7058 /* TableOfContentsHeader.swift in Sources */,
 				83F26B2A220B62EC002D87A4 /* SectionEditorButton.swift in Sources */,
 				6761AEF72707E34F00E47BAD /* NotificationsCenterModelController.swift in Sources */,
+				6757649C2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */,
 				0EE489031D4ADCA00088505C /* UIViewController+WMFScrollToTop.swift in Sources */,
 				00D1F58F28885BA300127169 /* TalkPageViewModel.swift in Sources */,
 				00E5B3A428EB8E4F00D2C51A /* TalkPageTopicReplyOnboardingHostingController.swift in Sources */,
@@ -12590,6 +12599,7 @@
 				D8A42B191E815A9C00D8E281 /* UIViewController+WMFScrollToTop.swift in Sources */,
 				6734116722739CCC005B31DA /* TalkPageLocalHandler.swift in Sources */,
 				6761AEFA2707E34F00E47BAD /* NotificationsCenterModelController.swift in Sources */,
+				6757649F2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */,
 				7A9F06102266425700856321 /* InsertMediaSettingsViewController.swift in Sources */,
 				00D1F59228885BA300127169 /* TalkPageViewModel.swift in Sources */,
 				00E5B3A728EB8E4F00D2C51A /* TalkPageTopicReplyOnboardingHostingController.swift in Sources */,
@@ -12930,6 +12940,7 @@
 				00BCB71F26DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				D8CE25091E698E2400DAE2E0 /* PlaceSearchSuggestionController.swift in Sources */,
 				7AF8CEEE22653406000B7676 /* InsertMediaSelectedImageView.swift in Sources */,
+				6757649E2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */,
 				83F1096A23D0DB0F003F3E9E /* ViewController+ArticlePreviewing.swift in Sources */,
 				6771299624FF775E00E89CA5 /* ArticleAsLivingDocLargeEventCollectionViewCell.swift in Sources */,
 				D8CE250B1E698E2400DAE2E0 /* WMFPageHistoryRevision.m in Sources */,
@@ -13517,6 +13528,7 @@
 				FF555566277287F400925099 /* CollectionViewContextMenuShowing.swift in Sources */,
 				00BCB71E26DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				D8B1668E1FD97FE000097D8B /* WMFViewController.m in Sources */,
+				6757649D2971E4F500C79B76 /* WMFSyntaxHighlightTextStorage.m in Sources */,
 				7AF8CEEF22653406000B7676 /* InsertMediaSelectedImageView.swift in Sources */,
 				83F1096B23D0DB0F003F3E9E /* ViewController+ArticlePreviewing.swift in Sources */,
 				D8EC3DFC1E9BDA35006712EB /* WMFDatabaseHousekeeper.swift in Sources */,
