@@ -305,9 +305,8 @@ class EditSaveViewController: WMFScrollViewController, Themeable, UITextFieldDel
                 self.captchaViewController?.captchaTextFieldBecomeFirstResponder()
             }
         case .abuseFilterDisallowed, .abuseFilterWarning, .abuseFilterOther:
-            // NSString *warningHtml = error.userInfo[@"warning"];
-
             wmf_hideKeyboard()
+            WMFAlertManager.sharedInstance.dismissAlert() // Hide "Publishing..."
             
             if errorType == .abuseFilterDisallowed {
                 WMFAlertManager.sharedInstance.showErrorAlert(nsError, sticky: false, dismissPreviousAlerts: true, tapCallBack: nil)
@@ -318,9 +317,29 @@ class EditSaveViewController: WMFScrollViewController, Themeable, UITextFieldDel
                 mode = .abuseFilterWarning
                 abuseFilterCode = nsError.userInfo["code"] as! String
             }
+            guard let displayError = nsError.userInfo[NSErrorUserInfoDisplayError] as? MediaWikiAPIDisplayError,
+                  let currentTitle = articleURL?.wmf_title else {
+                return
+            }
             
-            let alertType: AbuseFilterAlertType = (errorType == .abuseFilterDisallowed) ? .disallow : .warning
-            showAbuseFilterAlert(for: alertType)
+            if errorType == .abuseFilterDisallowed {
+                mode = .abuseFilterDisallow
+                abuseFilterCode = displayError.code
+
+                wmf_showAbuseFilterDisallowPanel(messageHtml: displayError.messageHtml, linkBaseURL: displayError.linkBaseURL, currentTitle: currentTitle, theme: theme, goBackIsOnlyDismiss: false)
+                
+            } else {
+                mode = .abuseFilterWarning
+                abuseFilterCode = displayError.code
+
+                wmf_showAbuseFilterWarningPanel(messageHtml: displayError.messageHtml, linkBaseURL: displayError.linkBaseURL, currentTitle: currentTitle, theme: theme, goBackIsOnlyDismiss: false, publishAnywayTapHandler: { [weak self] _ in
+                    
+                    self?.dismiss(animated: true) {
+                        self?.save()
+                    }
+                    
+                })
+            }
             
         case .server, .unknown:
             WMFAlertManager.sharedInstance.showErrorAlert(nsError, sticky: true, dismissPreviousAlerts: true, tapCallBack: nil)
@@ -328,27 +347,15 @@ class EditSaveViewController: WMFScrollViewController, Themeable, UITextFieldDel
             
             WMFAlertManager.sharedInstance.dismissAlert() // Hide "Publishing..."
             
-            guard let blockedError = nsError.userInfo[NSErrorUserInfoBlockedDisplayError] as? MediaWikiAPIBlockedDisplayError,
+            guard let displayError = nsError.userInfo[NSErrorUserInfoDisplayError] as? MediaWikiAPIDisplayError,
                   let currentTitle = articleURL?.wmf_title else {
                 return
             }
             
-            wmf_showBlockedPanel(messageHtml: blockedError.messageHtml, linkBaseURL: blockedError.linkBaseURL, currentTitle: currentTitle, theme: theme)
+            wmf_showBlockedPanel(messageHtml: displayError.messageHtml, linkBaseURL: displayError.linkBaseURL, currentTitle: currentTitle, theme: theme)
             
         default:
             WMFAlertManager.sharedInstance.showErrorAlert(nsError, sticky: true, dismissPreviousAlerts: true, tapCallBack: nil)
-        }
-    }
-    
-    private func showAbuseFilterAlert(for type: AbuseFilterAlertType) {
-        if let abuseFilterAlertView = AbuseFilterAlertView.wmf_viewFromClassNib() {
-            abuseFilterAlertView.type = type
-            abuseFilterAlertView.apply(theme: theme)
-            abuseFilterAlertView.isHidden = true
-            view.wmf_addSubviewWithConstraintsToEdges(abuseFilterAlertView)
-            dispatchOnMainQueueAfterDelayInSeconds(0.3) {
-                abuseFilterAlertView.isHidden = false
-            }
         }
     }
     
