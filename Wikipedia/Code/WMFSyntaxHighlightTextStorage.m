@@ -49,10 +49,10 @@
     UIFont *boldItalicFont = [UIFont fontWithDescriptor:boldItalicFontDescriptor size:0];
     UIFont *normalFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
-    NSString *boldItalicRegexStr = @"((''''')\\w+(\\s\\w+)*('''''))";
-    NSString *boldRegexStr = @"((?<!')('{3})\\w+(\\s\\w+)*('{3})(?!'))";
-    NSString *italicRegexStr = @"((?<!')('{2})\\w+(\\s\\w+)*('{2})(?!'))";
-    NSString *linkRegexStr = @"(\\[\\[\\w+(\\s\\w+)*(\\|\\w+(\\s\\w+)*)*\\]\\])";
+    NSString *boldItalicRegexStr = @"('{5})[^']*(?:'(?!'''')[^']*)*('{5})";
+    NSString *boldRegexStr = @"('{3})[^']*(?:'(?!'')[^']*)*('{3})";
+    NSString *italicRegexStr = @"('{2})[^']*(?:'(?!')[^']*)*('{2})";
+    NSString *linkRegexStr = @"(\\[\\[.*\\]\\])";
     
     NSRegularExpression *boldItalicRegex = [NSRegularExpression regularExpressionWithPattern:boldItalicRegexStr options:0 error:nil];
     NSRegularExpression *boldRegex = [NSRegularExpression regularExpressionWithPattern:boldRegexStr options:0 error:nil];
@@ -70,7 +70,7 @@
     NSDictionary *boldItalicAttributes = @{
         NSFontAttributeName:boldItalicFont,
     };
-    
+
     NSDictionary *linkAttributes = @{
         NSForegroundColorAttributeName:self.theme.colors.link
     };
@@ -90,9 +90,9 @@
     
     [italicRegex enumerateMatchesInString:self.backingStore.string options:0 range:searchRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
         
-        NSRange matchRange = [result rangeAtIndex:1];
-        NSRange openingRange = [result rangeAtIndex:2];
-        NSRange closingRange = [result rangeAtIndex:4];
+        NSRange matchRange = [result rangeAtIndex:0];
+        NSRange openingRange = [result rangeAtIndex:1];
+        NSRange closingRange = [result rangeAtIndex:2];
         
         if (matchRange.location != NSNotFound) {
             [self addAttributes:italicAttributes range:matchRange];
@@ -109,9 +109,9 @@
     
     [boldRegex enumerateMatchesInString:self.backingStore.string options:0 range:searchRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
         
-        NSRange matchRange = [result rangeAtIndex:1];
-        NSRange openingRange = [result rangeAtIndex:2];
-        NSRange closingRange = [result rangeAtIndex:4];
+        NSRange matchRange = [result rangeAtIndex:0];
+        NSRange openingRange = [result rangeAtIndex:1];
+        NSRange closingRange = [result rangeAtIndex:2];
         
         if (matchRange.location != NSNotFound) {
             [self addAttributes:boldAttributes range:matchRange];
@@ -125,30 +125,30 @@
             [self addAttributes:orangeFontAttributes range:closingRange];
         }
     }];
-    
+
     [boldItalicRegex enumerateMatchesInString:self.backingStore.string options:0 range:searchRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
-        
-        NSRange matchRange = [result rangeAtIndex:1];
-        NSRange openingRange = [result rangeAtIndex:2];
-        NSRange closingRange = [result rangeAtIndex:4];
-        
+
+        NSRange matchRange = [result rangeAtIndex:0];
+        NSRange openingRange = [result rangeAtIndex:1];
+        NSRange closingRange = [result rangeAtIndex:2];
+
         if (matchRange.location != NSNotFound) {
             [self addAttributes:boldItalicAttributes range:matchRange];
         }
-        
+
         if (openingRange.location != NSNotFound) {
             [self addAttributes:orangeFontAttributes range:openingRange];
         }
-        
+
         if (closingRange.location != NSNotFound) {
             [self addAttributes:orangeFontAttributes range:closingRange];
         }
     }];
-    
+
     [linkRegex enumerateMatchesInString:self.backingStore.string options:0 range:searchRange usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
-        
-        NSRange matchRange = [result rangeAtIndex:1];
-        
+
+        NSRange matchRange = [result rangeAtIndex:0];
+
         if (matchRange.location != NSNotFound) {
             [self addAttributes:linkAttributes range:matchRange];
         }
