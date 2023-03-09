@@ -380,8 +380,7 @@ class TalkPageTopicComposeViewController: ViewController {
         divView.backgroundColor = theme.colors.chromeShadow
         
         finePrintTextView.backgroundColor = theme.colors.midBackground
-        finePrintTextView.linkTextAttributes = [.foregroundColor: theme.colors.link]
-        finePrintTextView.attributedText = licenseTitleTextViewAttributedString
+        finePrintTextView.attributedText = licenseTitleTextViewAttributedString // TODO: not working? Link colors are off.
         
         // Calling here to ensure text alignment is set properly after attributed strings are set
         updateSemanticContentAttribute(semanticContentAttribute: viewModel.semanticContentAttribute)
@@ -423,12 +422,12 @@ class TalkPageTopicComposeViewController: ViewController {
         inputContainerView.semanticContentAttribute = semanticContentAttribute
         titleTextField.semanticContentAttribute = semanticContentAttribute
         divView.semanticContentAttribute = semanticContentAttribute
-        //bodyTextView.semanticContentAttribute = semanticContentAttribute
+        // bodyTextView.semanticContentAttribute = semanticContentAttribute
         bodyPlaceholderLabel.semanticContentAttribute = semanticContentAttribute
         finePrintTextView.semanticContentAttribute = semanticContentAttribute
         
         titleTextField.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
-        //bodyTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        // bodyTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
         bodyPlaceholderLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
         finePrintTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
     }
@@ -541,126 +540,110 @@ class SyntaxHighlightTextStorage: NSTextStorage {
     
     func applyStylesToRange(searchRange: NSRange) {
         
-        //todo: allow for punctuation and spaces on either side of formatted text. maybe format as you write, not once formatter has completed typing. to prevent in-between formatting misfires, maybe flag an opening range as already taken if it's already been formatted, and skip subsequent match formatting if it's already been formatted earlier'.
+        // todo: allow for punctuation and spaces on either side of formatted text. maybe format as you write, not once formatter has completed typing. to prevent in-between formatting misfires, maybe flag an opening range as already taken if it's already been formatted, and skip subsequent match formatting if it's already been formatted earlier'.
         
       // 1
-      let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
-      let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
-      let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic)
-      let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])
-      let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 0)
-      let italicFont = UIFont(descriptor: italicFontDescriptor!, size: 0)
-      let boldItalicFont = UIFont(descriptor: boldItalicFontDescriptor!, size: 0)
-      let normalFont = UIFont.preferredFont(forTextStyle: .body)
-        
-        //(?<!")"{1,2}(?!")
-      // 2
-      let boldItalicRegexStr = "((''''')\\w+(\\s\\w+)*('''''))"
-      //let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
-      let boldRegexStr = "((?<!')('{3})\\w+(\\s\\w+)*('{3})(?!'))" //"((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
-      let italicRegexStr = "((?<!')('{2})\\w+(\\s\\w+)*('{2})(?!'))"
-        let linkRegexStr = "(\\[\\[\\w+(\\s\\w+)*(\\|\\w+(\\s\\w+)*)*\\]\\])"
+        let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
+        let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
+        // let italicFontDescriptor = fontDescriptor.withSymbolicTraits(.traitItalic)
+        // let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits([.traitItalic, .traitBold])
+        let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 0)
+        // let italicFont = UIFont(descriptor: italicFontDescriptor!, size: 0)
+        // let boldItalicFont = UIFont(descriptor: boldItalicFontDescriptor!, size: 0)
+        let normalFont = UIFont.preferredFont(forTextStyle: .body)
+
+        // (?<!")"{1,2}(?!")
+        // 2
+        // let boldItalicRegexStr = "(('{5})([^']*(?:'(?!'')[^']*)*)('{5}))"
+        // let boldRegexStr = "('''\\w+(\\s\\w+)*''')"
+
+        // (#|@)[^\s#@]+
+        let boldRegexStr = NSRegularExpression.escapedPattern(for: "('{3})[^']*(?:'(?!'')[^']*)*('{3})")
+        // let boldRegexStr = "('{3})[^']*(?:'(?!'')[^']*)*('{3})" // "((?<!')'{3}\\s*\\w*\\s*'{3}(?!'))" "((?<!')'{3}\\w+(\\s\\w+)*'{3}(?!'))"
+        // let italicRegexStr = "('{2})[^']*(?:'(?!'')[^']*)*('{2})"
+        // let linkRegexStr = "(\\[\\[\\w+(\\s\\w+)*(\\|\\w+(\\s\\w+)*)*\\]\\])"
      
-      let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
-      let boldRegex = try! NSRegularExpression(pattern: boldRegexStr)
-      let italicRegex = try! NSRegularExpression(pattern: italicRegexStr)
-        let linkRegex = try! NSRegularExpression(pattern: linkRegexStr)
+        // let boldItalicRegex = try! NSRegularExpression(pattern: boldItalicRegexStr)
+        let boldRegex = try! NSRegularExpression(pattern: boldRegexStr)
+        // let italicRegex = try! NSRegularExpression(pattern: italicRegexStr)
+        // let linkRegex = try! NSRegularExpression(pattern: linkRegexStr)
+
+        let boldAttributes = [NSAttributedString.Key.font: boldFont]
+        // let italicAttributes = [NSAttributedString.Key.font: italicFont]
+        // let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
+        // let linkAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue]
+        let wackyColorTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple]
         
-      let boldAttributes = [NSAttributedString.Key.font: boldFont]
-      let italicAttributes = [NSAttributedString.Key.font: italicFont]
-      let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
-        let linkAttributes = [NSAttributedString.Key.foregroundColor: UIColor.blue]
-        let orangeTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]
+        let normalAttributes = [NSAttributedString.Key.font: normalFont]
         
-      let normalAttributes = [NSAttributedString.Key.font: normalFont]
-        
-        //reset to normal first
-      removeAttribute(NSAttributedString.Key.font, range: searchRange)
+        // reset to normal first
+        removeAttribute(NSAttributedString.Key.font, range: searchRange)
         removeAttribute(NSAttributedString.Key.foregroundColor, range: searchRange)
-      addAttributes(normalAttributes, range: searchRange)
+        addAttributes(normalAttributes, range: searchRange)
         
       // 3
-      italicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
-        match, flags, stop in
-        if let matchRange = match?.range(at: 1) {
-          addAttributes(italicAttributes, range: matchRange)
-          // 4
-            //maybe not needed bc we reset above
-//          let maxRange = matchRange.location + matchRange.length
-//          if maxRange + 1 < length {
-//            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-//          }
-        }
-          
-          if let openingRange = match?.range(at: 2),
-             let closingRange = match?.range(at: 4) {
-              addAttributes(orangeTextAttributes, range: openingRange)
-              addAttributes(orangeTextAttributes, range: closingRange)
-          }
-      }
         
-        boldRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
-          match, flags, stop in
+//        var boldItalicRanges: [NSRange] = []
+//
+//        boldItalicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+//          match, flags, stop in
+//          if let matchRange = match?.range(at: 1) {
+//              boldItalicRanges.append(matchRange)
+//            addAttributes(boldItalicAttributes, range: matchRange)
+//          }
+//
+//            if let openingRange = match?.range(at: 2),
+//               let closingRange = match?.range(at: 4) {
+//                addAttributes(orangeTextAttributes, range: openingRange)
+//                addAttributes(orangeTextAttributes, range: closingRange)
+//            }
+//        }
+        
+//      italicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+//        match, flags, stop in
+//
+//
+//        if let matchRange = match?.range(at: 1) {
+//          addAttributes(italicAttributes, range: matchRange)
+//        }
+//
+//          if let openingRange = match?.range(at: 1),
+//             let closingRange = match?.range(at: 2) {
+//              addAttributes(orangeTextAttributes, range: openingRange)
+//              addAttributes(orangeTextAttributes, range: closingRange)
+//          }
+//      }
+        
+        boldRegex.enumerateMatches(in: backingStore.string, range: searchRange) {match, flags, stop in
           if let matchRange = match?.range(at: 1) {
             addAttributes(boldAttributes, range: matchRange)
-            // 4
-              //maybe not needed bc we reset above
-  //          let maxRange = matchRange.location + matchRange.length
-  //          if maxRange + 1 < length {
-  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-  //          }
           }
             
-            if let openingRange = match?.range(at: 2),
-               let closingRange = match?.range(at: 4) {
-                addAttributes(orangeTextAttributes, range: openingRange)
-                addAttributes(orangeTextAttributes, range: closingRange)
+            if let openingRange = match?.range(at: 1),
+               let closingRange = match?.range(at: 2) {
+                addAttributes(wackyColorTextAttributes, range: openingRange)
+                addAttributes(wackyColorTextAttributes, range: closingRange)
             }
             
         }
         
-        boldItalicRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
-          match, flags, stop in
-          if let matchRange = match?.range(at: 1) {
-            addAttributes(boldItalicAttributes, range: matchRange)
-            // 4
-              //maybe not needed bc we reset above
-  //          let maxRange = matchRange.location + matchRange.length
-  //          if maxRange + 1 < length {
-  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-  //          }
-          }
-            
-            if let openingRange = match?.range(at: 2),
-               let closingRange = match?.range(at: 4) {
-                addAttributes(orangeTextAttributes, range: openingRange)
-                addAttributes(orangeTextAttributes, range: closingRange)
-            }
-        }
-        
-        linkRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
-          match, flags, stop in
-          if let matchRange = match?.range(at: 1) {
-            addAttributes(linkAttributes, range: matchRange)
-            // 4
-              //maybe not needed bc we reset above
-  //          let maxRange = matchRange.location + matchRange.length
-  //          if maxRange + 1 < length {
-  //            addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-  //          }
-          }
-        }
+//        linkRegex.enumerateMatches(in: backingStore.string, range: searchRange) {
+//          match, flags, stop in
+//          if let matchRange = match?.range(at: 1) {
+//            addAttributes(linkAttributes, range: matchRange)
+//          }
+//        }
     }
 
     func performReplacementsForRange(changedRange: NSRange) {
       var extendedRange =
         NSUnionRange(changedRange,
         NSString(string: backingStore.string)
-          .lineRange(for: NSMakeRange(changedRange.location, 0)))
+          .lineRange(for: NSRange(location: changedRange.location, length: 0)))
       extendedRange =
         NSUnionRange(changedRange,
         NSString(string: backingStore.string)
-          .lineRange(for: NSMakeRange(NSMaxRange(changedRange), 0)))
+          .lineRange(for: NSRange(location: NSMaxRange(changedRange), length: 0)))
       applyStylesToRange(searchRange: extendedRange)
     }
     
