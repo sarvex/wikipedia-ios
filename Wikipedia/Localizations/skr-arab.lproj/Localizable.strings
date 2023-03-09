@@ -49,6 +49,7 @@
 "article-reference-view-title" = "حوالہ$1";
 "article-share" = "شیئر";
 "back-button-accessibility-label" = "پچھوں";
+"button-go-back" = "واپس ڄُلو";
 "button-next" = "اڳوں تے ونڄو";
 "button-ok" = "ٹھیک ہے";
 "button-publish" = "چھاپو";
@@ -202,6 +203,7 @@
 "talk-page-new-subject-textfield-accessibility-label" = "موضوع";
 "talk-page-reply-title" = "جواب";
 "talk-page-user-contributions" = "ونگاراں";
+"talk-pages-archives-view-title" = "آرکائیواں";
 "talk-pages-empty-view-button-article-add-topic" = "نواں عنوان شامل کرو";
 "talk-pages-empty-view-button-user-start-discussion" = "بحت شروع کرو";
 "talk-pages-topic-reply-onboarding-title" = "ڳالھ مہاڑ ورقے";

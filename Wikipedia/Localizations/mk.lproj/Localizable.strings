@@ -20,7 +20,7 @@
 "aaald-deleted-text-description-2" = "Избиришани $1";
 "aaald-error-subitle" = "Превчитајте за да пробате пак";
 "aaald-error-title" = "Не можев да ја вчитам воредната историја на статијата";
-"aaald-many-sections-description" = "во $1 поднаслови";
+"aaald-many-sections-description" = "во $1 оддели";
 "aaald-multiple-changes-description" = "Направени повеќе промени";
 "aaald-multiple-references-added-description" = "Додадени повеќе наводи";
 "aaald-new-book-reference-title" = "Книга";
@@ -35,13 +35,13 @@
 "aaald-new-website-reference-archive-url-text" = "Адреса на Archive.org";
 "aaald-new-website-reference-title" = "Мреж. место";
 "aaald-numerical-multiple-references-added-description" = "{{PLURAL:$1|0=Додадени 0 наводи|Додаден $1 навод|Додадени $1 наводи}}";
-"aaald-one-section-description" = "во поднасловот $1";
+"aaald-one-section-description" = "во одделот $1";
 "aaald-revision-by-anonymous" = "Уредување на анонимен корисник";
 "aaald-revision-userInfo" = "Уредување на $1 ($2 уредувања)";
 "aaald-single-reference-added-description" = "Додаден навод";
 "aaald-small-change-description" = "{{PLURAL:$1|0=Нема ситни промени|Направена $1 ситна промена|Направени $1 ситни промени}}";
 "aaald-summary-title" = "{{PLURAL:$1|0=0 промени|$1 промена|$1 промени}} од {{PLURAL:$2|0=0 уредници|$2 уредник|$2 уредници}} за {{PLURAL:$3|0=0 дена|$3 ден|$3 дена}}";
-"aaald-two-sections-description" = "во поднасловите $1 и $2";
+"aaald-two-sections-description" = "во одделите $1 и $2";
 "aaald-vandalism-revert-description" = "Отповикан осомничен вандализам";
 "aaald-view-full-history-button" = "Целосна историја на статијата";
 "about-content-license" = "Лиценца на содржината";
@@ -67,15 +67,6 @@
 "about-translators-details" = "Прилогов го преведоа доброволни преведувачи на $1";
 "about-wikimedia-foundation" = "Фондацијата Викимедија";
 "about-wikipedia" = "Википедија";
-"abuse-filter-disallow-heading" = "Не можете да го објавите уредувањево.";
-"abuse-filter-disallow-unconstructive" = "Автоматски филтер утврди дека ова урадување е потенцијално неконструктивно или претставува обид за вандализам. Навратете се и изменете го уредувањето.";
-"abuse-filter-warning-blanking" = "Бришење на делови или цели статии";
-"abuse-filter-warning-caps" = "Големи букви";
-"abuse-filter-warning-heading" = "Ова личи на неконструктивно уредување. Дали сигурно сакате да го објавите?";
-"abuse-filter-warning-irrelevant" = "Нерелевантни надворешни врски или слики";
-"abuse-filter-warning-repeat" = "Повторени знаци";
-"abuse-filter-warning-spam" = "Ставање спам во статии";
-"abuse-filter-warning-subheading" = "Вашето уредување може да содржи:";
 "account-creation-captcha-cannot-see-image" = "Не ја гледате сликата? $1";
 "account-creation-captcha-obtaining" = "Правам нова сликичка...";
 "account-creation-captcha-request-account" = "Побарајте сметка.";
@@ -154,9 +145,11 @@
 "article-toolbar-reading-themes-controls-toolbar-item" = "Контроли за изгледите за читање";
 "back-button-accessibility-label" = "Назад";
 "back-button-popover-title" = "Допрете за да се вратите";
+"button-go-back" = "Назад";
 "button-next" = "Следно";
 "button-ok" = "ОК";
 "button-publish" = "Објави";
+"button-publish-anyway" = "Сепак објави";
 "button-read-now" = "Прочитајте сега";
 "button-report-a-bug" = "Пријави грешка";
 "button-save-for-later" = "Зачувај за подоцна";
@@ -222,7 +215,7 @@
 "diff-paragraph-moved-direction-down" = "надолу";
 "diff-paragraph-moved-direction-up" = "нагоре";
 "diff-paragraph-moved-distance-line" = "{{PLURAL:$1|$1 ред|$1 реда}}";
-"diff-paragraph-moved-distance-section" = "{{PLURAL:$1|$1 поднаслов|$1 поднаслови}}";
+"diff-paragraph-moved-distance-section" = "{{PLURAL:$1|$1 оддел|$1 оддели}}";
 "diff-paragraph-moved-format" = "Пасусот е преместен $2 $1";
 "diff-revision-error-title" = "Не можам да ја вчитам преработката";
 "diff-single-header-editor-number-edits-format" = "{{PLURAL:$1|$1 уредување|$1 уредувања}}";
@@ -268,6 +261,9 @@
 "edit-menu-item-could-not-find-selection-alert-title" = "Не можев да го пронајдам избраниот текст";
 "edit-minor-learn-more-text" = "Дознајте повеќе за ситните уредувања";
 "edit-minor-text" = "Ова е ситно уредување";
+"edit-notices" = "Известувања за уредување";
+"edit-notices-always-display" = "Секогаш прикажувај известувања за уредување";
+"edit-notices-please-read" = "Прочитајте пред да уредувате";
 "edit-ordered-list-accessibility-label" = "Направи го тековниот ред подреден список";
 "edit-ordered-list-remove-accessibility-label" = "Отстрани подреден список од тековниот ред";
 "edit-published" = "Уредувањето е објавено";
@@ -489,10 +485,8 @@
 "import-shared-reading-list-survey-prompt-button-cancel" = "Не сега";
 "import-shared-reading-list-survey-prompt-button-take-survey" = "Пополнете ја анкетата";
 "import-shared-reading-list-survey-prompt-footer" = "ПОгледајте ја нашата $1изјава за личните податоци$2. Анкетата ја овозможува трето лице. Погледајте ги нивните $3правила за личните податоци$4.";
-// Fuzzy
-"import-shared-reading-list-survey-prompt-subtitle" = "Споделени списоци за читање е пробна функција и ни тербаат ваши мислења за да ја подобриме или отстраниме.";
-// Fuzzy
-"import-shared-reading-list-survey-prompt-title" = "Дали би ни помогнале да ја подобриме оваа функција, пополнувајќи анкета за неа?";
+"import-shared-reading-list-survey-prompt-subtitle" = "„Сподели списоци за читање“ е пробна функција и ни требаат ваши мислења за да ја подобриме или отстраниме.";
+"import-shared-reading-list-survey-prompt-title" = "Можете ли да ни помогнете да ја подобриме „Сподели списоци за читање“?";
 "import-shared-reading-list-title" = "Увези споделен список за читање";
 "in-the-news-sub-title-from-language-wikipedia" = "Од Википедија на $1";
 "in-the-news-sub-title-from-wikipedia" = "Од Википедија";
@@ -983,7 +977,7 @@
 "table-of-contents-close-accessibility-label" = "Затвори ја Содржината";
 "table-of-contents-heading" = "Содржина";
 "table-of-contents-hide-button-label" = "Скриј содржина";
-"table-of-contents-subheading-label" = "Поднаслов $1";
+"table-of-contents-subheading-label" = "Подзаглавие $1";
 "tachelhit-variants-alert-body" = "Прилогот на Википедија сега ги поддржува следниве шилхански варијанти како главен или спореден јазик во прилогот, олеснувајќи го читањето, пребарувањето и уредувањето на вашите претпочитани варијанти:\n\n\nⵜⴰⵛⵍⵃⵉⵜ — шилхански со старолибиско писмо (shi-tfng)\nTaclḥit — шилхански на латиница (shi-latn)";
 "tachelhit-variants-alert-title" = "Новост за поддршка на шилхански варијанти";
 "tajik-variants-alert-body" = "Прилогот на Википедија сега ги поддржува следниве таџички варијанти како главен или спореден јазик во прилогот, олеснувајќи го читањето, пребарувањето и уредувањето на вашите претпочитани варијанти:\n\nтоҷикӣ кирилликӣ — таџички на кирилица (tg-cyrl)\ntojikī lotinī — таџички на латиница (tg-latn)";
@@ -1061,6 +1055,8 @@
 "talk-page-unsubscription-failed-alert" = "Отпишувањето од темата не успеа. Обидете се повторно.";
 "talk-page-user-about" = "За корисничките разговорни страници";
 "talk-page-user-contributions" = "Придонеси";
+"talk-pages-archives-empty-title" = "Нема архивирани страници.";
+"talk-pages-archives-view-title" = "Архиви";
 "talk-pages-coffee-roll-read-more" = "Прочитајте повеќе";
 "talk-pages-comment-added-alert-title" = "Вашиот коментар е додаден";
 "talk-pages-compose-close-confirmation-keep" = "Продолжи со уредување";
@@ -1122,10 +1118,8 @@
 "vanish-account-warning-title" = "Предупредување";
 "vanish-modal-item" = "Ако го завршивте барањето за отстранување, дајте ни пар денови за да го обработи администратор.";
 "vanish-modal-item-2" = "Ако не сте сигурни дали сме го примиле барањето, проверете го вашиот прилог Пошта";
-// Fuzzy
-"vanish-modal-item-3" = "Ако имате други прашања во врска со остранувањето на сметки, појдете на Википедија:Право на исчезнување";
-// Fuzzy
-"vanish-modal-item-3-ios15" = "If you have further questions about vanishing please visit $1Википедија:Право на исчезнување$2$3.";
+"vanish-modal-item-3" = "Ако имате други прашања во врска со остранувањето на сметки, појдете на Meta:Right_to_vanish";
+"vanish-modal-item-3-ios15" = "Ако имате уште прашања за исчезнувањето, посетете ја страницата $1Meta:Right_to_vanish$2$3";
 "vanish-modal-title" = "Барање за поништување";
 "vanishing-request-email-title" = "Побарај исчезнување";
 "variants-alert-dismiss-button" = "Не, благодарам";
