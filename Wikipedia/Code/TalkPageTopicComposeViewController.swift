@@ -413,8 +413,11 @@ class TalkPageTopicComposeViewController: ViewController {
         return attributedString
     }
     
-    private func evaluatePublishButtonEnabledState() {        
-        publishButton.isEnabled = !(titleTextField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !bodyTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    private func evaluatePublishButtonEnabledState() {
+        
+        // simplify for performance
+        // publishButton.isEnabled = !(titleTextField.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !bodyTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        publishButton.isEnabled = !(titleTextField.text ?? "").isEmpty && (bodyTextView.textStorage.length > 0)
     }
     
     private func updateSemanticContentAttribute(semanticContentAttribute: UISemanticContentAttribute) {
@@ -492,7 +495,7 @@ extension TalkPageTopicComposeViewController: UITextViewDelegate {
              return
          }
 
-         bodyPlaceholderLabel.isHidden = bodyTextView.text.count == 0 ? false : true
+         bodyPlaceholderLabel.isHidden = bodyTextView.textStorage.length == 0 ? false : true
          
          evaluatePublishButtonEnabledState()
      }
