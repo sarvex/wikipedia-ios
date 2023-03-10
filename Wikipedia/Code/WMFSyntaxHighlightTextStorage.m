@@ -24,17 +24,17 @@
 }
 
 - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)str {
-    [self beginEditing];
+    //[self beginEditing];
     [self.backingStore replaceCharactersInRange:range withString:str];
     [self edited:NSTextStorageEditedCharacters range:range changeInLength:str.length - range.length];
-    [self endEditing];
+    //[self endEditing];
 }
 
 - (void)setAttributes:(NSDictionary<NSAttributedStringKey, id> *)attrs range:(NSRange)range {
-    [self beginEditing];
+    //[self beginEditing];
     [self.backingStore setAttributes:attrs range:range];
     [self edited:NSTextStorageEditedAttributes range:range changeInLength:0];
-    [self endEditing];
+    //[self endEditing];
 }
 
 - (void)applyStylesToRange:(NSRange)searchRange {
@@ -163,14 +163,15 @@
 }
 
 - (void)performReplacementsForRange:(NSRange)changedRange {
-    NSRange extendedRange = NSUnionRange(changedRange, [self.backingStore.string lineRangeForRange:NSMakeRange(changedRange.location, 0)]);
-    extendedRange = NSUnionRange(changedRange, [self.backingStore.string lineRangeForRange:NSMakeRange(NSMaxRange(changedRange), 0)]);
-    [self applyStylesToRange:extendedRange];
+    //    NSRange extendedRange = NSUnionRange(changedRange, [self.backingStore.string lineRangeForRange:NSMakeRange(changedRange.location, 0)]);
+    //    extendedRange = NSUnionRange(changedRange, [self.backingStore.string lineRangeForRange:NSMakeRange(NSMaxRange(changedRange), 0)]);
+    NSRange paragaphRange = [self.string paragraphRangeForRange:changedRange];
+    [self applyStylesToRange:paragaphRange];
 }
 
 - (void)processEditing {
-    [self performReplacementsForRange:self.editedRange];
     [super processEditing];
+    [self performReplacementsForRange:self.editedRange];
 }
 
 - (void)applyTheme:(WMFTheme *)theme {
