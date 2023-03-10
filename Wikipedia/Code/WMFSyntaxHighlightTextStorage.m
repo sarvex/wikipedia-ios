@@ -46,7 +46,8 @@
     UIFont *boldFont = [UIFont fontWithDescriptor:boldFontDescriptor size:0];
     UIFont *italicFont = [UIFont fontWithDescriptor:italicFontDescriptor size:0];
     UIFont *boldItalicFont = [UIFont fontWithDescriptor:boldItalicFontDescriptor size:0];
-    UIFont *normalFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    UIFont *normalFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody compatibleWithTraitCollection:self.fontSizeTraitCollection];
 
     NSString *boldItalicRegexStr = @"('{5})([^']*(?:'(?!'''')[^']*)*)('{5})";
     NSString *boldRegexStr = @"('{3})([^']*(?:'(?!'')[^']*)*)('{3})";
@@ -195,6 +196,20 @@
     self.theme = theme;
     NSRange allRange = NSMakeRange(0, self.backingStore.length);
     [self applyStylesToRange:allRange];
+}
+
+- (void)applyFontSizeTraitCollection:(UITraitCollection *)fontSizeTraitCollection {
+    self.fontSizeTraitCollection = fontSizeTraitCollection;
+    NSRange allRange = NSMakeRange(0, self.backingStore.length);
+    //[self applyStylesToRange:allRange];
+    
+    //more performant?
+    
+    UIFont *normalFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody compatibleWithTraitCollection:self.fontSizeTraitCollection];
+    NSDictionary *normalAttributes = @{
+        NSFontAttributeName: normalFont,
+    };
+    [self addAttributes:normalAttributes range:allRange];
 }
 
 @end

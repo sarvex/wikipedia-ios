@@ -112,7 +112,11 @@ class SectionEditorViewController: ViewController {
         
 //            }
             
+        let message = WMFLocalizedString("wikitext-downloading", value: "Loading content...", comment: "Alert text shown when obtaining latest revision of the section being edited")
+        WMFAlertManager.sharedInstance.showAlert(message, sticky: true, dismissPreviousAlerts: true)
+        
         self.wikitext = CommonStrings.obamaWikitext
+        
                 self.configureWebView(readOnly: false)
             self.dataStore.authenticationManager.loginWithSavedCredentials { (_) in }
             
@@ -259,6 +263,8 @@ class SectionEditorViewController: ViewController {
         scriptMessageHandlers.append(ScriptMessageHandler(handler: messagingController, name: SectionEditorWebViewMessagingController.Message.Name.smoothScrollToYOffsetMessage))
         
         scriptMessageHandlers.append(ScriptMessageHandler(handler: messagingController, name: SectionEditorWebViewMessagingController.Message.Name.replaceAllCountMessage))
+        
+        scriptMessageHandlers.append(ScriptMessageHandler(handler: messagingController, name: SectionEditorWebViewMessagingController.Message.Name.didChangeFontSize))
 
         scriptMessageHandlers.append(ScriptMessageHandler(handler: messagingController, name: SectionEditorWebViewMessagingController.Message.Name.didSetWikitextMessage))
         
@@ -352,6 +358,7 @@ class SectionEditorViewController: ViewController {
             return
         }
         setWikitextToWebView(wikitext) { [weak self] (error) in
+            WMFAlertManager.sharedInstance.dismissAlert()
             if let error = error {
                 assertionFailure(error.localizedDescription)
             } else {

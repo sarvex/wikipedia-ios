@@ -44,6 +44,8 @@ class SectionEditorWebViewMessagingController: NSObject, WKScriptMessageHandler 
     // MARK: - Receiving messages
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.name)
+        print(message.body)
         switch (message.name, message.body) {
         case (Message.Name.didSetWikitextMessage, let result as [String: Any]):
             assert(Thread.isMainThread)
@@ -54,6 +56,8 @@ class SectionEditorWebViewMessagingController: NSObject, WKScriptMessageHandler 
         case (Message.Name.smoothScrollToYOffsetMessage, let yOffset as CGFloat):
             let newOffset = CGPoint(x: webView.scrollView.contentOffset.x, y: webView.scrollView.contentOffset.y + yOffset)
             scrollDelegate?.sectionEditorWebViewMessagingController(self, didReceiveScrollMessageWithNewContentOffset: newOffset)
+        case (Message.Name.didChangeFontSize, _):
+            print("changed!")
         case (Message.Name.codeMirrorMessage, let message as [String: Any]):
             guard
                 let selectionChangedMessage = message[Message.Name.selectionChanged],
@@ -484,6 +488,7 @@ extension SectionEditorWebViewMessagingController {
             static let smoothScrollToYOffsetMessage = "smoothScrollToYOffsetMessage"
             static let replaceAllCountMessage = "replaceAllCountMessage"
             static let didSetWikitextMessage = "didSetWikitextMessage"
+            static let didChangeFontSize = "didChangeFontSize"
         }
         struct Body {
             struct Key {

@@ -411,7 +411,9 @@
     }
   
     const scaleBodyText = (textSizeAdjustment) => {
-      document.body.style['font-size'] = (textSizeAdjustment/100.0) + 'em'
+      document.body.style['font-size'] = (textSizeAdjustment/100.0) + 'em';
+      window.webkit.messageHandlers.didChangeFontSize.postMessage(textSizeAdjustment);
+      console.log('Changed in JS');
     }
     
     const setupCodemirrorWithSettings = (codeMirrorSettings, callback) => {

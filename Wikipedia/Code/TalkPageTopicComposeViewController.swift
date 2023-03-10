@@ -448,12 +448,58 @@ class TalkPageTopicComposeViewController: ViewController {
     
     @objc private func tappedClose() {
         
-        guard shouldBlockDismissal else {
-            dismiss(animated: true)
-            return
-        }
+//        guard shouldBlockDismissal else {
+//            dismiss(animated: true)
+//            return
+//        }
+//
+//        presentDismissConfirmationActionSheet()
         
-        presentDismissConfirmationActionSheet()
+        // fake out changing font size for now.
+        
+        let randomThemeOrFontChange = Int.random(in: 1...2)
+        if randomThemeOrFontChange == 1 {
+
+            let randomTheme = Int.random(in: 1...4)
+            switch randomTheme {
+            case 1:
+                apply(theme: .light)
+            case 2:
+                apply(theme: .sepia)
+            case 3:
+                apply(theme: .dark)
+            case 4:
+                apply(theme: .black)
+            default:
+                break
+            }
+        } else {
+            let randomFontNumber = Int.random(in: 1...7)
+            var contentSizeCategory: UIContentSizeCategory?
+            switch randomFontNumber {
+            case 1:
+                contentSizeCategory = .extraSmall
+            case 2:
+                contentSizeCategory = .small
+            case 3:
+                contentSizeCategory = .medium
+            case 4:
+                contentSizeCategory = .large
+            case 5:
+                contentSizeCategory = .extraLarge
+            case 6:
+                contentSizeCategory = .extraExtraLarge
+            case 7:
+                contentSizeCategory = .extraExtraExtraLarge
+            default:
+                contentSizeCategory = .large
+            }
+
+            if let contentSizeCategory {
+                let customTraitCollection = UITraitCollection(preferredContentSizeCategory: contentSizeCategory)
+                textStorage.applyFontSizeTraitCollection(customTraitCollection)
+            }
+        }
     }
     
     @objc private func tappedPublish() {
