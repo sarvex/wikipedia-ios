@@ -197,6 +197,10 @@ class TalkPageTopicComposeViewController: ViewController {
         updateFonts()
         apply(theme: theme)
         self.title = Self.TopicComposeStrings.navigationBarTitle
+        
+        // Prepopulate wikitext
+        // bodyTextView.text = CommonStrings.obamaWikitext
+        // textViewDidChange(bodyTextView)
     }
     
     override func accessibilityPerformEscape() -> Bool {
