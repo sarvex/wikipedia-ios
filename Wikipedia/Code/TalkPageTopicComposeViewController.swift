@@ -199,8 +199,13 @@ class TalkPageTopicComposeViewController: ViewController {
         self.title = Self.TopicComposeStrings.navigationBarTitle
         
         // Prepopulate wikitext
-        // bodyTextView.text = CommonStrings.obamaWikitext
-        // textViewDidChange(bodyTextView)
+        bodyTextView.text = CommonStrings.obamaWikitext
+        textViewDidChange(bodyTextView)
+        let newPosition = bodyTextView.beginningOfDocument
+        bodyTextView.selectedTextRange = bodyTextView.textRange(from: newPosition, to: newPosition)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.bodyTextView.becomeFirstResponder()
+        }
     }
     
     override func accessibilityPerformEscape() -> Bool {

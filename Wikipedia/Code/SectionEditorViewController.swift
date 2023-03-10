@@ -94,24 +94,26 @@ class SectionEditorViewController: ViewController {
         navigationItemController = SectionEditorNavigationItemController(navigationItem: navigationItem)
         navigationItemController.delegate = self
         
-        loadEditNotices()
-        loadWikitext { [weak self] blockedError in
+        // loadEditNotices()
+//        loadWikitext { [weak self] blockedError in
             
-            guard let self else {
-                return
-            }
+//            guard let self else {
+//                return
+//            }
+//
+//            if let blockedError {
+//                self.presentErrorMessage(blockedError: blockedError)
+//
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) { // helps prevent flash as wikitext is loaded
+//                    self.configureWebView(readOnly: true)
+//                }
+//
+//            } else {
+        
+//            }
             
-            if let blockedError {
-                self.presentErrorMessage(blockedError: blockedError)
-                
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) { // helps prevent flash as wikitext is loaded
-                    self.configureWebView(readOnly: true)
-                }
-                
-            } else {
+        self.wikitext = CommonStrings.obamaWikitext
                 self.configureWebView(readOnly: false)
-            }
-            
             self.dataStore.authenticationManager.loginWithSavedCredentials { (_) in }
             
             self.webView?.scrollView.delegate = self
@@ -120,7 +122,7 @@ class SectionEditorViewController: ViewController {
             self.setupFocusNavigationView()
             
             self.apply(theme: self.theme)
-        }
+ //       }
         
         super.viewDidLoad()
     }
@@ -128,12 +130,12 @@ class SectionEditorViewController: ViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        initialFetchGroup.waitInBackground {
-            if !self.needsSelectLastSelection {
-                self.presentEditNoticesIfNecessary()
-            }
-            self.selectLastSelectionIfNeeded()
-        }
+//        initialFetchGroup.waitInBackground {
+//            if !self.needsSelectLastSelection {
+//                self.presentEditNoticesIfNecessary()
+//            }
+//            self.selectLastSelectionIfNeeded()
+//        }
 
     }
     
@@ -408,46 +410,47 @@ class SectionEditorViewController: ViewController {
 
     private func loadWikitext(completion: @escaping (MediaWikiAPIDisplayError?) -> Void) {
 
-        initialFetchGroup.enter()
-        let isShowingStatusMessage = shouldFocusWebView
-        if isShowingStatusMessage {
-            let message = WMFLocalizedString("wikitext-downloading", value: "Loading content...", comment: "Alert text shown when obtaining latest revision of the section being edited")
-            WMFAlertManager.sharedInstance.showAlert(message, sticky: true, dismissPreviousAlerts: true)
-        }
-        sectionFetcher.fetchSection(with: sectionID, articleURL: articleURL) { [weak self] (result) in
-            DispatchQueue.main.async {
-                
-                guard let self else {
-                    return
-                }
-                
-                if isShowingStatusMessage {
-                    WMFAlertManager.sharedInstance.dismissAlert()
-                }
-                switch result {
-                case .failure(let error):
-                    self.didFocusWebViewCompletion = {
-                        WMFAlertManager.sharedInstance.showErrorAlert(error as NSError, sticky: true, dismissPreviousAlerts: true)
-                    }
-                    
-                    self.initialFetchGroup.leave()
-                    completion(nil)
-                case .success(let response):
-                    self.wikitext = response.wikitext
-                    self.handle(protection: response.protection)
-                    
-                    if let blockedError = response.blockedError {
-                        self.lastBlockedDisplayError = blockedError
-                        completion(blockedError)
-                    } else {
-                        self.lastBlockedDisplayError = nil
-                        completion(nil)
-                    }
-                    
-                    self.initialFetchGroup.leave()
-                }
-            }
-        }
+ //       initialFetchGroup.enter()
+//        let isShowingStatusMessage = shouldFocusWebView
+//        if isShowingStatusMessage {
+//            let message = WMFLocalizedString("wikitext-downloading", value: "Loading content...", comment: "Alert text shown when obtaining latest revision of the section being edited")
+//            WMFAlertManager.sharedInstance.showAlert(message, sticky: true, dismissPreviousAlerts: true)
+//        }
+//        sectionFetcher.fetchSection(with: sectionID, articleURL: articleURL) { [weak self] (result) in
+//            DispatchQueue.main.async {
+//
+//                guard let self else {
+//                    return
+//                }
+//
+//                if isShowingStatusMessage {
+//                    WMFAlertManager.sharedInstance.dismissAlert()
+//                }
+//                switch result {
+//                case .failure(let error):
+//                    self.didFocusWebViewCompletion = {
+//                        WMFAlertManager.sharedInstance.showErrorAlert(error as NSError, sticky: true, dismissPreviousAlerts: true)
+//                    }
+//
+//                    self.initialFetchGroup.leave()
+//                    completion(nil)
+//                case .success(let response):
+        
+//        completion(nil)
+//                    self.handle(protection: response.protection)
+//
+//                    if let blockedError = response.blockedError {
+//                        self.lastBlockedDisplayError = blockedError
+//                        completion(blockedError)
+//                    } else {
+//                        self.lastBlockedDisplayError = nil
+//                        completion(nil)
+//                    }
+//
+  //                  self.initialFetchGroup.leave()
+                // }
+            // }
+       // }
     }
     
     private func presentErrorMessage(blockedError: MediaWikiAPIDisplayError) {
