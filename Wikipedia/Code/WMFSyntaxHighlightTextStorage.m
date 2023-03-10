@@ -48,9 +48,21 @@
     UIFont *boldItalicFont = [UIFont fontWithDescriptor:boldItalicFontDescriptor size:0];
     UIFont *normalFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 
-    NSString *boldItalicRegexStr = @"('{5})[^']*(?:'(?!'''')[^']*)*('{5})";
-    NSString *boldRegexStr = @"('{3})[^']*(?:'(?!'')[^']*)*('{3})";
-    NSString *italicRegexStr = @"('{2})[^']*(?:'(?!')[^']*)*('{2})";
+    NSString *boldItalicRegexStr = @"('{5})([^']*(?:'(?!'''')[^']*)*)('{5})";
+    NSString *boldRegexStr = @"('{3})([^']*(?:'(?!'')[^']*)*)('{3})";
+
+    // Explaining the most complicated example here, others (bold, italic, link) follow a similar pattern
+    // ('{2})       - matches opening ''. Captures in group so it can be orangified.
+    // (            - start of capturing group. The group that will be italisized.
+    // [^']*        - matches any character that isn't a ' zero or more times
+    // (?:          - beginning of non-capturing group
+    // (?<!')'(?!') - matches any ' that are NOT followed or preceded by another ' (so single apostrophes or words like "don't" still get formatted
+    // [^']*        - matches any character that isn't a ' zero or more times
+    // )*           - end of non-capturing group, which can happen zero or more times (i.e. all single apostrophe logic)
+    // )            - end of capturing group. End italisization
+    // ('{2})       - matches ending ''. Captures in group so it can be orangified.
+
+    NSString *italicRegexStr = @"('{2})([^']*(?:(?<!')'(?!')[^']*)*)('{2})";
     NSString *linkRegexStr = @"(\\[{2})[^\\[]*(?:\\[(?!\\[)[^'\\[]*)*(\\]{2})";
 
     NSRegularExpression *boldItalicRegex = [NSRegularExpression regularExpressionWithPattern:boldItalicRegexStr options:0 error:nil];
@@ -91,12 +103,12 @@
                                   options:0
                                     range:searchRange
                                usingBlock:^(NSTextCheckingResult *_Nullable result, NSMatchingFlags flags, BOOL *_Nonnull stop) {
-                                   NSRange matchRange = [result rangeAtIndex:0];
                                    NSRange openingRange = [result rangeAtIndex:1];
-                                   NSRange closingRange = [result rangeAtIndex:2];
+                                   NSRange textRange = [result rangeAtIndex:2];
+                                   NSRange closingRange = [result rangeAtIndex:3];
 
-                                   if (matchRange.location != NSNotFound) {
-                                       [self addAttributes:italicAttributes range:matchRange];
+                                   if (textRange.location != NSNotFound) {
+                                       [self addAttributes:italicAttributes range:textRange];
                                    }
 
                                    if (openingRange.location != NSNotFound) {
@@ -112,12 +124,12 @@
                                 options:0
                                   range:searchRange
                              usingBlock:^(NSTextCheckingResult *_Nullable result, NSMatchingFlags flags, BOOL *_Nonnull stop) {
-                                 NSRange matchRange = [result rangeAtIndex:0];
                                  NSRange openingRange = [result rangeAtIndex:1];
-                                 NSRange closingRange = [result rangeAtIndex:2];
+                                 NSRange textRange = [result rangeAtIndex:2];
+                                 NSRange closingRange = [result rangeAtIndex:3];
 
-                                 if (matchRange.location != NSNotFound) {
-                                     [self addAttributes:boldAttributes range:matchRange];
+                                 if (textRange.location != NSNotFound) {
+                                     [self addAttributes:boldAttributes range:textRange];
                                  }
 
                                  if (openingRange.location != NSNotFound) {
@@ -133,12 +145,18 @@
                                       options:0
                                         range:searchRange
                                    usingBlock:^(NSTextCheckingResult *_Nullable result, NSMatchingFlags flags, BOOL *_Nonnull stop) {
-                                       NSRange matchRange = [result rangeAtIndex:0];
+                                       NSRange fullMatch = [result rangeAtIndex:0];
                                        NSRange openingRange = [result rangeAtIndex:1];
-                                       NSRange closingRange = [result rangeAtIndex:2];
+                                       NSRange textRange = [result rangeAtIndex:2];
+                                       NSRange closingRange = [result rangeAtIndex:3];
 
-                                       if (matchRange.location != NSNotFound) {
-                                           [self addAttributes:boldItalicAttributes range:matchRange];
+                                       // helps to undo attributes from bold and italic single regex above.
+                                       [self removeAttribute:NSFontAttributeName range:result.range];
+                                       [self removeAttribute:NSForegroundColorAttributeName range:result.range];
+                                       [self addAttributes:normalAttributes range:result.range];
+
+                                       if (textRange.location != NSNotFound) {
+                                           [self addAttributes:boldItalicAttributes range:textRange];
                                        }
 
                                        if (openingRange.location != NSNotFound) {
