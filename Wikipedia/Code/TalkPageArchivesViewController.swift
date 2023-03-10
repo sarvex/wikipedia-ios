@@ -67,7 +67,7 @@ class TalkPageArchivesViewController: UIViewController, Themeable, ShiftingTopVi
                 showGenericError()
                 return
             }
-        let vc = TalkPageViewController(theme: observableTheme.theme, viewModel: viewModel)
+        let vc = TalkPageViewController(theme: observableTheme.theme, viewModel: viewModel, dataStore: nil)
             navigationController?.pushViewController(vc, animated: true)
         }
 }

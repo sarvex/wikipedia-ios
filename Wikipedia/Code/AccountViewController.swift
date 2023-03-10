@@ -132,7 +132,7 @@ class AccountViewController: SubSettingsViewController {
             
             if FeatureFlags.needsNewTalkPage {
                 if let viewModel = TalkPageViewModel(pageType: .user, pageTitle: title, siteURL: siteURL, source: .account, articleSummaryController: dataStore.articleSummaryController, authenticationManager: dataStore.authenticationManager, languageLinkController: dataStore.languageLinkController) {
-                    let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel)
+                    let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel, dataStore: dataStore)
                     self.navigationController?.pushViewController(newTalkPage, animated: true)
                 }
             } else {

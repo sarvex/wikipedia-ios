@@ -53,7 +53,7 @@ class ShortDescriptionController: ArticleDescriptionControlling {
     ///   - completion: Completion called when updated section upload call is successful.
     func publishDescription(_ description: String, completion: @escaping (Result<ArticleDescriptionPublishResult, Error>) -> Void) {
         
-        sectionFetcher.fetchSection(with: sectionID, articleURL: articleURL) { [weak self] (result) in
+        sectionFetcher.fetchWikitext(with: sectionID, articleURL: articleURL) { [weak self] (result) in
             
             guard let self = self else {
                 completion(.failure(ShortDescriptionControllerError.missingSelf))
@@ -90,7 +90,7 @@ class ShortDescriptionController: ArticleDescriptionControlling {
         
         // Populate blocked error
         group.enter()
-        sectionFetcher.fetchSection(with: sectionID, articleURL: articleURL) { (result) in
+        sectionFetcher.fetchWikitext(with: sectionID, articleURL: articleURL) { (result) in
             
             defer {
                 group.leave()

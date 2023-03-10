@@ -142,16 +142,24 @@ class TalkPageViewController: ViewController {
             self?.pushToDesktopWeb()
         })
         
+        // TODO: Localize, icon name
+        let editFullTalkPage = UIAction(title: "Edit full talk page", image: UIImage(systemName: "display"), handler: { [weak self] _ in
+            self?.pushToEditor()
+        })
+        
         let submenu = UIMenu(title: String(), options: .displayInline, children: overflowSubmenuActions)
-        let mainMenu = UIMenu(title: String(), children: [openAllAction, revisionHistoryAction, openInWebAction, submenu])
+        let mainMenu = UIMenu(title: String(), children: [openAllAction, revisionHistoryAction, openInWebAction, editFullTalkPage, submenu])
 
         return mainMenu
     }
 
     // MARK: - Lifecycle
 
-    init(theme: Theme, viewModel: TalkPageViewModel) {
+    private let dataStore: MWKDataStore?
+    
+    init(theme: Theme, viewModel: TalkPageViewModel, dataStore: MWKDataStore?) {
         self.viewModel = viewModel
+        self.dataStore = dataStore
         super.init(theme: theme)
     }
     
@@ -471,6 +479,23 @@ class TalkPageViewController: ViewController {
         }
         
         navigate(to: url, useSafari: true)
+    }
+    
+    fileprivate func pushToEditor() {
+        guard let url = viewModel.siteURL.wmf_URL(withPath: "/wiki/\(viewModel.pageTitle)", isMobile: false) else {
+            showGenericError()
+            return
+        }
+        
+        guard let dataStore = dataStore else {
+            return
+        }
+        
+        let sectionEditVC = SectionEditorViewController(articleURL: url, sectionID: nil, dataStore: dataStore, selectedTextEditInfo: nil, theme: theme)
+        sectionEditVC.delegate = self
+        let navigationController = WMFThemeableNavigationController(rootViewController: sectionEditVC, theme: theme)
+        navigationController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        present(navigationController, animated: true)
     }
     
     fileprivate func pushToArchives() {
@@ -1169,5 +1194,26 @@ extension TalkPageViewController: TalkPageTopicReplyOnboardingDelegate {
                 }
             }
         }
+    }
+}
+
+extension TalkPageViewController: SectionEditorViewControllerDelegate {
+    func sectionEditorDidFinishEditing(_ sectionEditor: SectionEditorViewController, result: Result<SectionEditorChanges, Error>) {
+        switch result {
+        case .failure(let error):
+            print(error)
+        case .success(let changes):
+            dismiss(animated: true)
+            // todo: refresh
+        }
+    }
+    
+    func sectionEditorDidCancelEditing(_ sectionEditor: SectionEditorViewController, navigateToURL url: URL?) {
+        dismiss(animated: true)
+        // todo: natigate to url?
+    }
+
+    func sectionEditorDidFinishLoadingWikitext(_ sectionEditor: SectionEditorViewController) {
+        
     }
 }

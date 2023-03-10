@@ -137,7 +137,7 @@ class ViewControllerRouter: NSObject {
                 viewModel.deepLinkData = deepLinkData
             }
             
-            let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel)
+            let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel, dataStore: appViewController.dataStore)
             return presentOrPush(newTalkPage, with: completion)
         case .userTalk(let linkURL):
             if FeatureFlags.needsNewTalkPage {
@@ -152,7 +152,7 @@ class ViewControllerRouter: NSObject {
                     viewModel.deepLinkData = deepLinkData
                 }
                 
-                let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel)
+                let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel, dataStore: appViewController.dataStore)
                 return presentOrPush(newTalkPage, with: completion)
             } else {
                 guard let talkPageVC = TalkPageContainerViewController.userTalkPageContainer(url: linkURL, dataStore: appViewController.dataStore, theme: theme) else {

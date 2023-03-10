@@ -269,17 +269,14 @@ class EditSaveViewController: WMFScrollViewController, Themeable, UITextFieldDel
             savedPagesFunnel?.logEditAttempt(withArticleURL: articleURL)
         }
         
-        guard let sectionID = sectionID else {
-            assertionFailure("Could not get section to be edited")
-            return
-        }
-        
         guard let editURL = articleURL else {
             assertionFailure("Could not get url of section to be edited")
             return
         }
         
-        wikiTextSectionUploader.uploadWikiText(wikitext, forArticleURL: editURL, section: "\(sectionID)", summary: summaryText, isMinorEdit: minorEditToggle.isOn, addToWatchlist: addToWatchlistToggle.isOn, baseRevID: nil, captchaId: captchaViewController?.captcha?.captchaID, captchaWord: captchaViewController?.solution, completion: { (result, error) in
+        let section = sectionID == nil ? nil : String(sectionID!)
+        
+        wikiTextSectionUploader.uploadWikiText(wikitext, forArticleURL: editURL, section: section, summary: summaryText, isMinorEdit: minorEditToggle.isOn, addToWatchlist: addToWatchlistToggle.isOn, baseRevID: nil, captchaId: captchaViewController?.captcha?.captchaID, captchaWord: captchaViewController?.solution, completion: { (result, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     self.handleEditFailure(with: error)

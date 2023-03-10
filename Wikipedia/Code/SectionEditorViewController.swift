@@ -13,7 +13,7 @@ class SectionEditorViewController: ViewController {
 
     weak var delegate: SectionEditorViewControllerDelegate?
     
-    private let sectionID: Int
+    private let sectionID: Int?
     private let articleURL: URL
     private let languageCode: String
     
@@ -73,7 +73,7 @@ class SectionEditorViewController: ViewController {
     private var editConfirmationSavedData: EditSaveViewController.SaveData? = nil
     private var lastBlockedDisplayError: MediaWikiAPIDisplayError?
     
-    init(articleURL: URL, sectionID: Int, messagingController: SectionEditorWebViewMessagingController? = nil, dataStore: MWKDataStore, selectedTextEditInfo: SelectedTextEditInfo? = nil, theme: Theme = Theme.standard) {
+    init(articleURL: URL, sectionID: Int?, messagingController: SectionEditorWebViewMessagingController? = nil, dataStore: MWKDataStore, selectedTextEditInfo: SelectedTextEditInfo? = nil, theme: Theme = Theme.standard) {
         self.articleURL = articleURL
         self.sectionID = sectionID
         self.dataStore = dataStore
@@ -414,7 +414,7 @@ class SectionEditorViewController: ViewController {
             let message = WMFLocalizedString("wikitext-downloading", value: "Loading content...", comment: "Alert text shown when obtaining latest revision of the section being edited")
             WMFAlertManager.sharedInstance.showAlert(message, sticky: true, dismissPreviousAlerts: true)
         }
-        sectionFetcher.fetchSection(with: sectionID, articleURL: articleURL) { [weak self] (result) in
+        sectionFetcher.fetchWikitext(with: sectionID, articleURL: articleURL) { [weak self] (result) in
             DispatchQueue.main.async {
                 
                 guard let self else {
