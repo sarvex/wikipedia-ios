@@ -151,9 +151,9 @@
                                        NSRange closingRange = [result rangeAtIndex:3];
 
                                        // helps to undo attributes from bold and italic single regex above.
-                                       [self removeAttribute:NSFontAttributeName range:result.range];
-                                       [self removeAttribute:NSForegroundColorAttributeName range:result.range];
-                                       [self addAttributes:normalAttributes range:result.range];
+                                       [self removeAttribute:NSFontAttributeName range:fullMatch];
+                                       [self removeAttribute:NSForegroundColorAttributeName range:fullMatch];
+                                       [self addAttributes:normalAttributes range:fullMatch];
 
                                        if (textRange.location != NSNotFound) {
                                            [self addAttributes:boldItalicAttributes range:textRange];
