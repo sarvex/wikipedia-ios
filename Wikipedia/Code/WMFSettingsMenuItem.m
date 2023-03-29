@@ -109,6 +109,7 @@
             return
                 [[WMFSettingsMenuItem alloc] initWithType:type
                                                     title:WMFCommonStrings.readingPreferences
+                                                 iconName:@"settings-appearance"
                                                 iconColor:[UIColor base0]
                                              isSystemIcon: NO
                                            disclosureType:WMFSettingsMenuItemDisclosureType_ViewControllerWithDisclosureText

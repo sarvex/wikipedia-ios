@@ -539,20 +539,6 @@
 		672428982362113900490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
 		672428992362113900490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
 		6724289A2362113A00490629 /* DiffFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672428962362113400490629 /* DiffFetcher.swift */; };
-		672818602899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
-		672818612899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
-		672818622899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
-		672818632899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */; };
-		6728187C289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
-		6728187D289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
-		6728187E289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
-		6728187F289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */; };
-		6728189A289A475100CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 67281899289A475100CD69E3 /* Adyen */; };
-		6728189C289A475100CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189B289A475100CD69E3 /* AdyenComponents */; };
-		6728189E289A484900CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189D289A484900CD69E3 /* Adyen */; };
-		672818A0289A484900CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 6728189F289A484900CD69E3 /* AdyenComponents */; };
-		672818A2289A485500CD69E3 /* Adyen in Frameworks */ = {isa = PBXBuildFile; productRef = 672818A1289A485500CD69E3 /* Adyen */; };
-		672818A4289A485500CD69E3 /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 672818A3289A485500CD69E3 /* AdyenComponents */; };
 		67282FBD24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
 		67282FBE24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
 		67282FBF24855B7B00B73E20 /* ArticleContextMenuPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */; };
@@ -570,6 +556,20 @@
 		672D69AA273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D69A8273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift */; };
 		672D69AB273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D69A8273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift */; };
 		672D69AC273ACAA200B123B3 /* UITabBarAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D69A8273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift */; };
+		672DB84829D4EE90006EB02F /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 672DB84729D4EE90006EB02F /* AdyenComponents */; };
+		672DB84B29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */; };
+		672DB84C29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */; };
+		672DB84D29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */; };
+		672DB84E29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */; };
+		672DB84F29D4EECE006EB02F /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */; };
+		672DB85029D4EECE006EB02F /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */; };
+		672DB85129D4EECE006EB02F /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */; };
+		672DB85229D4EECE006EB02F /* ApplePayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */; };
+		672DB85429D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */; };
+		672DB85529D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */; };
+		672DB85629D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */; };
+		672DB85729D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */; };
+		672DB85929D4EF8B006EB02F /* AdyenComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 672DB85829D4EF8B006EB02F /* AdyenComponents */; };
 		672F0558222F24FB00FB1084 /* IconBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F0557222F24FB00FB1084 /* IconBarButtonItem.swift */; };
 		6730FD0E28998EFD000E5F40 /* TalkPageReplyComposeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730FD0D28998EFD000E5F40 /* TalkPageReplyComposeContentView.swift */; };
 		6730FD0F28998EFD000E5F40 /* TalkPageReplyComposeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730FD0D28998EFD000E5F40 /* TalkPageReplyComposeContentView.swift */; };
@@ -633,14 +633,14 @@
 		675175DE276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675175DB276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift */; };
 		675175DF276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675175DB276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift */; };
 		67540CA924D221E3008B2894 /* LocationManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67540CA824D221E3008B2894 /* LocationManagerFactory.swift */; };
-        675FE07B288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
-		675FE07C288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
-		675FE07D288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
-		675FE07E288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };=
 		6754E44922773587005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
 		6754E44A22773587005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
 		6754E44B22773588005EEAD1 /* OldTalkPageReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6734116F22773122005B31DA /* OldTalkPageReplyCell.swift */; };
 		675A7CFE227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A7CFD227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift */; };
+		675FE07B288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
+		675FE07C288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
+		675FE07D288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
+		675FE07E288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */; };
 		676070A2227CE60800A81F09 /* TalkPageReplyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676070A1227CE60800A81F09 /* TalkPageReplyFooterView.swift */; };
 		676070A42280987C00A81F09 /* TalkPageTopicNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 676070A32280987C00A81F09 /* TalkPageTopicNewViewController.xib */; };
 		676070A52280D72400A81F09 /* TalkPageTopicNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 676070A32280987C00A81F09 /* TalkPageTopicNewViewController.xib */; };
@@ -962,10 +962,6 @@
 		67B64D5D2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B64D5B2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift */; };
 		67B64D5E2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B64D5B2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift */; };
 		67B64D5F2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B64D5B2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift */; };
-		67C5756F2878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
-		67C575702878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
-		67C575712878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
-		67C575722878A2E100C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
 		67B7E77E2988777A00708A81 /* MediaWikiApiErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7E7792988768C00708A81 /* MediaWikiApiErrors.swift */; };
 		67BEFFD528AD9DF000606B38 /* TalkPageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BEFFD428AD9DF000606B38 /* TalkPageType.swift */; };
 		67BEFFD628AD9DF000606B38 /* TalkPageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BEFFD428AD9DF000606B38 /* TalkPageType.swift */; };
@@ -976,6 +972,10 @@
 		67C1757728AD4D6000C5ABA4 /* TalkPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1757528AD4D6000C5ABA4 /* TalkPageDataController.swift */; };
 		67C1757828AD4D6000C5ABA4 /* TalkPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1757528AD4D6000C5ABA4 /* TalkPageDataController.swift */; };
 		67C1757928AD4D6000C5ABA4 /* TalkPageDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1757528AD4D6000C5ABA4 /* TalkPageDataController.swift */; };
+		67C5756F2878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
+		67C575702878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
+		67C575712878A2E000C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
+		67C575722878A2E100C3BF70 /* ApplePayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */; };
 		67C6F74E27E2919B00B9C864 /* RemoteNotificationsModelController+TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6F74D27E2919A00B9C864 /* RemoteNotificationsModelController+TestExtensions.swift */; };
 		67C6F75027E293C700B9C864 /* NotificationsCenterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6F74F27E293C700B9C864 /* NotificationsCenterViewModelTests.swift */; };
 		67C6F76827E2E76E00B9C864 /* NotificationsCenterCellViewModelUserTalkMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6F76727E2E76E00B9C864 /* NotificationsCenterCellViewModelUserTalkMessageTests.swift */; };
@@ -4227,13 +4227,14 @@
 		672034E227A2531F007DC24F /* RemoteNotificationsReauthenticateOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsReauthenticateOperation.swift; sourceTree = "<group>"; };
 		672034E427A2600C007DC24F /* RemoteNotificationsProjectOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsProjectOperation.swift; sourceTree = "<group>"; };
 		672428962362113400490629 /* DiffFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffFetcher.swift; sourceTree = "<group>"; };
-		6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdyenApplePayPaymentHandler.swift; sourceTree = "<group>"; };
-		6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHostingController.swift; sourceTree = "<group>"; };
 		67282FBC24855B7B00B73E20 /* ArticleContextMenuPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContextMenuPresenting.swift; sourceTree = "<group>"; };
 		672B127722A450F000CC85A5 /* OldTalkPageHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OldTalkPageHeaderView.xib; sourceTree = "<group>"; };
 		672C35EA22D8E7C9007B8D46 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		672D69A3273ABD3600B123B3 /* UINavigationBarAppearance+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBarAppearance+Extensions.swift"; sourceTree = "<group>"; };
 		672D69A8273ACAA100B123B3 /* UITabBarAppearance+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarAppearance+Extensions.swift"; sourceTree = "<group>"; };
+		672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayPaymentHandler.swift; sourceTree = "<group>"; };
+		672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayHostingController.swift; sourceTree = "<group>"; };
+		672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdyenApplePayPaymentHandler.swift; sourceTree = "<group>"; };
 		672F0557222F24FB00FB1084 /* IconBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBarButtonItem.swift; sourceTree = "<group>"; };
 		6730FD0D28998EFD000E5F40 /* TalkPageReplyComposeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageReplyComposeContentView.swift; sourceTree = "<group>"; };
 		6734114F22700A95005B31DA /* TalkPageControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageControllerTests.swift; sourceTree = "<group>"; };
@@ -4252,8 +4253,8 @@
 		674E8AB82382DEFF0053D206 /* DiffTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffTransformer.swift; sourceTree = "<group>"; };
 		675175DB276D3B9700CD2974 /* DisappearingCallbackNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisappearingCallbackNavigationController.swift; sourceTree = "<group>"; };
 		67540CA824D221E3008B2894 /* LocationManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerFactory.swift; sourceTree = "<group>"; };
-		675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WMFSettingsViewController+ApplePay.swift"; sourceTree = "<group>"; };
 		675A7CFD227A3F7C0034D9D9 /* OldTalkPageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTalkPageHeaderView.swift; sourceTree = "<group>"; };
+		675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WMFSettingsViewController+ApplePay.swift"; sourceTree = "<group>"; };
 		676070A1227CE60800A81F09 /* TalkPageReplyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageReplyFooterView.swift; sourceTree = "<group>"; };
 		676070A32280987C00A81F09 /* TalkPageTopicNewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkPageTopicNewViewController.xib; sourceTree = "<group>"; };
 		6761AED82704BA3800E47BAD /* RemoteNotification+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteNotification+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -4358,11 +4359,11 @@
 		67B5333B28416A3B00C33E13 /* UserDataExportCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataExportCache.swift; sourceTree = "<group>"; };
 		67B64D562507DE3E00FA27F3 /* ArticleAsLivingDocSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAsLivingDocSectionHeaderView.swift; sourceTree = "<group>"; };
 		67B64D5B2507E9FD00FA27F3 /* ArticleAsLivingDocSmallEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAsLivingDocSmallEventCollectionViewCell.swift; sourceTree = "<group>"; };
-		67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTextField.swift; sourceTree = "<group>"; };
 		67B7E7792988768C00708A81 /* MediaWikiApiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWikiApiErrors.swift; sourceTree = "<group>"; };
 		67BEFFD428AD9DF000606B38 /* TalkPageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageType.swift; sourceTree = "<group>"; };
 		67BEFFD928AEDF3600606B38 /* WikimediaProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikimediaProject.swift; sourceTree = "<group>"; };
 		67C1757528AD4D6000C5ABA4 /* TalkPageDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageDataController.swift; sourceTree = "<group>"; };
+		67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayTextField.swift; sourceTree = "<group>"; };
 		67C6F74D27E2919A00B9C864 /* RemoteNotificationsModelController+TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteNotificationsModelController+TestExtensions.swift"; sourceTree = "<group>"; };
 		67C6F74F27E293C700B9C864 /* NotificationsCenterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCenterViewModelTests.swift; sourceTree = "<group>"; };
 		67C6F76727E2E76E00B9C864 /* NotificationsCenterCellViewModelUserTalkMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCenterCellViewModelUserTalkMessageTests.swift; sourceTree = "<group>"; };
@@ -5828,10 +5829,9 @@
 			files = (
 				D844D9731D6CB2600042D692 /* WMF.framework in Frameworks */,
 				83AF34F724D3341E000046D6 /* BackgroundTasks.framework in Frameworks */,
-				6728189C289A475100CD69E3 /* AdyenComponents in Frameworks */,
+				672DB84829D4EE90006EB02F /* AdyenComponents in Frameworks */,
 				67359894299ED915002EE8D1 /* Components in Frameworks */,
 				D8D553621DF1B63200B90177 /* QuartzCore.framework in Frameworks */,
-				6728189A289A475100CD69E3 /* Adyen in Frameworks */,
 				D4E6D9121A5C65F9004916C1 /* CoreData.framework in Frameworks */,
 				D499143B181D51DE00E6073C /* CoreGraphics.framework in Frameworks */,
 				D499143D181D51DE00E6073C /* UIKit.framework in Frameworks */,
@@ -5886,10 +5886,8 @@
 			files = (
 				D8CE262C1E698E2400DAE2E0 /* WMF.framework in Frameworks */,
 				83AF34F924D33432000046D6 /* BackgroundTasks.framework in Frameworks */,
-				672818A4289A485500CD69E3 /* AdyenComponents in Frameworks */,
 				67359898299EDA72002EE8D1 /* Components in Frameworks */,
 				D8CE26201E698E2400DAE2E0 /* QuartzCore.framework in Frameworks */,
-				672818A2289A485500CD69E3 /* Adyen in Frameworks */,
 				D8CE262B1E698E2400DAE2E0 /* CoreData.framework in Frameworks */,
 				D8CE262E1E698E2400DAE2E0 /* CoreGraphics.framework in Frameworks */,
 				D8CE26321E698E2400DAE2E0 /* UIKit.framework in Frameworks */,
@@ -5904,10 +5902,9 @@
 			files = (
 				D8EC3F2E1E9BDA35006712EB /* WMF.framework in Frameworks */,
 				83AF34F824D33428000046D6 /* BackgroundTasks.framework in Frameworks */,
-				672818A0289A484900CD69E3 /* AdyenComponents in Frameworks */,
+				672DB85929D4EF8B006EB02F /* AdyenComponents in Frameworks */,
 				67359896299EDA6C002EE8D1 /* Components in Frameworks */,
 				D8EC3F241E9BDA35006712EB /* QuartzCore.framework in Frameworks */,
-				6728189E289A484900CD69E3 /* Adyen in Frameworks */,
 				D8EC3F2D1E9BDA35006712EB /* CoreData.framework in Frameworks */,
 				D8EC3F301E9BDA35006712EB /* CoreGraphics.framework in Frameworks */,
 				D8EC3F341E9BDA35006712EB /* UIKit.framework in Frameworks */,
@@ -8714,16 +8711,16 @@
 				BC45D59F1C33018C007C72F3 /* User */,
 				B0524B0121484F1F00D8FD8D /* Description Editing */,
 				0E26B0541C0E28E60004D687 /* Welcome */,
-				836BF56D2869F9C200B98321 /* TalkPageViewController.swift */,
 				677A65EB28768324001B9145 /* CustomUIHostingController.swift */,
+				672DB84A29D4EECE006EB02F /* ApplePayHostingController.swift */,
+				672DB84929D4EECE006EB02F /* ApplePayPaymentHandler.swift */,
+				672DB85329D4EF37006EB02F /* AdyenApplePayPaymentHandler.swift */,
 				675FE07A288FA10500EE8E72 /* WMFSettingsViewController+ApplePay.swift */,
 				67647AD32878E5CC00384488 /* LongTestingListView.swift */,
 				677A65F0287684D0001B9145 /* ApplePayContentView.swift */,
 				67C5756E2878A2E000C3BF70 /* ApplePayTextField.swift */,
 				67647ACE2878E21A00384488 /* ApplePayDonateButton.swift */,
 				67647AD8287C72AC00384488 /* ApplePayPaymentHandler.swift */,
-				6728185F2899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift */,
-				6728187B289A1EB800CD69E3 /* ApplePayHostingController.swift */,
 				00D1F58D28885B8200127169 /* Talk Pages */,
 			);
 			name = Features;
@@ -10153,9 +10150,8 @@
 			);
 			name = Wikipedia;
 			packageProductDependencies = (
-				67281899289A475100CD69E3 /* Adyen */,
-				6728189B289A475100CD69E3 /* AdyenComponents */,
 				67359893299ED915002EE8D1 /* Components */,
+				672DB84729D4EE90006EB02F /* AdyenComponents */,
 			);
 			productName = "Wikipedia-iOS";
 			productReference = D4991435181D51DE00E6073C /* Wikipedia.app */;
@@ -10279,8 +10275,6 @@
 			);
 			name = Experimental;
 			packageProductDependencies = (
-				672818A1289A485500CD69E3 /* Adyen */,
-				672818A3289A485500CD69E3 /* AdyenComponents */,
 				67359897299EDA72002EE8D1 /* Components */,
 			);
 			productName = "Wikipedia-iOS";
@@ -10307,9 +10301,8 @@
 			);
 			name = Staging;
 			packageProductDependencies = (
-				6728189D289A484900CD69E3 /* Adyen */,
-				6728189F289A484900CD69E3 /* AdyenComponents */,
 				67359895299EDA6C002EE8D1 /* Components */,
+				672DB85829D4EF8B006EB02F /* AdyenComponents */,
 			);
 			productName = "Wikipedia-iOS";
 			productReference = D8EC3FB41E9BDA35006712EB /* Staging.app */;
@@ -10561,8 +10554,8 @@
 			mainGroup = D499142C181D51DE00E6073C;
 			packageReferences = (
 				67A770C6251BFE0400F94EF9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
-				67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */,
 				67359892299ED915002EE8D1 /* XCRemoteSwiftPackageReference "wikipedia-ios-components" */,
+				672DB84629D4EE90006EB02F /* XCRemoteSwiftPackageReference "adyen-ios" */,
 			);
 			productRefGroup = D4991436181D51DE00E6073C /* Products */;
 			projectDirPath = "";
@@ -11575,7 +11568,6 @@
 				D84BF62F1DBE616D00E0C85E /* UIViewController+WMFAlerts.swift in Sources */,
 				83023C1F20E6584F00EC7592 /* SearchTransition.swift in Sources */,
 				67CEF263235110F700D5CA6C /* DiffNetworkModels.swift in Sources */,
-				6728187C289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				7A23CECF211A24FC00441A79 /* FeedFunnel.swift in Sources */,
 				679A23FE2968DAB9008D7686 /* ShiftingTopView.swift in Sources */,
 				7AC19E322301EF7D00E25B83 /* PageHistoryFilterCountsViewController.swift in Sources */,
@@ -11724,6 +11716,7 @@
 				B09B03ED1CE0FB4200009083 /* PageHistorySection.swift in Sources */,
 				D8B166851FD97A0500097D8B /* ViewController.swift in Sources */,
 				7AB809D022675B2300BFAB7C /* ThemeableTextView.swift in Sources */,
+				672DB84B29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */,
 				83A642752226CCF1004A1796 /* SwiftKVOCrashWorkaround.swift in Sources */,
 				677A65EC28768324001B9145 /* CustomUIHostingController.swift in Sources */,
 				B0C7A07A1F710E75008415E7 /* WMFWelcomeExplorationAnimationBackgroundView.swift in Sources */,
@@ -11823,6 +11816,7 @@
 				7A8422532268DA2C0074648E /* InsertMediaSearchResultPreviewingViewController.swift in Sources */,
 				B0BCF0B9202537D800986F72 /* Panels.swift in Sources */,
 				67C6F7A127E8C7C500B9C864 /* NotificationsCenterCommonViewModel+ActionExtensions.swift in Sources */,
+				672DB84F29D4EECE006EB02F /* ApplePayHostingController.swift in Sources */,
 				D8E27BA61F82B38500F9D2B3 /* RMessage.m in Sources */,
 				678D79F0235E5979006161FF /* DiffListChangeViewModel.swift in Sources */,
 				B0E8031C1C0CD6820065EBC0 /* WMFCompassView.m in Sources */,
@@ -11912,6 +11906,7 @@
 				B0E805551C0CE0DC0065EBC0 /* UIView+IBExtras.swift in Sources */,
 				00BCB71826DEE04D002C3F72 /* InsetLabelView.swift in Sources */,
 				6782DB912343B6F9003FA21B /* DiffContainerViewController.swift in Sources */,
+				672DB85429D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */,
 				D8E6FF7C2405AAC400686272 /* ArticleViewController+Analytics.swift in Sources */,
 				D818D3861ED750E40076110D /* ArticleCollectionViewController.swift in Sources */,
 				B0E805961C0CE2C60065EBC0 /* WMFHamburgerMenuFunnel.m in Sources */,
@@ -12067,7 +12062,6 @@
 				8330532923EF0B4200123141 /* ArticleViewController+Media.swift in Sources */,
 				B09705B4236B29D7006FDB5C /* DiffThanker.swift in Sources */,
 				67DAEDD927E8DCBF005CF9B6 /* NotificationsCenterDetailViewModel+TextExtensions.swift in Sources */,
-				672818602899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				B09B03F51CE0FB7700009083 /* ReadingThemesControlsViewController.swift in Sources */,
 				00BCB71D26DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				B0E8036F1C0CD99A0065EBC0 /* TableOfContentsPresentationController.swift in Sources */,
@@ -12563,7 +12557,6 @@
 				7A23CED3211A24FF00441A79 /* FeedFunnel.swift in Sources */,
 				677129A324FFF43000E89CA5 /* ArticleAsLivingDocHorizontallyScrollingCell.swift in Sources */,
 				83DAA9B323FEB611002D5716 /* ReferenceBackLinksViewController.swift in Sources */,
-				6728187F289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D8A42A751E815A9C00D8E281 /* UIViewController+WMFAlerts.swift in Sources */,
 				679A24012968DAB9008D7686 /* ShiftingTopView.swift in Sources */,
 				7A49A20421231510005C574C /* CollectionViewFooter.swift in Sources */,
@@ -12712,6 +12705,7 @@
 				D8A47C9223D7338C002AA823 /* ArticleViewController+TableOfContents.swift in Sources */,
 				6782DBD02343FDF2003FA21B /* DiffListUneditedCell.swift in Sources */,
 				7AB809D322675B2300BFAB7C /* ThemeableTextView.swift in Sources */,
+				672DB84E29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */,
 				677A65EF28768324001B9145 /* CustomUIHostingController.swift in Sources */,
 				D8A42AC41E815A9C00D8E281 /* TableOfContentsViewController.swift in Sources */,
 				67D9D1FE29711CA700BFCD4F /* Loadable.swift in Sources */,
@@ -12811,6 +12805,7 @@
 				D8A42AFC1E815A9C00D8E281 /* WMFCompassView.m in Sources */,
 				D8A42AFD1E815A9C00D8E281 /* WMFWelcomeIntroductionViewController.swift in Sources */,
 				67C6F7A427E8C7C500B9C864 /* NotificationsCenterCommonViewModel+ActionExtensions.swift in Sources */,
+				672DB85229D4EECE006EB02F /* ApplePayHostingController.swift in Sources */,
 				678D79F3235E5979006161FF /* DiffListChangeViewModel.swift in Sources */,
 				B0BCF0BC202537D800986F72 /* Panels.swift in Sources */,
 				6782DBCA2343FDE4003FA21B /* DiffListContextCell.swift in Sources */,
@@ -12900,6 +12895,7 @@
 				00BCB71B26DEE11C002C3F72 /* InsetLabelView.swift in Sources */,
 				D8A42B421E815A9C00D8E281 /* WMFRevisionQueryResults.m in Sources */,
 				D8A42B431E815A9C00D8E281 /* WMFAppViewController.m in Sources */,
+				672DB85729D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */,
 				D8C4D3DB1FD5D9260089CEC2 /* TUSafariActivity.m in Sources */,
 				B0845E1420618DA400CDD98E /* SavedProgressViewController.swift in Sources */,
 				6782DB942343B6F9003FA21B /* DiffContainerViewController.swift in Sources */,
@@ -13055,7 +13051,6 @@
 				D8A42B8F1E815A9C00D8E281 /* TableOfContentsPresentationController.swift in Sources */,
 				8330532C23EF0B4200123141 /* ArticleViewController+Media.swift in Sources */,
 				67DAEDDC27E8DCBF005CF9B6 /* NotificationsCenterDetailViewModel+TextExtensions.swift in Sources */,
-				672818632899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				B09705B7236B29D7006FDB5C /* DiffThanker.swift in Sources */,
 				00BCB72026DEE1C7002C3F72 /* VerticalSpacerView.swift in Sources */,
 				D8A42B921E815A9C00D8E281 /* WMFLoginViewController.swift in Sources */,
@@ -13179,6 +13174,7 @@
 				7A9524D822669A8B00C55CDC /* InsertMediaSettingsButtonView.swift in Sources */,
 				67BEFFD728AD9DF000606B38 /* TalkPageType.swift in Sources */,
 				678E7E8326432F060005439C /* NavigationEventsFunnel.swift in Sources */,
+				672DB85629D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */,
 				FF2B2112254B7D6A0009E61A /* ActivityIndicatorCollectionViewFooter.swift in Sources */,
 				8351CE7920D4424100E32FC1 /* CollectionViewHeader.swift in Sources */,
 				7A20AE092057F39C005FB5DF /* UIView+Identifier.swift in Sources */,
@@ -13270,8 +13266,8 @@
 				679A23FB2968D865008D7686 /* ShiftingTopViewsData.swift in Sources */,
 				7AA96D5D21B733A800DE9877 /* TextFormattingProvidingTableViewController.swift in Sources */,
 				B0B423621EF9D6A300D3DC4C /* OnThisDayViewController.swift in Sources */,
-				6728187E289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D818D3871ED750E40076110D /* ArticleCollectionViewController.swift in Sources */,
+				672DB85129D4EECE006EB02F /* ApplePayHostingController.swift in Sources */,
 				00CB689A288B0CD3002EBB0A /* TalkPageHeaderView.swift in Sources */,
 				7A203F0C1FDEDCDD00A229EC /* ReadingListHintController.swift in Sources */,
 				D8CE25371E698E2400DAE2E0 /* SavedPagesFunnel.m in Sources */,
@@ -13592,7 +13588,6 @@
 				83C06884292EC85700DF1403 /* TalkPageFormattingToolbarView.swift in Sources */,
 				00E5B3A628EB8E4F00D2C51A /* TalkPageTopicReplyOnboardingHostingController.swift in Sources */,
 				7A9F061A2266432200856321 /* InsertMediaSettingsTextTableViewCell.swift in Sources */,
-				672818622899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				D8CE25EA1E698E2400DAE2E0 /* WMFForgotPasswordViewController.swift in Sources */,
 				67647AD62878E5CC00384488 /* LongTestingListView.swift in Sources */,
 				D8E6FF6824054FA100686272 /* ArticleViewController+LinkPreviewing.swift in Sources */,
@@ -13601,6 +13596,7 @@
 				00474A3128DD1B13002E3C09 /* TalkPageCoffeeRollView.swift in Sources */,
 				00EACEC828E39D470054DDB4 /* TalkPageEmptyView.swift in Sources */,
 				D8CE25EC1E698E2400DAE2E0 /* WMFImageGalleryViewController.m in Sources */,
+				672DB84D29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */,
 				7AF0265722985CB9000E0A06 /* BeKindInputAccessoryView.swift in Sources */,
 				00E75B6927EB927B00A45B78 /* NotificationsCenterDetailActionCell.swift in Sources */,
 				67DAEDA423CE24DA003AA208 /* SavedArticlesFetcher.swift in Sources */,
@@ -13793,6 +13789,7 @@
 				7A9524D922669A8B00C55CDC /* InsertMediaSettingsButtonView.swift in Sources */,
 				67BEFFD628AD9DF000606B38 /* TalkPageType.swift in Sources */,
 				678E7E8226432F060005439C /* NavigationEventsFunnel.swift in Sources */,
+				672DB85529D4EF38006EB02F /* AdyenApplePayPaymentHandler.swift in Sources */,
 				FF2B2111254B7D6A0009E61A /* ActivityIndicatorCollectionViewFooter.swift in Sources */,
 				83023C2120E6584F00EC7592 /* SearchTransition.swift in Sources */,
 				D8EC3DF61E9BDA35006712EB /* NSDate+WMFPOTDTitle.m in Sources */,
@@ -13884,8 +13881,8 @@
 				679A23FA2968D865008D7686 /* ShiftingTopViewsData.swift in Sources */,
 				7A0CD24221DFA34100066F68 /* TextFormattingToolbarView.swift in Sources */,
 				D8EC3E251E9BDA35006712EB /* WMFArticleRevisionFetcher.m in Sources */,
-				6728187D289A1EB800CD69E3 /* ApplePayHostingController.swift in Sources */,
 				D8EC3E261E9BDA35006712EB /* WMFArticleLanguagesSectionHeader.m in Sources */,
+				672DB85029D4EECE006EB02F /* ApplePayHostingController.swift in Sources */,
 				00CB6899288B0CD3002EBB0A /* TalkPageHeaderView.swift in Sources */,
 				7A29A5CA1F6C405900E8F42B /* HistoryViewController.swift in Sources */,
 				7AA96D5E21B733A800DE9877 /* TextFormattingProvidingTableViewController.swift in Sources */,
@@ -14206,7 +14203,6 @@
 				83C06883292EC85700DF1403 /* TalkPageFormattingToolbarView.swift in Sources */,
 				00E5B3A528EB8E4F00D2C51A /* TalkPageTopicReplyOnboardingHostingController.swift in Sources */,
 				7A2BB1D621F27AC5004C0FDF /* WKWebView+OffsetHack.swift in Sources */,
-				672818612899F7A400CD69E3 /* AdyenApplePayPaymentHandler.swift in Sources */,
 				FF92187C252F7EA300C39A8F /* ThanksGiving.swift in Sources */,
 				67647AD52878E5CC00384488 /* LongTestingListView.swift in Sources */,
 				D8E6FF6924054FA100686272 /* ArticleViewController+LinkPreviewing.swift in Sources */,
@@ -14215,6 +14211,7 @@
 				00474A3028DD1B13002E3C09 /* TalkPageCoffeeRollView.swift in Sources */,
 				00EACEC728E39D470054DDB4 /* TalkPageEmptyView.swift in Sources */,
 				B0F9299C1F84789D002A0788 /* WMFWelcomeInitialViewController.swift in Sources */,
+				672DB84C29D4EECE006EB02F /* ApplePayPaymentHandler.swift in Sources */,
 				6747118925072D1500287951 /* IconTitleBadge.swift in Sources */,
 				00E75B6827EB927B00A45B78 /* NotificationsCenterDetailActionCell.swift in Sources */,
 				7AF0265822985CB9000E0A06 /* BeKindInputAccessoryView.swift in Sources */,
@@ -20261,13 +20258,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */ = {
+		672DB84629D4EE90006EB02F /* XCRemoteSwiftPackageReference "adyen-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Adyen/adyen-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-        };
+				kind = exactVersion;
+				version = 4.8.0;
+			};
+		};
 		67359892299ED915002EE8D1 /* XCRemoteSwiftPackageReference "wikipedia-ios-components" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wikimedia/wikipedia-ios-components.git";
@@ -20287,36 +20285,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		67281899289A475100CD69E3 /* Adyen */ = {
+		672DB84729D4EE90006EB02F /* AdyenComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
-			productName = Adyen;
-		};
-		6728189B289A475100CD69E3 /* AdyenComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			package = 672DB84629D4EE90006EB02F /* XCRemoteSwiftPackageReference "adyen-ios" */;
 			productName = AdyenComponents;
 		};
-		6728189D289A484900CD69E3 /* Adyen */ = {
+		672DB85829D4EF8B006EB02F /* AdyenComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
-			productName = Adyen;
-		};
-		6728189F289A484900CD69E3 /* AdyenComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
+			package = 672DB84629D4EE90006EB02F /* XCRemoteSwiftPackageReference "adyen-ios" */;
 			productName = AdyenComponents;
 		};
-		672818A1289A485500CD69E3 /* Adyen */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
-			productName = Adyen;
-		};
-		672818A3289A485500CD69E3 /* AdyenComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67281898289A475100CD69E3 /* XCRemoteSwiftPackageReference "adyen-ios" */;
-			productName = AdyenComponents;
-        };
 		67359893299ED915002EE8D1 /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 67359892299ED915002EE8D1 /* XCRemoteSwiftPackageReference "wikipedia-ios-components" */;
