@@ -16,10 +16,6 @@
 "about-title" = "Heqa";
 "about-translators" = "Çarnayoği";
 "about-wikipedia" = "Wikipediya";
-"abuse-filter-disallow-heading" = "Şıma nêşenê nê vurnayışi pêl derê";
-"abuse-filter-warning-blanking" = "Qısımi ya zi meqaleyi esterıti";
-"abuse-filter-warning-caps" = "Metın be herfanê gırdan ra";
-"abuse-filter-warning-spam" = "Spam kerd be meqaleyan";
 "account-creation-log-in" = "Cı kewe.";
 "account-creation-logging-in" = "Kewno cı...";
 "account-creation-saving" = "Qeyd beno...";
@@ -53,6 +49,7 @@
 "compass-direction" = "Hettê seate $1 ya";
 "description-help-tips-for-example" = " Mesela :";
 "diff-context-lines-collapsed-button-title" = "Bımocne";
+"diff-context-lines-expanded-button-title" = "Bınımne";
 "edit-bold-accessibility-label" = "Formatê qalındi cı ke";
 "edit-bold-remove-accessibility-label" = "Formatê qalındi wedare";
 "edit-decrease-indent-depth-accessibility-label" = "Xoriyiya cıkerdışi kemi ke";
@@ -135,7 +132,6 @@
 "page-history-revision-author-accessibility-label" = "Nuştekar: $1";
 "page-history-revision-comment-accessibility-label" = "Mışewre $1";
 "page-history-revision-minor-edit-accessibility-label" = "Vurriyayışo werdi";
-"rank-accessibility-label" = "Numre $1";
 "reading-list-create-new-list-description" = "Şınasnayış";
 "reading-list-entry-limit-exceeded-title" = "Sinorê yew hesabi ra {{PLURAL:$1|$1 meqale vêrd|$1 meqaleyi vêrdi}} ra.";
 "reading-list-list-limit-exceeded-title" = "Sinorê yew hesabi ra {{PLURAL:$1|$1 lista wendışi vêrde|$1 listeyê wendışi vêrdi}} ra.";
@@ -179,8 +175,6 @@
 "talk-page-topic-title" = "Werênayış";
 "theme-light-display-name" = "Akerde";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipediya";
-"top-read-header-with-language" = "$1 Wikipediya";
 "welcome-explore-continue-button" = "Dest pêke";
 "wikitext-downloading" = "Zerreko beno bar...";
 "wikitext-preview-changes" = "Verqaytê vıriyayış dê şıma yo arêno...";

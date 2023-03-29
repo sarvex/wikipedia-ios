@@ -44,12 +44,6 @@
 "about-translators-details" = "Μεταφράζεται από εθελοντές στο $1";
 "about-wikimedia-foundation" = "Ίδρυμα Wikimedia";
 "about-wikipedia" = "Βικιπαίδεια";
-"abuse-filter-disallow-heading" = "Δεν μπορείτε να αποθηκεύσετε αυτή την επεξεργασία.";
-"abuse-filter-disallow-unconstructive" = "Ένα αυτόματο φίλτρο έχει αναγνωρίσει αυτή την επεξεργασία ως πιθανώς μη εποικοδομητική ή ως προσπάθεια βανδαλισμού. Παρακαλούμε πηγαίνετε πίσω και αλλάξτε την επεξεργασία σας.";
-"abuse-filter-warning-caps" = "Όλο το κείμενο με κεφαλαία";
-"abuse-filter-warning-heading" = "Αυτή μπορεί να είναι μια μη εποικοδομητική επεξεργασία, είσαι σίγουρος ότι θέλεις να την δημοσιεύσεις;";
-"abuse-filter-warning-repeat" = "Επαναλαμβανόμενοι χαρακτήρες";
-"abuse-filter-warning-subheading" = "Η επεξεργασία σας μπορεί να περιέχει:";
 "account-creation-captcha-cannot-see-image" = "Δεν μπορείτε να δείτε την εικόνα; $1";
 "account-creation-captcha-obtaining" = "Λήψη νέου CAPTCHA...";
 "account-creation-captcha-request-account" = "Αίτημα λογαριασμού.";
@@ -362,8 +356,6 @@
 "places-unknown-distance" = "Άγνωστη απόσταση";
 "potd-description-prefix" = "Εικόνα της ημέρας για το $1";
 "preference-title-eventlogging-opt-in" = "Στείλτε εκθέσεις χρήσης";
-"rank-accessibility-label" = "Αριθμός $1";
-"readers-accessibility-label" = "$1 αναγνώστες";
 "reading-list-add-hint-title" = "Προσθήκη του \"$1\" σε μια λίστα ανάνγωσης;";
 "reading-list-add-saved-button-title" = "Ναι, πρόσθεσέ τα στις λίστες ανάγνωσής μου";
 "reading-list-add-saved-title" = "Αποθηκευμένα λήμματα που βρέθηκαν";
@@ -474,9 +466,6 @@
 "theme-dark-display-name" = "Σκούρο";
 "theme-default-display-name" = "Προεπιλογή";
 "theme-sepia-display-name" = "Σέπια";
-"top-read-header-generic" = "Βικιπαίδεια";
-"top-read-header-with-language" = "$1 Βικιπαίδεια";
-"top-read-see-more" = "Δείτε περισσότερα κορυφαία αναγνωσμένα άρθρα";
 "two-factor-login-continue" = "Συνεχίστε την σύνδεσή σας";
 "two-factor-login-title" = "Συνδεθείτε στο λογαριασμό σας.";
 "two-factor-login-with-backup-code" = "Χρησιμοποιήστε έναν από τους κωδικούς ασφαλείας σας";

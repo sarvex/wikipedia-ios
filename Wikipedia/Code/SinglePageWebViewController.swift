@@ -17,10 +17,9 @@ class SinglePageWebViewController: ViewController {
         self.doesUseSimpleNavigationBar = doesUseSimpleNavigationBar
         super.init()
         self.theme = theme
-        if #available(iOS 14.0, *) {
-            self.navigationItem.backButtonTitle = url.lastPathComponent
-            self.navigationItem.backButtonDisplayMode = .generic
-        }
+        
+        self.navigationItem.backButtonTitle = url.lastPathComponent
+        self.navigationItem.backButtonDisplayMode = .generic
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -104,7 +103,9 @@ class SinglePageWebViewController: ViewController {
             return true
         }
     
-        navigate(to: actionURL)
+        let userInfo: [AnyHashable : Any] = [RoutingUserInfoKeys.source: RoutingUserInfoSourceValue.inAppWebView.rawValue]
+        navigate(to: actionURL, userInfo: userInfo)
+        
         return false
     }
     
@@ -141,10 +142,17 @@ extension SinglePageWebViewController: WKNavigationDelegate {
         }
         decisionHandler(.allow, preferences)
     }
+
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        DDLogError("Error loading single page - did fail provisional navigation: \(error)")
+        WMFAlertManager.sharedInstance.showErrorAlert(error as NSError, sticky: false, dismissPreviousAlerts: true)
+        fakeProgressController.finish()
+    }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         DDLogError("Error loading single page: \(error)")
         WMFAlertManager.sharedInstance.showErrorAlert(error as NSError, sticky: false, dismissPreviousAlerts: false)
+        fakeProgressController.finish()
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

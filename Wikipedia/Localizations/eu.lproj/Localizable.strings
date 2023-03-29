@@ -36,14 +36,6 @@
 "about-translators-details" = "$1(e)n boluntarioek itzulita";
 "about-wikimedia-foundation" = "Wikimedia Fundazioa";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Ezin duzu aldaketa hau argitaratu";
-"abuse-filter-disallow-unconstructive" = "Iragazki automatizatu batek edizio hau kaltegarria edo bandalismozkoa izan daitekeela  identifikatu du.";
-"abuse-filter-warning-blanking" = "Artikulu osoak edo atalak ezabatu";
-"abuse-filter-warning-caps" = "Testua letra larrietan bakarrik";
-"abuse-filter-warning-heading" = "Hau editatze ezezaguna izan daiteke. Ziur al zaude argitaratu nahi duzula?";
-"abuse-filter-warning-irrelevant" = "Garrantzirik gabeko kanpo-loturak edo argazkiak";
-"abuse-filter-warning-repeat" = "Errepikatutako karaktereak";
-"abuse-filter-warning-subheading" = "Zure aldaketak hauetako bat eduki dezake:";
 "account-creation-captcha-cannot-see-image" = "Ezin duzu argazkia ikusi? $1";
 "account-creation-captcha-obtaining" = "CAPTCHA berria lortzen...";
 "account-creation-captcha-request-account" = "Eskatu kontua.";
@@ -84,7 +76,7 @@
 "announcements-dismiss" = "Utzi";
 "app-store-keywords" = "Wikipedia, erreferentzia, wiki, entziklopedia, informazioa, ezagutza, ikerketa, informazioa, arakatu, ikasi";
 "app-store-release-notes" = "Gordetako artikuluak jada irakurketa zerrendetan antola daitezke eta gailuetatik zehar sinkroniza daitezke ere.";
-"app-store-short-description" = "Jaitsi Wikipedia app zugandik gertu dauden lekuak exploratzeko, sinkronizatu artikuluak offline irakurtzeko eta zure irakurtze-esperientziari probetxua ateratzeko.";
+"app-store-short-description" = "Deskargatu Wikipedia aplikazioa zure inguruko tokiak arakatzeko, artikuluak konexiorik gabe irakurtzearren sinkronizatzeko, eta zure irakurketa esperientzia pertsonalizatzeko.";
 "app-store-subtitle" = "Entziklopedia askea";
 "appearance-settings-adjust-text-sizing" = "Artikuluaren testuaren tamaina egokitu";
 "appearance-settings-expand-tables" = "Taulak zabaldu";
@@ -342,8 +334,6 @@
 "potd-empty-error-description" = "Ezin izan da berreskuratu gaurko argazkia $1(e)ngatik";
 "preference-summary-eventlogging-opt-in" = "Baimendu Wikimediari zure aplikazioaren erabileraren inguruko informazioa jasotzen, aplikazioa hobetzeko.";
 "preference-title-eventlogging-opt-in" = "Bidali erabilpen iruzkina";
-"rank-accessibility-label" = "$1 zenbakia";
-"readers-accessibility-label" = "$1 irakurle";
 "reading-list-add-generic-hint-title" = "Artikulu hau gehitu irakurtze zerrendara?";
 "reading-list-add-hint-title" = "Gehitu $1 irakurketa zerrendara?";
 "reading-list-add-saved-button-title" = "Bai, gehitu itzazu nire irakurketa zerrendetara";
@@ -371,7 +361,7 @@
 "reading-list-limit-hit-for-unsorted-articles-button-title" = "Sailkatu artikuluak";
 "reading-list-limit-hit-for-unsorted-articles-subtitle" = "Sailkatu gabeko 5000 artikuluren muga dago. Mesedez, antola itzazu jadanik existitzen diren artikuluak zerrendatan sailkatu gabeko artikuluak sinkronizatu ahal izateko.";
 "reading-list-limit-hit-for-unsorted-articles-title" = "Sailkatu gabeko artikuluen muga jo duzu";
-"reading-list-list-limit-exceeded-message" = "Irakurketa zerrenda eta horretan gordetako artikuluak ez dira sinkronizatuk, mesedez jaitsi zure zerrenden zenbakia $1-(e)ra zerrenda honen sinkronizatzea amaitu ahal izateko.";
+"reading-list-list-limit-exceeded-message" = "Irakurketa zerrenda hau eta hor gordetako artikuluak ez dira sinkronizatuko. Murriztu ezazu zure zerrenda kopurua $1-(e)ra, zerrenda honen sinkronizazioari berriz ekin ahal izateko.";
 "reading-list-list-limit-exceeded-title" = "Kontu bakoitzeko {{PLURAL:$1|irakurketa zerrenda $1en|$1 irakurketa zerrenden}} muga gainditu duzu.";
 "reading-list-list-limit-reached" = "Kontu bakoitzeko $1 irakurketa-zerrenden muga gainditu duzu.";
 "reading-list-login-button-title" = "Hasi saioa gordetako arikuluak sinkronizatzeko";
@@ -509,9 +499,6 @@
 "theme-dark-display-name" = "Iluna";
 "theme-default-display-name" = "Lehenetsia";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "$1 Wikipedia";
-"top-read-see-more" = "Irakurketa nabarmen gehiago ikusi";
 "two-factor-login-continue" = "Saio hasierarekin jarraitu";
 "two-factor-login-instructions" = "Mesedez, sartu bi faktoreen egiaztapen kodea";
 "two-factor-login-title" = "Zure kontuan sartu";

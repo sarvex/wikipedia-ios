@@ -68,27 +68,7 @@ class ArticleAsLivingDocController: NSObject {
     
     var articleAsLivingDocViewController: ArticleAsLivingDocViewController?
     
-    var shouldAttemptToShowArticleAsLivingDoc: Bool {
-        
-        guard let delegate = delegate,
-              delegate.articleURL.wmf_isEnglishWikipedia,
-              let view = delegate.view,
-              view.effectiveUserInterfaceLayoutDirection == .leftToRight
-               else {
-            return false
-        }
-        
-        let isInExperimentBucket: Bool
-        if let bucket = delegate.abTestsController.bucketForExperiment(.articleAsLivingDoc) {
-            isInExperimentBucket = bucket == .articleAsLivingDocTest
-        } else {
-            isInExperimentBucket = false
-        }
-        
-        let shouldAttemptToShowArticleAsLivingDoc = articleTitleAndSiteURL() != nil && delegate.isInValidSurveyCampaignAndArticleList && isInExperimentBucket
-        
-        return shouldAttemptToShowArticleAsLivingDoc
-    }
+    let shouldAttemptToShowArticleAsLivingDoc = false
     
     var shouldShowArticleAsLivingDoc: Bool {
         if let articleAsLivingDocViewModel = articleAsLivingDocViewModel,
@@ -406,7 +386,6 @@ class ArticleAsLivingDocController: NSObject {
                 return
             }
             
-            ArticleAsLivingDocFunnel.shared.logArticleContentInsertEditorTapped()
             delegate?.navigate(to: resolvedURL)
             return
         }
@@ -414,17 +393,14 @@ class ArticleAsLivingDocController: NSObject {
         // example: anchor of "significant-events-1-2-3" means scroll to initial index path (item: 1, section: 2) and log ArticleContentInsertEventDescriptionType(rawValue: 3)
         guard splitItems.count == 5,
               let item = Int(splitItems[2]),
-              let section = Int(splitItems[3]),
-              let loggingDescriptionTypeRaw = Int(splitItems[4]),
-              let loggingDescriptionType = ArticleAsLivingDocFunnel.ArticleContentInsertEventDescriptionType(rawValue: loggingDescriptionTypeRaw) else {
+              let section = Int(splitItems[3])
+              else {
             
-            ArticleAsLivingDocFunnel.shared.logArticleContentInsertReadMoreUpdatesTapped()
             presentArticleAsLivingDoc()
             return
         }
 
-        ArticleAsLivingDocFunnel.shared.logArticleContentInsertEventDescriptionTapped(descriptionType: loggingDescriptionType)
-        
+
         let indexPath = IndexPath(item: item, section: section)
         presentArticleAsLivingDoc(scrollToInitialIndexPath: indexPath)
     }

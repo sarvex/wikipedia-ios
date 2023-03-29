@@ -4,6 +4,8 @@
 // Author: Chameleon222
 // Author: Cleinman
 // Author: Danmichaelo
+// Author: EdoAug
+// Author: Gabriel Kielland
 // Author: Imre Eilertsen
 // Author: Jeblad
 // Author: Jon Harald Søby
@@ -16,6 +18,7 @@
 // Author: Pmt
 // Author: Premeditated
 // Author: SuperPotato
+// Author: Telaneo
 // Author: Tsaetre
 // Author: Tsevener
 
@@ -76,15 +79,6 @@
 "about-translators-details" = "Oversatt av frivillige på $1";
 "about-wikimedia-foundation" = "Wikimedia Foundation";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Du kan ikke publisere denne endringen.";
-"abuse-filter-disallow-unconstructive" = "Redigeringen har blitt automatisk identifisert som potensielt destruktiv eller forsøk på vandalisme. Vennligst gå tilbake og gjør endringer i den.";
-"abuse-filter-warning-blanking" = "Tømming av avsnitt eller hele artikkelen";
-"abuse-filter-warning-caps" = "Tekst skrevet med bare store bokstaver";
-"abuse-filter-warning-heading" = "Dette ser ut som en mindre konstruktiv redigering. Er du sikker på at du vil publisere den?";
-"abuse-filter-warning-irrelevant" = "Irrelevante eksterne lenker eller bilder";
-"abuse-filter-warning-repeat" = "Gjentagende tegn";
-"abuse-filter-warning-spam" = "Tilføyelse av spam til artikler";
-"abuse-filter-warning-subheading" = "Redigeringen din kan inneholde:";
 "account-creation-captcha-cannot-see-image" = "Ser du ikke bildet? $1";
 "account-creation-captcha-obtaining" = "Henter en ny CAPTCHA…";
 "account-creation-captcha-request-account" = " Opprett konto.";
@@ -98,6 +92,7 @@
 "account-creation-saving" = "Lagrer…";
 "account-creation-title" = "Opprett ny konto";
 "account-group-title" = "Kontoen din";
+"account-request-vanishing" = "Få kontoen til å forsvinne";
 "account-talk-page-title" = "Diskusjonssiden din";
 "account-talk-preferences-auto-sign-discussions" = "Signer diskusjoner automatisk";
 "account-talk-preferences-auto-sign-discussions-setting-explanation" = "Automatisk signering av diskusjoner bruker signaturen som er angitt i innstillingene dine";
@@ -106,6 +101,7 @@
 "action-add-to-reading-list" = "Legg til i leseliste";
 "action-add-to-reading-list-short" = "Legg til i liste";
 "action-cancel" = "Avbryt";
+"action-discard-edits" = "Forkast endringene";
 "action-find-in-page" = "Finn på siden";
 "action-language-accessibility" = "Endre språk";
 "action-move-to" = "Flytt til…";
@@ -132,6 +128,7 @@
 "action-update" = "Oppdater";
 "add-articles-to-reading-list" = "Legg til {{PLURAL:$1|$1 artikkel|$1 artikler}} i leselisten";
 "add-citation-title" = "Legg til referanse";
+"additional-information-email-title" = "Ekstra informasjon";
 "announcements-dismiss" = "Lukk";
 "app-store-keywords" = "Wikipedia, referanse, wiki, encyklopedi, info, kunnskap, informasjon, oppdaging, læring";
 "app-store-release-notes" = "Fullstendig tilpassbar og mer lettlest utforskingsside. Lokalisering, ytelsesforbedringer og feilrettinger.";
@@ -316,6 +313,8 @@
 "editing-welcome-impartial-tone-title" = "Skriv med en upartisk tone";
 "editing-welcome-set-knowledge-free-subtitle" = "For å gi alle tilgang til all verdens kunnskap trenger vi din deltakelse i å lese, redigere og bidra til de temaene som har størst betydning for deg.";
 "editing-welcome-set-knowledge-free-title" = "Sett kunnskap fri";
+"editor-exit-confirmation-body" = "Er du sikker på at du vil gå ut av redigeringsmodus uten å publisere først?";
+"editor-exit-confirmation-title" = "Gå ut av redigeringsmodus?";
 "empty-diff-compare-title" = "Ingen forskjeller mellom revisjoner";
 "empty-diff-single-title" = "Ingen synlige endringer gjort";
 "empty-insert-media-title" = "Velg ei fil fra Wikimedia Commons";
@@ -420,12 +419,13 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "Fra $1 Wikipedia";
 "explore-random-article-sub-heading-from-wikipedia" = "Fra Wikipedia";
 "explore-randomizer" = "Tilfeldig artikkel";
-"featured-article-empty-title" = "Ingen utvalgt artikkel tilgjengelig i dag";
+"export-user-data-generic-error" = "Det oppsto en feil ved eksporteringen av din data. Vennligst prøv igjen senere.";
+"export-user-data-title" = "Eksporter brukerdata";
 "featured-widget-content-failure-for-date" = "Ingen utvalgt artikkel er tilgjengelig for denne datoen.";
 "featured-widget-description" = "Oppdag de beste artiklene på Wikipedia, som velges ut daglig av bidragsyterne.";
 "featured-widget-from-language-wikipedia" = "Fra Wikipedia på $1";
 "featured-widget-from-wikipedia" = "Fra Wikipedia";
-"featured-widget-language-failure" = "Ditt hoved Wikipedia-språk har ikke støtte for Utmerkede artikler. Du kan oppdatere ditt hoved Wikipedia-språk i applikasjons innstillingene.";
+"featured-widget-language-failure" = "Ditt hoved-Wikipedia-språk har ikke støtte for Utmerkede artikler. Du kan oppdatere ditt hoved-Wikipedia-språk i applikasjonens innstillinger.";
 "featured-widget-title" = "Utvalgt artikkel";
 "fetcher-error-generic" = "Noe gikk galt. Prøv igjen senere.";
 "fetcher-error-unexpected-response" = "Appen mottok en uventet respons fra serveren. Prøv igjen senere.";
@@ -437,8 +437,8 @@
 "field-captcha-placeholder" = "CAPTCHA-tekst";
 "field-captcha-title" = "Fyll inn teksten du ser ovenfor";
 "field-email-placeholder" = "eksempel@eksempel.org";
-"field-email-title" = "Epost";
-"field-email-title-optional" = "Epost (valgfritt)";
+"field-email-title" = "E-post";
+"field-email-title-optional" = "E-post (valgfritt)";
 "field-new-password-confirm-placeholder" = "gjenta nytt passord";
 "field-new-password-confirm-title" = "Bekreeft nytt passord";
 "field-new-password-placeholder" = "fyll inn nytt passord";
@@ -458,8 +458,8 @@
 "find-replace-header-close-accessibility" = "Lukk søk og erstatt";
 "find-textfield-accessibility" = "Søk";
 "forgot-password-button-title" = "Tilbakestill";
-"forgot-password-email-sent" = "Epost med instruksjoner for å tilbakestille passordet har blitt sendt deg";
-"forgot-password-instructions" = "Fyll inn et av feltene under for å motta instruksjoner for tilbakestilling av passord per epost";
+"forgot-password-email-sent" = "Vi har sendt deg n e-post med instruksjoner for å tilbakestille passordet";
+"forgot-password-instructions" = "Fyll inn et av feltene under for å motta instruksjoner for tilbakestilling av passord per e-post";
 "forgot-password-title" = "Tilbakestill passord";
 "forgot-password-username-or-email-title" = "Eller";
 "gan-variants-alert-body" = "Wikipedia-appen støtter nå følgende gan-varianter som primær- eller sekundærspråk i appen, noe som gjør det enklere å lese, søke i og redigere på dine foretrukne varianter:\n\n贛語 原文 gan (gan)\n赣语 简体 forenklet gan (gan-hans)\n贛語 繁體 tradisjonell gan (gan-hant)";
@@ -485,6 +485,12 @@
 "icon-shortcut-random-title" = "Tilfeldig artikkel";
 "icon-shortcut-search-title" = "Søk i Wikipedia";
 "image-gallery-unknown-owner" = "Ukjent forfatter.";
+"import-shared-reading-list-default-title" = "Min leseliste";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Ikke nå";
+"import-shared-reading-list-survey-prompt-button-take-survey" = "Ta undersøkelsen";
+"import-shared-reading-list-survey-prompt-subtitle" = "«Del leselister» er en testfunksjon, og vi trenger tilbakemelding fra brukerne for å forbedre eller fjerne den.";
+"import-shared-reading-list-survey-prompt-title" = "Kan du hjelpe oss å forbedre «Del leselister»?";
+"import-shared-reading-list-title" = "Importer delt leseliste";
 "in-the-news-sub-title-from-language-wikipedia" = "Fra Wikipedia på $1";
 "in-the-news-sub-title-from-wikipedia" = "Fra Wikipedia";
 "in-the-news-title" = "Aktuelt";
@@ -542,11 +548,12 @@
 "main-menu-account-login" = "Logg inn";
 "main-menu-account-logout" = "Logg ut";
 "main-menu-account-logout-are-you-sure" = "Er du sikker på at du vil logge ut?";
+"main-menu-account-logout-are-you-sure-message" = "Å logge ut vil slette dine lokalt lagrede kontodata (varsler og meldinger), men kontodataene dine vil still være tilgjengelige på nett og lastes ned på nytt hvis du logger inn igjen.";
 "main-menu-account-logout-cancel" = "Avbryt";
 "main-menu-account-title-logged-in" = "Innlogget som $1";
 "main-menu-heading-legal" = "Personvern og vilkår";
 "main-menu-nearby" = "I nærheten";
-"main-menu-privacy-policy" = "Personvernpolitikk";
+"main-menu-privacy-policy" = "Personvernspolitikk";
 "main-menu-rate-app" = "Vurder appen";
 "main-menu-terms-of-use" = "Bruksvilkår";
 "main-menu-title" = "Mer";
@@ -567,19 +574,25 @@
 "no-internet-connection-article-reload" = "Det kan hende at en nyere versjon av denne artikkelen er tilgjengelig, men en fungerende internettforbindelse trengs for å kunne sjekke";
 "no-internet-connection-article-reload-button" = "Tilbake til sist lagrede versjon";
 "notifications-center-agent-description-from-format" = "Fra $1";
+"notifications-center-alert" = "Varsel";
 "notifications-center-applied-filters-accessibility-label" = "Varselfilter – har gjeldende filtre";
 "notifications-center-applied-project-filters-accessibility-label" = "Prosjektfilter – har gjeldende filtre";
 "notifications-center-badge-button-accessibility-label" = "Varsler med merking for ulest";
+"notifications-center-cell-notification-type-accessibility-label-format" = "$1 varsel";
 "notifications-center-change-password" = "Endre passord";
 "notifications-center-checking-for-notifications" = "Sjekker varsler …";
+"notifications-center-destination-app" = "I appen";
+"notifications-center-destination-web" = "På nettet";
 "notifications-center-empty-checking-for-notifications" = "Sjekker varsler …";
 "notifications-center-empty-no-messages" = "Du har ingen meldinger";
 "notifications-center-empty-not-subscribed" = "Du abonnerer for tiden ikke på noen Wikipedia-varsler";
 "notifications-center-empty-state-filters-subtitle" = "Endre $1 for å se flere meldinger";
 "notifications-center-empty-state-no-projects-selected" = "Legg til prosjekter for å se flere beskjeder";
 "notifications-center-empty-state-num-filters" = "{{PLURAL:$1|$1 filter|$1 filtre}}";
-// Fuzzy
-"notifications-center-feed-news-notification-button-text" = "Slå på varslinger";
+"notifications-center-feed-card-title" = "Redigeringsvarsler er nå tilgjengelige";
+"notifications-center-feed-news-notification-button-text" = "Slå på pushvarsler";
+"notifications-center-feed-news-notification-dismiss-button-text" = "Ikke nå";
+"notifications-center-feed-news-notification-text" = "Redigeringsvarsler for alle Wikimedia-prosjekter er nå tilgjengelige via appen. Slå på pushvarsler for å holde deg oppdatert mens du er i farta.";
 "notifications-center-filters-accessibility-label" = "Varselfilter";
 "notifications-center-filters-read-status-item-title-all" = "Alle";
 "notifications-center-filters-read-status-item-title-read" = "Lest";
@@ -589,30 +602,42 @@
 "notifications-center-filters-types-footer" = "Endre varseltyper for å filtrere dem til/fra varselsinnboksen din. Typene som er slått av vil ikke være synlige, men innholdet deres og nye varsler vil være tilgjengelige hvis typen slås på igjen.";
 "notifications-center-filters-types-item-title-all" = "Alle typer";
 "notifications-center-filters-types-section-title" = "Typer varsler";
-// Fuzzy
-"notifications-center-go-to-diff" = "Gå til diff";
-// Fuzzy
-"notifications-center-go-to-talk-page" = "Gå til diskusjonsside";
-// Fuzzy
-"notifications-center-go-to-user-page" = "Gå til {{GRAMMAR:genitive|$1}} brukerside";
-// Fuzzy
-"notifications-center-go-to-wikidata-item" = "Gå til Wikidata-element";
-// Fuzzy
-"notifications-center-go-to-your-talk-page" = "Gå til diskusjonssiden din";
+"notifications-center-go-to-article" = "Artikkel";
+"notifications-center-go-to-article-talk-format" = "Diskusjon om $1";
+"notifications-center-go-to-diff" = "Diff";
+"notifications-center-go-to-talk-page" = "Diskusjonsside";
+"notifications-center-go-to-user-page" = "{{GRAMMAR:genitive|$1}} brukerside";
+"notifications-center-go-to-wikidata-item" = "Wikidata-element";
+"notifications-center-go-to-your-talk-page" = "Din diskusjonsside";
 "notifications-center-header-alert-from-agent" = "Varsel fra $1";
 "notifications-center-inbox-title" = "Prosjekter";
 "notifications-center-inbox-wikimedia-projects-section-footer" = "Bare prosjekter du har opprettet konto på dukker opp her";
 "notifications-center-inbox-wikimedia-projects-section-title" = "Wikimedia-prosjekter";
 "notifications-center-inbox-wikipedias-section-title" = "Wikipedia-er";
+"notifications-center-language-project-name-format" = "$2 på $1";
 "notifications-center-login-notifications" = "Innloggingsvarsler";
 "notifications-center-mark" = "Merk";
 "notifications-center-mark-all-as-read" = "Merk alle som lest";
-"notifications-center-mark-all-as-read-confirmation-format" = "Er du sikker på at du ønsker å merke {{PLURAL:$1|den ene meldingen|alle $1 meldinger}} fra varslene dine som lest? Varslene blir merket som lest på alle enhetene dine.";
+"notifications-center-mark-all-as-read-confirmation-format" = "Er du sikker på at du ønsker å merke {{PLURAL:$1|den ene meldingen|2=begge meldingene|alle $1 meldinger}} fra varslene dine som lest? Varslene blir merket som lest på alle enhetene dine.";
 "notifications-center-mark-all-as-read-missing-number" = "Er du sikker på at du vil merke alle varslene dine som lest? Varslene blir merket som lest på alle enhetene dine.";
 "notifications-center-mark-as-read" = "Merk som lest";
 "notifications-center-mark-as-unread" = "Merk som ulest";
+"notifications-center-more-action-accessibility-label" = "Mer";
 "notifications-center-notifications-settings" = "Varselsinnstillinger";
 "notifications-center-num-selected-messages-format" = "$1 {{PLURAL:$1|melding|meldinger}}";
+"notifications-center-onboarding-modal-continue-action" = "Fortsett";
+"notifications-center-onboarding-modal-filters-message" = "Filtrer varslene dine etter hvorvidt de er leste og etter type for å enkelt finne fram i innboksen din.";
+"notifications-center-onboarding-modal-filters-title" = "Filtre";
+"notifications-center-onboarding-modal-learn-more-action" = "Lær mer om varsler";
+"notifications-center-onboarding-modal-notifications-alerts-message" = "Varsler holder deg informert om aktivitet som gjelder din konto og dine redigeringer.";
+"notifications-center-onboarding-modal-notifications-alerts-title" = "Varsler";
+"notifications-center-onboarding-modal-project-inboxes-message" = "Se alle dine uleste meldinger fra forskjellige språkversjon av Wikipedia- og Wikimedia-prosjekter på ett sted.";
+"notifications-center-onboarding-modal-project-inboxes-title" = "Prosjektinnbokser";
+"notifications-center-onboarding-modal-push-notifications-title" = "Pushvarsler";
+"notifications-center-onboarding-modal-title" = "Redigeringsvarsler";
+"notifications-center-onboarding-panel-heading" = "Slå på pushvarsler?";
+"notifications-center-onboarding-panel-primary-button" = "Slå på pushvarsler";
+"notifications-center-onboarding-panel-secondary-button" = "Nei takk";
 "notifications-center-project-filters-accessibility-label" = "Prosjektfilter";
 "notifications-center-status-all" = "Alle";
 "notifications-center-status-all-notifications" = "Alle varsler";
@@ -629,7 +654,6 @@
 "notifications-center-subheader-email-from-other-user" = "Ny e-post";
 "notifications-center-subheader-login-fail-known-device" = "Flere mislykkede innloggingsforsøk";
 "notifications-center-subheader-login-fail-unknown-device" = "Mislykket innloggingsforsøk";
-// Fuzzy
 "notifications-center-subheader-login-success-unknown-device" = "Innlogging fra ukjent enhet";
 "notifications-center-subheader-mention-article-talk-page" = "Nevnt på diskusjonsside";
 "notifications-center-subheader-mention-edit-summary" = "Nevnt i redigeringssammendrag";
@@ -649,11 +673,28 @@
 "notifications-center-swipe-more" = "Mer";
 "notifications-center-title" = "Varsler";
 "notifications-center-toolbar-mark-accessibility-label" = "Merk valgte varsler";
+"notifications-center-type-item-description-mentions" = "Nevninger";
+"notifications-center-type-item-description-notice" = "Notis";
+"notifications-center-type-item-description-welcome-verbose" = "Velkomstmelding";
+"notifications-center-type-title-connection-with-wikidata" = "Kobling med Wikidata";
+"notifications-center-type-title-edit-milestone" = "Redigeringsmilepæl";
+"notifications-center-type-title-edit-reverted" = "Redigering tilbakestilt";
+"notifications-center-type-title-edit-summary-mention" = "Nevning i redigeringsforklaring";
+"notifications-center-type-title-email-from-other-user" = "E-post fra en annen bruker";
+"notifications-center-type-title-login-attempts" = "Innloggingsforsøk";
+"notifications-center-type-title-login-attempts-subtitle" = "Mislykkede innloggingsforsøk på kontoen din";
+"notifications-center-type-title-login-success" = "Vellykket innlogging";
+"notifications-center-type-title-other" = "Annet";
+"notifications-center-type-title-page-link" = "Sidelenke";
+"notifications-center-type-title-talk-page-mention" = "Omtalt på diskusjonsside";
+"notifications-center-type-title-thanks" = "Takk";
+"notifications-center-type-title-translation-milestone" = "Oversettelsesmilepæl";
+"notifications-center-type-title-user-rights-change" = "Endring av brukerrettigheter";
+"notifications-center-type-title-user-talk-page-messsage" = "Melding på diskusjonsside";
+"notifications-center-type-title-welcome" = "Velkommen";
 "notifications-push-fallback-body-text" = "Ny aktivitet på Wikipedia";
-// Fuzzy
-"notifications-push-talk-body-format" = "$1 nye $2 på $3";
-// Fuzzy
-"notifications-push-talk-title-format" = "Ny $1";
+"notifications-push-talk-body-format" = "{{PLURAL:$1|$1 ny melding|$1 nye meldinger}} på $2";
+"notifications-push-talk-title-format" = "{{PLURAL:$1|Ny melding|Nye meldinger}}";
 "number-billions" = "$1 mrd.";
 "number-millions" = "$1 mill.";
 "number-thousands" = "$1 tusen";
@@ -661,6 +702,7 @@
 "on-this-day-detail-header-title" = "{{PLURAL:$1|$1 historisk hendelse|$1 historiske hendelser}}";
 "on-this-day-footer" = "Flere historiske hendelser på denne dagen";
 "on-this-day-footer-showing-event-count" = "$1 {{PLURAL:$1|historisk hendelse|historiske hendelser}} til på denne dag";
+"on-this-day-language-does-not-support-error" = "Ditt hoved-Wikipedia-språk har ikke støtte for På denne dag. Du kan oppdatere ditt hoved-Wikipedia-språk i applikasjonens innstillinger.";
 "on-this-day-no-internet-error" = "Ingen tilgjengelige data";
 "on-this-day-sub-title-for-date-from-language-wikipedia" = "$1 fra Wikipedia på $2";
 "on-this-day-title" = "På denne dag";
@@ -730,8 +772,17 @@
 "potd-widget-title" = "Dagens bilde";
 "preference-summary-eventlogging-opt-in" = "Tillatt at Wikimedia Foundation samler informasjon om hvordan du bruker appen for å gjøre den bedre";
 "preference-title-eventlogging-opt-in" = "Send bruksrapporter";
-"rank-accessibility-label" = "Nummer $1";
-"readers-accessibility-label" = "$1 lesere";
+"project-name-mediawiki" = "MediaWiki";
+"project-name-wikibooks" = "Wikibøker";
+"project-name-wikidata" = "Wikidata";
+"project-name-wikimedia-commons" = "Wikimedia Commons";
+"project-name-wikinews" = "Wikinytt";
+"project-name-wikiquote" = "Wikiquote";
+"project-name-wikisource" = "Wikikilden";
+"project-name-wikispecies" = "Wikispecies";
+"project-name-wikiversity" = "Wikiversity";
+"project-name-wikivoyage" = "Wikivoyage";
+"project-name-wiktionary" = "Wiktionary";
 "reading-list-add-generic-hint-title" = "Legg til artikkelen i en leseliste?";
 "reading-list-add-hint-title" = "Legg til «$1» i en leseliste?";
 "reading-list-add-saved-button-title" = "Ja, legg dem til i leselistene mine";
@@ -872,8 +923,8 @@
 "settings-language-bar" = "Vis språk ved søkefeltet";
 "settings-languages-feed-customization" = "Du kan tilpasse hvilke språk som vises på utforskingssiden fra innstillingene for utforskingssiden.";
 "settings-my-languages" = "Mine språk";
-// Fuzzy
-"settings-notifications" = "Varslinger";
+"settings-notifications" = "Pushvarsler";
+"settings-notifications-echo-failure-try-again" = "Prøv igjen";
 "settings-notifications-info" = "Bli tipset om populære og mye leste artikler på Wikipedia med push-varsler.";
 "settings-notifications-learn-more" = "Lær mer om varsler";
 "settings-notifications-push-notifications" = "Pushvarslinger";
@@ -899,20 +950,17 @@
 "settings-support" = "Støtt Wikipedia";
 "settings-title" = "Innstillinger";
 "share-a-fact-made-with" = "Laget med Wikipedia-appen";
-// Fuzzy
-"share-article-name-on-wikipedia" = "«$1» på @Wikipedia:";
+"share-article-name-on-wikipedia" = "«$1» på Wikipedia:";
 "share-building" = "Bygger faktadelingskort …";
 "share-default-format" = "«$1» fra «$2»: $3";
 "share-email-format" = "«$1»\n\nfra «$2»\n\n$3";
 "share-get-directions-in-maps" = "Veibeskrivelse";
 "share-menu-item" = "Del …";
 "share-message-format" = "«$1» $2";
-// Fuzzy
-"share-on-twitter-sign-off" = "via @Wikipedia";
+"share-on-twitter-sign-off" = "via Wikipedia";
 "share-open-in-maps" = "Vis på kart";
 "share-social-format" = "«$1» via Wikipedia: $2";
-// Fuzzy
-"share-social-mention-format" = "«$1» via @Wikipedia: $2";
+"share-social-mention-format" = "«$1» via Wikipedia: $2";
 "sort-by-recently-added-action" = "Nylig lagt til";
 "sort-by-title-action" = "Tittel";
 "table-of-contents-button-label" = "Innholdsfortegnelse";
@@ -925,19 +973,32 @@
 "tachelhit-variants-alert-title" = "Oppdateringer i støtte for tachelhit-varianter";
 "tajik-variants-alert-body" = "Wikipedia-appen støtter nå følgende tadsjikiske varianter som primær- eller sekundærspråk i appen, noe som gjør det enklere å lese, søke i og redigere på dine foretrukne varianter:\n\nтоҷикӣ кирилликӣ kyrillisk tadsjikisk (tg-cyrl)\ntojikī lotinī latinsk tadsjikisk (tg-latn)";
 "tajik-variants-alert-title" = "Oppdateringer i støtte for tadsjikiske varianter";
+"talk-page-active-users-accessibilty-label" = "{{PLURAL:$1|$1 aktiv bruker|$1 aktive brukere}}";
 "talk-page-add-discussion-accessibility-label" = "Legg til diskusjon";
+"talk-page-add-topic-button" = "Legg til emne";
+"talk-page-archives" = "Arkiv";
+"talk-page-article-about" = "Om diskusjonssider";
+"talk-page-change-language" = "Endre språk";
+"talk-page-collapse-thread-button" = "Minimer tråd";
 "talk-page-discussion-accessibility-hint" = "Dobbeltrykk for å åpne diskusjonstråd";
 "talk-page-discussion-read-accessibility-label" = "Lest";
 "talk-page-discussion-read-ipa-accessibility-attribute" = "leːst";
 "talk-page-discussion-unread-accessibility-label" = "Ulest";
 "talk-page-discussion-unread-ipa-accessibility-attribute" = "ʉːˈlɛst";
+"talk-page-error-alert-subtitle" = "Appen fikk en uventet respons fra tjeneren. Prøv igjen senere.";
+"talk-page-error-alert-title" = "Uventet feil";
+"talk-page-error-loading-subtitle" = "Noe gikk galt.";
+"talk-page-error-loading-title" = "Kunne ikke laste diskusjonsside";
 "talk-page-error-unable-to-post-reply" = "Ingen internettforbindelse. Kunne ikke poste svar.";
 "talk-page-error-unable-to-post-topic" = "Ingen internettforbindelse. Kunne ikke poste diskusjon.";
+"talk-page-expand-thread-button" = "Utvid tråd";
+"talk-page-find-in-page-button" = "Finn på siden";
 "talk-page-info-active-conversations" = "Aktive samtaler på Wikipedia på $1";
 "talk-page-info-active-conversations-generic" = "Aktive samtaler på Wikipedia";
 "talk-page-link-user-action-sheet-app" = "Vis brukerdiskusjonsside i appen";
 "talk-page-link-user-action-sheet-safari" = "Vis brukerside i Safari";
 "talk-page-link-user-action-sheet-title" = "Brukersider";
+"talk-page-menu-open-all" = "Åpne alle tråder";
 "talk-page-new-banner-subtitle" = "Husk at vi alle er mennesker her";
 "talk-page-new-banner-title" = "Vær snill";
 "talk-page-new-body-textfield-accessibility-label" = "Diskusjonskropp";
@@ -950,21 +1011,70 @@
 "talk-page-new-topic-body-placeholder-text" = "Skriv ny diskusjon";
 "talk-page-new-topic-success-text" = "Diskusjonen din ble publisert";
 "talk-page-new-topic-title" = "Ny diskusjon";
+"talk-page-onboarding-button-accessibility-label" = "Trykk to ganger for å gå tilbake til svaret";
+"talk-page-overflow-menu-accessibility" = "Flere diskusjonssidealternativer";
+"talk-page-page-info" = "Sideinformasjon";
+"talk-page-permanent-link" = "Permanent lenke";
+"talk-page-publish-reply-error-subtitle" = "Sjekk internettforbindelsen din.";
+"talk-page-publish-reply-error-title" = "Kunne ikke publisere kommentaren din.";
 "talk-page-publish-terms-and-licenses" = "Ved å lagre endringene samtykker du i $1bruksvilkårene$2 og i å slippe ditt bidrag under lisensene $3CC BY-SA 3.0$4 og $5GFDL$6.";
+"talk-page-publish-topic-error-title" = "Kunne ikke publisere nytt emne.";
+"talk-page-read-in-web" = "Les i nettversjonen";
+"talk-page-related-links" = "Lenker hit";
+"talk-page-replies-count-accessibilty-label" = "{{PLURAL:$1|$1 svar}}";
+"talk-page-reply-button" = "Svar";
+"talk-page-reply-button-accessibility-label" = "Svar til $1";
+"talk-page-reply-depth-accessibility-label" = "Svardybde: $1";
+"talk-page-reply-placeholder-format" = "Gi et svar til $1";
+"talk-page-reply-terms-and-licenses" = "Merk at svaret ditt automatisk signeres med brukernavnet ditt. Ved å lagre endringene samtykker du i $1bruksvilkårene$2, og samtykker til å utgi bidraget ditt under lisensene $3CC-by-SA 3.0$4 og $5GFDL$6.";
 "talk-page-reply-title" = "Svar";
+"talk-page-revision-history" = "Versjonshistorikk";
+"talk-page-rply-close-button-accessibility-hint" = "Lukk svarvisning";
+"talk-page-share-button" = "Del diskusjonsside";
+"talk-page-subscribe-to-topic" = "Abonner";
+"talk-page-subscribed-alert-subtitle" = "Du vil få varsler om nye kommentarer på dette emnet.";
+"talk-page-subscribed-alert-title" = "Du abonnerer!";
+"talk-page-subscription-failed-alert" = "Abonnering feilet, prøv igjen.";
 "talk-page-title-article-talk" = "Artikkeldiskusjon";
 "talk-page-title-user-talk" = "Brukerdiskusjon";
+"talk-page-topic-close-button-hint" = "Lukk nytt emne";
+"talk-page-topic-compose-terms-and-licenses" = "Ved å publisere endringene samtykker du til $1bruksvilkårene$2, og samtykker i å ugjenkallelig utgi bidraget ditt under lisensene $3CC-by-SA 3.0$4 og $5GFDL$6.";
 "talk-page-topic-title" = "Diskusjon";
+"talk-page-unsubscribe-to-topic" = "Avslutt abonnement";
+"talk-page-unsubscribed-alert-subtitle" = "Du vil ikke lenger motta varsler om nye kommentarer på dette emnet.";
+"talk-page-unsubscribed-alert-title" = "Du har avsluttet abonnementet.";
+"talk-page-unsubscription-failed-alert" = "Avslutting av abonnement feilet, prøv igjen.";
+"talk-page-user-about" = "Om brukerdiskusjonssider";
+"talk-page-user-contributions" = "Bidrag";
+"talk-pages-coffee-roll-read-more" = "Les mer";
+"talk-pages-comment-added-alert-title" = "Kommentaren din ble lagt til";
+"talk-pages-compose-close-confirmation-keep" = "Fortsett å redigere";
+"talk-pages-empty-view-button-article-add-topic" = "Legg til et nytt emne";
+"talk-pages-empty-view-button-user-start-discussion" = "Start en diskusjon";
+"talk-pages-empty-view-header-article" = "Samtalen begynner her";
+"talk-pages-empty-view-header-user" = "Begynn en samtale med $1";
 "talk-pages-reply-button-title" = "Svar på denne diskusjonen";
+"talk-pages-reply-compose-close-confirmation-title" = "Er du sikker på at du vil forkaste dette nye svaret?";
+"talk-pages-topic-added-alert-title" = "Emnet ditt ble lagt til";
+"talk-pages-topic-compose-body-placeholder" = "Beskrivelse";
+"talk-pages-topic-compose-body-placeholder-accessibility" = "Emnebeskrivelse";
+"talk-pages-topic-compose-close-confirmation-discard" = "Forkast svar";
+"talk-pages-topic-compose-close-confirmation-title" = "Er du sikker på at du vil forkaste dette nye emnet?";
+"talk-pages-topic-compose-navbar-title" = "Emne";
+"talk-pages-topic-compose-title-placeholder" = "Emnetittel";
+"talk-pages-topic-reply-onboarding-body" = "Diskusjonssider er stedet hvor folk diskuterer hvordan en kan gjøre det som står på Wikipedia-sider best mulig. Legg til et nytt diskusjonssavsnitt for å ta kontakt og sam arbeide med wikipedianerne.";
+"talk-pages-topic-reply-onboarding-body-ios15" = "Diskusjonssider er stedet for $1å diskutere hvordan Wikipedias innhold kan bli enda bedre$1. Du kan begynne ved å legge til et nytt emne for å få kontakt og samarbeide med fellesskapet av wikipedianere.";
+"talk-pages-topic-reply-onboarding-body-note-ios15" = "Vær snill, vi er alle mennesker.";
+"talk-pages-topic-reply-onboarding-title" = "Diskusjonssider";
+"talk-pages-user-groups" = "Brukergrupper";
+"talk-pages-user-logs" = "Logger";
+"talk-pages-view-title" = "Diskusjon";
 "theme-black-display-name" = "Svart";
 "theme-dark-display-name" = "Mørk";
 "theme-default-display-name" = "Standard";
 "theme-default-explanation" = "Matcher systemtemaet";
 "theme-light-display-name" = "Lys";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "Wikipedia på $1";
-"top-read-see-more" = "Se flere populære artikler";
 "top-read-widget-description" = "Få greie på hva verden leser om på Wikipedia i dag.";
 "top-read-widget-readers-count" = "$1 lesere";
 "top-read-widget-title" = "Mest leste";
@@ -977,6 +1087,17 @@
 "unknown-generic-text" = "Ukjent";
 "uzbek-variants-alert-body" = "Wikipedia-appen støtter nå følgende usbekiske varianter som primær- eller sekundærspråk i appen, noe som gjør det enklere å lese, søke i og redigere på dine foretrukne varianter:\n\noʻzbekcha lotin latinsk usbekisk (uz-latin)\nўзбекча кирилл kyrillisk usbekisk (uz-cyrl)";
 "uzbek-variants-alert-title" = "Oppdateringer i støtte for usbekiske varianter";
+"vanish-account-additional-information-field" = "Ekstra informasjon";
+"vanish-account-additional-information-placeholder" = "Valgfritt";
+"vanish-account-back-confirm-discard" = "Forkast forespørsel";
+"vanish-account-back-confirm-keep-editing" = "Fortsett å redigere";
+"vanish-account-back-confirm-title" = "Er du sikker på at du vil forkaste denne forespørselen om å forsvinne?";
+"vanish-account-bottom-text" = "Sletting av kontoer på Wikipedia gjøres ved å endre kontonavnet på en slik måte at det ikke er gjenkjennelig for andre. Du kan bruke skjemaet nedenfor for å be om at kontoen din skal forsvinne. Forsvinning garanterer ikke fullstendig anonymitet, og fjerner ikke bidragene dine til prosjektet.";
+"vanish-account-button-text" = "Send forespørsel";
+"vanish-account-continue-button-title" = "Fortsett";
+"vanish-account-learn-more-text" = "Les mer";
+"vanish-account-username-field" = "Brukernavn og brukerside";
+"vanish-account-warning-title" = "Advarsel";
 "variants-alert-dismiss-button" = "Nei takk";
 "variants-alert-preferences-button" = "Gå gjennom innstillingene dine";
 "welcome-exploration-explore-feed-description" = "Anbefalt lesning og daglige artikler utvalgt av fellesskapet";

@@ -38,7 +38,7 @@ class ViewController: ThemeableViewController, NavigationBarHiderDelegate {
         }
     }
 
-    private var keyboardFrame: CGRect? {
+    private(set) var keyboardFrame: CGRect? {
         didSet {
             keyboardDidChangeFrame(from: oldValue, newKeyboardFrame: keyboardFrame)
         }
@@ -284,7 +284,8 @@ class ViewController: ThemeableViewController, NavigationBarHiderDelegate {
         let safeInsets = view.safeAreaInsets
         
         var bottom = safeInsets.bottom
-        if let keyboardFrame = keyboardFrame {
+        if let keyboardFrame = keyboardFrame,
+           keyboardIsIncludedInBottomContentInset {
             let adjustedKeyboardFrame = view.convert(keyboardFrame, to: scrollView)
             let keyboardIntersection = adjustedKeyboardFrame.intersection(scrollView.bounds)
             bottom = max(bottom, scrollView.bounds.maxY - keyboardIntersection.minY)
@@ -293,6 +294,8 @@ class ViewController: ThemeableViewController, NavigationBarHiderDelegate {
         if !isToolbarHidden {
             bottom += toolbar.frame.height
         }
+        
+        bottom += additionalBottomContentInset
         
         let scrollIndicatorInsets: UIEdgeInsets = UIEdgeInsets(top: top, left: safeInsets.left, bottom: bottom, right: safeInsets.right)
         
@@ -303,6 +306,16 @@ class ViewController: ThemeableViewController, NavigationBarHiderDelegate {
         if scrollView.setContentInset(contentInset, verticalScrollIndicatorInsets: scrollIndicatorInsets, preserveContentOffset: navigationBar.isAdjustingHidingFromContentInsetChangesEnabled, preserveAnimation: shouldAnimateWhileUpdatingScrollViewInsets) {
             scrollViewInsetsDidChange()
         }
+    }
+    
+    /// Override to add any additional bottom insets during content inset calculations
+    var additionalBottomContentInset: CGFloat {
+        return 0
+    }
+    
+    /// Override if needed - useful when needing to calculate your own additionalBottomContentInset
+    var keyboardIsIncludedInBottomContentInset: Bool {
+        return true
     }
 
     open func scrollViewInsetsDidChange() {
@@ -534,18 +547,6 @@ class ViewController: ThemeableViewController, NavigationBarHiderDelegate {
     
     @objc func wButtonTapped(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
-    }
-    
-    // MARK: Errors
-    
-    internal let alertManager: WMFAlertManager = WMFAlertManager.sharedInstance
-    
-    func showError(_ error: Error, sticky: Bool = false) {
-        alertManager.showErrorAlert(error, sticky: sticky, dismissPreviousAlerts: false, viewController: self)
-    }
-    
-    func showGenericError() {
-        showError(RequestError.unknown)
     }
     
     // MARK: Gestures

@@ -23,10 +23,8 @@ enum ContextMenuCompletionType {
 /// More details: https://phabricator.wikimedia.org/T253891#6173598
 extension ArticleContextMenuPresenting {
     func contextMenuConfigurationForElement(_ elementInfo: WKContextMenuElementInfo, completionHandler: @escaping (UIContextMenuConfiguration?) -> Void) {
-        let nullConfig = UIContextMenuConfiguration(identifier: nil, previewProvider: nil)
-
         let nullCompletion = {
-            completionHandler(nullConfig)
+            completionHandler(nil)
         }
 
         // This "N/A" part is pretty hacky. But we don't want to do a preview for "view article in browser", and this is the URL that is sent
@@ -48,16 +46,18 @@ extension ArticleContextMenuPresenting {
         }
     }
 
-    func contextMenuConfigurationForLinkURL(_ linkURL: URL, completionHandler: @escaping (ContextMenuCompletionType, UIContextMenuConfiguration?) -> Void) {
+    func contextMenuConfigurationForLinkURL(_ linkURL: URL, ignoreTimeout: Bool = false, completionHandler: @escaping (ContextMenuCompletionType, UIContextMenuConfiguration?) -> Void) {
 
         // It's helpful if we can fetch the article before calling the completion
         // However, we need to timeout if it takes too long
         var didCallCompletion = false
 
-        dispatchAfterDelayInSeconds(1.0, DispatchQueue.main) {
-            if !didCallCompletion {
-                completionHandler(.timeout, nil)
-                didCallCompletion = true
+        if !ignoreTimeout {
+            dispatchAfterDelayInSeconds(1.0, DispatchQueue.main) {
+                if !didCallCompletion {
+                    completionHandler(.timeout, nil)
+                    didCallCompletion = true
+                }
             }
         }
 

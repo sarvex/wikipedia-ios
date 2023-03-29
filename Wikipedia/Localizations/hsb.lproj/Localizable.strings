@@ -41,15 +41,6 @@
 "about-translators-details" = "Tuta app je so wot dobrowólnych přełožowarjow na $1 přełožiła";
 "about-wikimedia-foundation" = "załožby Wikimedije";
 "about-wikipedia" = "Wikipedija";
-"abuse-filter-disallow-heading" = "Njemóžeš tutu změnu wozjewić.";
-"abuse-filter-disallow-unconstructive" = "Awtomatiski filter je tute wobdźěłanje jako potencielnje njekonstruktiwnu abo jako pospyt wandalizma identifikował. Prošu dźi wróćo a změń twoje wobdźěłanje.";
-"abuse-filter-warning-blanking" = "Wotstronjenje wotrězkow abo cyłych zapiskow";
-"abuse-filter-warning-caps" = "Tekst we wulkich pismikach";
-"abuse-filter-warning-heading" = "Tuta změna wupada njekonstruktiwna. Chceš ju woprawdźe wozjewić?";
-"abuse-filter-warning-irrelevant" = "Njerelewantne wotkazy abo wobrazy";
-"abuse-filter-warning-repeat" = "Wospjetowace so znamješka";
-"abuse-filter-warning-spam" = "Spam do zapiskow přidaty";
-"abuse-filter-warning-subheading" = "Twoja změna móhła wobsahować:";
 "account-creation-captcha-cannot-see-image" = "Njemóžeš wobraz widźeć? $1";
 "account-creation-captcha-obtaining" = "Wobstaraj sej nowy CAPTCHA...";
 "account-creation-captcha-title" = "CAPTCHA wěstotne pruwowanje";
@@ -268,7 +259,6 @@
 "explore-random-article-heading" = "Připadny zapisk";
 "explore-random-article-sub-heading-from-language-wikipedia" = "Z tuteje Wikipedije: $1";
 "explore-random-article-sub-heading-from-wikipedia" = "Z Wikipedije";
-"featured-article-empty-title" = "Dźensa žadyn předstajeny zapisk přistupny njeje";
 "fetcher-error-generic" = "Něšto je křiwje šło. Prošu spytaj pozdźišo znowa.";
 "fetcher-error-unexpected-response" = "App je njewočakowanu wotmołwu wot serwera dóstała. Prošu spytaj pozdźišo znowa.";
 "field-alert-captcha-invalid" = "Njepłaćiwy CAPTCHA";
@@ -428,8 +418,6 @@
 "share-on-twitter-sign-off" = "přez @Wikipedia";
 "share-social-format" = "„$1“ přez Wikipediju: $2";
 "talk-page-info-active-conversations" = "Aktiwne diskusije we Wikipediji ($1)";
-"top-read-header-generic" = "Wikipedija";
-"top-read-see-more" = "Dalše husto čitane zapiski pokazać";
 "welcome-exploration-on-this-day-description" = "Pućuj w času wróćo, zo by {{GENDER:$1|zhonił|zhoniła|zhoniła}}, što je so na tutym dnju w stawiznach stało.";
 "welcome-exploration-on-this-day-title" = "Na tutym dnju";
 "welcome-intro-free-encyclopedia-more" = "Wjace wo Wikipediji zhonić";

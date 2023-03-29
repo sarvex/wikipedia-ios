@@ -6,6 +6,7 @@
 // Author: Pacha Tchernof
 // Author: פוילישער
 
+"aaald-added-text-description-2" = "$1 צוגעגעבן";
 "about-contributors" = "בײַשטײַערער";
 "about-libraries" = "געניצטע ביבליאטעקן";
 "about-libraries-complete-list" = "פֿולשטענדיקע רשימה";
@@ -23,6 +24,8 @@
 "account-creation-logging-in" = "ארײנלאגנדיק…";
 "account-creation-passwords-mismatched" = "פאסווארט פעלדער שטימען נישט.";
 "account-creation-saving" = "אויפהיטנדיק…";
+"action-cancel" = "אַנולירן";
+"action-language-accessibility" = "ענדערן שפּראַך";
 "action-read" = "לייענען";
 "action-save" = "אויפֿהיטן";
 "action-saved" = "אויפֿגעהיטן";
@@ -37,10 +40,13 @@
 "button-ok" = "יאָ";
 "button-publish" = "פֿאַרעפֿנטלעכן";
 "button-read-now" = "לייענען אצינד";
+"cancel" = "אַנולירן";
 "close-button-accessibility-label" = "פארמאכן";
+"diff-context-lines-expanded-button-title" = "באַהאַלטן";
 "edit-summary-choice-fixed-grammar" = "פארראכטן גראמאטיק";
 "edit-summary-choice-linked-words" = "צולייגן לינקען";
 "field-alert-token-invalid" = "אומגילטיקער קאד";
+"field-email-title" = "בליצפּאָסט";
 "forgot-password-button-title" = "צוריקשטעלן";
 "forgot-password-title" = "צוריקשטעלן פאַסווארט";
 "history-clear-all" = "אפליידיגן";
@@ -63,29 +69,32 @@
 "main-menu-nearby" = "דערבײ";
 "main-menu-privacy-policy" = "פּריוואַטקייט פּאליסי";
 "main-menu-terms-of-use" = "ניצבאדינגונגען";
-"main-menu-title" = "נאך";
+"main-menu-title" = "נאָך";
 "main-menu-zero-faq" = "וויקיפעדיע נול שאלות ותשובות";
 "menu-cancel-accessibility-label" = "אַנולירן";
+"more-languages-tooltip-title" = "צולייגן שפראַכן";
 "navbar-title-mode-edit-wikitext-preview" = "פֿאראויסשטעלונג";
 "nearby-distance-label-feet" = "$1 פיס";
 "nearby-distance-label-km" = "$1 ק״מ";
 "nearby-distance-label-meters" = "$1 מ";
 "nearby-distance-label-miles" = "$1 מייל";
+"notifications-center-status-all" = "אַלע";
+"notifications-center-swipe-more" = "נאָך";
 "number-thousands" = "$1K";
 "page-protected-autoconfirmed" = "דער בלאט איז געווארן האלב געשיצט.";
 "page-protected-can-not-edit" = "איר האט נישט די רעכטן צו רעדאקטירן דעם בלאט";
 "page-protected-can-not-edit-title" = "דער בלאט איז געשיצט";
 "page-protected-sysop" = "דער בלאט איז געווארן גאנג געשיצט.";
+"places-accessibility-group" = "$1 אַרטיקלען";
 "places-filter-top-articles-count" = "{{PLURAL:$1|$1 אַרטיקל|$1 אַרטיקלען}}";
 "places-search-default-text" = "זוכן ערטער";
 "preference-summary-eventlogging-opt-in" = "דערלויבן די וויקימעדיע פֿונדאציע צו זאמלען אינפארמאציע וויאזוי איר ניצט דעם אפ כדי צו פארבעסערן דעם אפ";
 "preference-title-eventlogging-opt-in" = "שיקן ניצונג־באריכטן";
-"rank-accessibility-label" = "נומער $1";
-"readers-accessibility-label" = "$1 לייענער";
 "reading-list-create-new-list-button-title" = "שאפֿן לייענען־ליסטע";
 "reading-list-create-new-list-description" = "באַשרײבונג";
 "reading-list-create-new-list-reading-list-name" = "נאמען פון לייענען־ליסטע";
 "reading-list-create-new-list-title" = "שאפן א נײע ליסטע";
+"reading-lists-default-list-title" = "אויפֿגעהיטן";
 "reference-title" = "רעפערענץ $1";
 "saved-title" = "אויפֿגעהיטן";
 "search-did-you-mean" = "צי האט איר געמיינט $1?";
@@ -107,12 +116,11 @@
 "settings-title" = "איינשטעלונגען";
 // Fuzzy
 "share-article-name-on-wikipedia" = "\"$1\" אויף @Wikipedia:";
+"sort-by-title-action" = "טיטל";
 "table-of-contents-close-accessibility-hint" = "פארמאכן";
 "table-of-contents-heading" = "אינהאַלט";
 "theme-dark-display-name" = "טונקל";
 "theme-default-display-name" = "גרונטלעך";
-"top-read-header-generic" = "וויקיפעדיע";
-"top-read-header-with-language" = "$1 וויקיפעדיע";
 "wikitext-downloading" = "אנלאדן אינהאלט…";
 "wikitext-preview-changes" = "רופן פאראויסקוק פון אייערע ענדערונגען…";
 "wikitext-preview-changes-none" = "קיין ענדערונגען נישט געמאכט פאראויסצוזען.";

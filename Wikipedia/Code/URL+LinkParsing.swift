@@ -30,17 +30,13 @@ extension URL {
     /// Resolves a relative href from a wiki page against the callee.
     /// The callee should be a standardized page URL generated with wmf_databaseURL, non-article namespaces are OK
     public func resolvingRelativeWikiHref(_ href: String) -> URL? {
-        let urlComponentsString: String
-
-        /// The link is sometimes encoded, and sometimes unencoded. (In some cases, this depends on whether an editor put added an escaped or unescaped version of the URL.) So we remove any potential encoding, so that we can be assured we are starting with an unencoded string.
-        let hrefWithoutEncoding = href.removingPercentEncoding ?? href
-
-        if hrefWithoutEncoding.hasPrefix(".") || hrefWithoutEncoding.hasPrefix("/") {
-            urlComponentsString = hrefWithoutEncoding.addingPercentEncoding(withAllowedCharacters: .relativePathAndFragmentAllowed) ?? href
-        } else {
-            urlComponentsString = hrefWithoutEncoding
-        }
+        // The link is sometimes encoded, and sometimes unencoded (In some cases, this depends on
+        // whether an editor put an escaped or unescaped version of the URL). We percent-encode
+        // certain characters first because URLComponents cannot ingest strings with these chacters
+        // in some versions of iOS (e.g. 15.5).
+        let urlComponentsString = href.addingPercentEncoding(withAllowedCharacters: .rfc3986Allowed) ?? href
         let components = URLComponents(string: urlComponentsString)
+        
         // Encode this URL to handle titles with forward slashes, otherwise URLComponents thinks they're separate path components
         let encodedBaseURL = encodedWikiURL
         var resolvedURL = components?.url(relativeTo: encodedBaseURL)?.absoluteURL
@@ -100,6 +96,10 @@ extension URL {
     /// returns true if host is en.wikipedia.org. Assumes desktop Wikipedia production format, i.e. that "en.wikipedia.org" is the host component and not in the path.
     public var wmf_isEnglishWikipedia: Bool {
         host == Configuration.Domain.englishWikipedia
+    }
+    
+    public var wmf_isTestWikipedia: Bool {
+        host == Configuration.Domain.testWikipedia
     }
 
     public var wmf_wiki: String? {

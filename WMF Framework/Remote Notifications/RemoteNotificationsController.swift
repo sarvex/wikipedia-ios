@@ -220,7 +220,7 @@ public enum RemoteNotificationsControllerError: LocalizedError {
             return
         }
         
-        let appLanguageProject =  RemoteNotificationsProject.wikipedia(appLanguage.languageCode, appLanguage.localizedName, appLanguage.languageVariantCode)
+        let appLanguageProject =  WikimediaProject.wikipedia(appLanguage.languageCode, appLanguage.localizedName, appLanguage.languageVariantCode)
         apiController.markAllAsSeen(project: appLanguageProject, completion: completion)
     }
     
@@ -288,7 +288,7 @@ public enum RemoteNotificationsControllerError: LocalizedError {
         }
         
         let count = try modelController.numberOfUnreadNotifications()
-        return NSNumber.init(value: count)
+        return NSNumber(value: count)
     }
     
     /// Fetches a count of all notifications from the local database. Uses the viewContext and must be called from the main thread
@@ -302,7 +302,7 @@ public enum RemoteNotificationsControllerError: LocalizedError {
     }
     
     /// List of all possible inbox projects available Notifications Center. Used for populating the Inbox screen and the project count toolbar
-    public private(set) var allInboxProjects: Set<RemoteNotificationsProject> = []
+    public private(set) var allInboxProjects: Set<WikimediaProject> = []
     
     /// A count of showing inbox projects (i.e. allInboxProjects minus those toggled off in the inbox filter screen)
     public var countOfShowingInboxProjects: Int {
@@ -312,7 +312,7 @@ public enum RemoteNotificationsControllerError: LocalizedError {
 
     @objc public func updateCacheWithCurrentUnreadNotificationsCount() throws {
         let currentCount = try numberOfUnreadNotifications().intValue
-        let sharedCache = SharedContainerCache<PushNotificationsCache>(pathComponent: .pushNotificationsCache, defaultCache: { PushNotificationsCache(settings: .default, notifications: []) })
+        let sharedCache = SharedContainerCache<PushNotificationsCache>(fileName: SharedContainerCacheCommonNames.pushNotificationsCache, defaultCache: { PushNotificationsCache(settings: .default, notifications: []) })
         var pushCache = sharedCache.loadCache()
         pushCache.currentUnreadCount = currentCount
         sharedCache.saveCache(pushCache)
@@ -342,7 +342,7 @@ public enum RemoteNotificationsControllerError: LocalizedError {
             return false
         }
         
-        let appLanguageProjects =  languageLinkController.preferredLanguages.map { RemoteNotificationsProject.wikipedia($0.languageCode, $0.localizedName, $0.languageVariantCode) }
+        let appLanguageProjects =  languageLinkController.preferredLanguages.map { WikimediaProject.wikipedia($0.languageCode, $0.localizedName, $0.languageVariantCode) }
         for project in appLanguageProjects {
             if !modelController.isProjectAlreadyImported(project: project) {
                 return false
@@ -377,14 +377,14 @@ public enum RemoteNotificationsControllerError: LocalizedError {
     }
     
     /// Fetches from the local database all projects that contain a local notification on device. Uses the viewContext and must be called from the main thread.
-    /// - Returns: Array of RemoteNotificationsProject
-    private func projectsFromLocalNotifications() throws -> Set<RemoteNotificationsProject> {
+    /// - Returns: Array of WikimediaProject
+    private func projectsFromLocalNotifications() throws -> Set<WikimediaProject> {
         guard let modelController = modelController else {
             return []
         }
         
         let wikis = try modelController.distinctWikis(predicate: nil)
-        let projects = wikis.compactMap { RemoteNotificationsProject(apiIdentifier: $0, languageLinkController: languageLinkController) }
+        let projects = wikis.compactMap { WikimediaProject(notificationsApiIdentifier: $0, languageLinkController: languageLinkController) }
         return Set(projects)
     }
     
@@ -401,8 +401,6 @@ public enum RemoteNotificationsControllerError: LocalizedError {
         case .unread:
             readStatusPredicate = NSPredicate(format: "isRead == %@", NSNumber(value: false))
         }
-        
-        // Note: The nature of the type and project predicates may feel backwards, but it allows unknown notification types to be caught by the filter `Other`. Writing these predicates by going through a list of types and projects toggled ON, with a predicate format of each like "categoryString IN %@ AND typeString IN %@" excludes unknown notification types when any filter is enabled. If the server started returning notifications with categoryString and typeStrings the app doesn't recognize (but is capable of displaying in a generic way), we would filter them generically as `other`. So instead we are going through a list of types and projects toggled OFF, and writing the predicates as "NOT (categoryString IN %@ AND typeString IN %@)" for notifications with known types. We're filtering projects in a similar manner for the sake of consistency.
         
         let offTypes = filterState.offTypes
         let onTypes = RemoteNotificationFilterType.orderingForFilters.filter {!offTypes.contains($0)}
@@ -466,9 +464,9 @@ public enum RemoteNotificationsControllerError: LocalizedError {
     
     /// Updates value of allInboxProjects by gathering list of static projects, app language projects, and local notifications projects. Involves a fetch to the local database. Uses the viewContext and must be called from the main thread
     private func updateAllInboxProjects() throws {
-        let sideProjects: Set<RemoteNotificationsProject> = [.commons, .wikidata]
+        let sideProjects: Set<WikimediaProject> = [.commons, .wikidata]
         
-        let appLanguageProjects =  languageLinkController.preferredLanguages.map { RemoteNotificationsProject.wikipedia($0.languageCode, $0.localizedName, $0.languageVariantCode) }
+        let appLanguageProjects =  languageLinkController.preferredLanguages.map { WikimediaProject.wikipedia($0.languageCode, $0.localizedName, $0.languageVariantCode) }
         
         var inboxProjects = sideProjects.union(appLanguageProjects)
         let localProjects = try projectsFromLocalNotifications()
@@ -502,9 +500,9 @@ public struct RemoteNotificationsFilterState: Equatable {
     
     public let readStatus: ReadStatus
     public let offTypes: Set<RemoteNotificationFilterType>
-    public let offProjects: Set<RemoteNotificationsProject>
+    public let offProjects: Set<WikimediaProject>
     
-    public init(readStatus: ReadStatus, offTypes: Set<RemoteNotificationFilterType>, offProjects: Set<RemoteNotificationsProject>) {
+    public init(readStatus: ReadStatus, offTypes: Set<RemoteNotificationFilterType>, offProjects: Set<WikimediaProject>) {
         self.readStatus = readStatus
         self.offTypes = offTypes
         self.offProjects = offProjects
@@ -619,7 +617,7 @@ public struct RemoteNotificationsFilterState: Equatable {
               }
         
         let offTypes = offTypeIdentifiers.compactMap { RemoteNotificationFilterType(from: $0 as String) }
-        let offProjects = offProjectApiIdentifiers.compactMap { RemoteNotificationsProject(apiIdentifier: $0 as String, languageLinkController: languageLinkController) }
+        let offProjects = offProjectApiIdentifiers.compactMap { WikimediaProject(notificationsApiIdentifier: $0 as String, languageLinkController: languageLinkController) }
         
         self.readStatus = readStatus
         self.offTypes = Set(offTypes)

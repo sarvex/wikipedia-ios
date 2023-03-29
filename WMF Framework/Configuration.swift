@@ -166,6 +166,7 @@ public class Configuration: NSObject {
         public static let appsLabs = "mobileapps.wmflabs.org" // Product Infrastructure team's labs instance
         public static let localhost = "localhost"
         public static let englishWikipedia = "en.wikipedia.org"
+        public static let testWikipedia = "test.wikipedia.org"
         public static let wikimedia = "wikimedia.org"
         public static let metaWiki = "meta.wikimedia.org"
         public static let wikimediafoundation = "wikimediafoundation.org"
@@ -196,11 +197,14 @@ public class Configuration: NSObject {
     public let centralAuthCookieSourceDomain: String // copy cookies from
     public let centralAuthCookieTargetDomains: [String] // copy cookies to
     
-    public let wikiResourceDomains: [String]
-    public let inAppLinkDomains: [String]
+    // Wikipedia Domains
+    public let wikipediaDomains: [String]
+    
+    // Domains that can fall back to in-app web view
+    public let inAppWebViewRoutingDomains: [String]
 
     @objc public lazy var router: Router = {
-       return Router(configuration: self)
+        return Router(configuration: self)
     }()
 
     required init(environment: Environment, defaultSiteDomain: String,
@@ -221,8 +225,9 @@ public class Configuration: NSObject {
         self.wikipediaCookieDomain = wikipediaCookieDomain
         self.centralAuthCookieSourceDomain = self.wikipediaCookieDomain
         self.centralAuthCookieTargetDomains = centralAuthCookieTargetDomains
-        self.wikiResourceDomains = [defaultSiteDomain]
-        self.inAppLinkDomains = [defaultSiteDomain, Domain.mediaWiki, Domain.wikidata, Domain.wikimedia, Domain.wikimediafoundation]
+        
+        self.wikipediaDomains = [Domain.wikipedia, Domain.wikipediaBetaLabs, Domain.appsLabs]
+        self.inAppWebViewRoutingDomains = wikipediaDomains + [Domain.mediaWiki, Domain.wikidata, Domain.wikimedia, Domain.wikimediafoundation]
         self.pageContentServiceAPIType = pageContentServiceAPIType
         self.feedContentAPIType = feedContentAPIType
         self.announcementsAPIType = announcementsAPIType
@@ -376,24 +381,29 @@ public class Configuration: NSObject {
     }
     
     // MARK: Routing Helpers
-
+    
     public func isWikipediaHost(_ host: String?) -> Bool {
         guard let host = host else {
             return false
         }
-        for domain in wikiResourceDomains {
+        for domain in wikipediaDomains {
             if host.isDomainOrSubDomainOf(domain) {
                 return true
             }
         }
+        
         return false
     }
     
-    public func isInAppLinkHost(_ host: String?) -> Bool {
+    /// Indicates if a url should fall back to an in-app web view or not
+    /// Please inspect url namespace first and confirm url cannot display natively before using this method.
+    /// - Parameter host: url host that you are trying to route
+    /// - Returns: true = host should fall back to app web view, route to in-app web view. false = host should fall back to external Safari web browser (business logic for parental controls).
+    public func hostCanRouteToInAppWebView(_ host: String?) -> Bool {
         guard let host = host else {
             return false
         }
-        for domain in inAppLinkDomains {
+        for domain in inAppWebViewRoutingDomains {
             if host.isDomainOrSubDomainOf(domain) {
                 return true
             }
@@ -401,5 +411,3 @@ public class Configuration: NSObject {
         return false
     }
 }
-
-

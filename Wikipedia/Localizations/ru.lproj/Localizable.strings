@@ -8,6 +8,7 @@
 // Author: BadDog
 // Author: Batumski brodyaga
 // Author: Bsitzmann
+// Author: Deltaspace
 // Author: Dicto23456
 // Author: Diralik
 // Author: Dyaydyasasha2015
@@ -48,6 +49,7 @@
 // Author: Soul Train
 // Author: Stjn
 // Author: Sunpriat
+// Author: UniCollab
 // Author: Valencia212
 // Author: Vlad5250
 // Author: WindEwriX
@@ -55,6 +57,7 @@
 // Author: Yuryleb
 // Author: Zpizza
 // Author: Александр Сигачёв
+// Author: Артём 13327
 // Author: Марио
 
 "aaald-added-text-description-2" = "$1 добавлено";
@@ -114,15 +117,6 @@
 "about-translators-details" = "Это приложение было переведено добровольцами на $1";
 "about-wikimedia-foundation" = "Фонд Викимедиа";
 "about-wikipedia" = "Википедия";
-"abuse-filter-disallow-heading" = "Вы не можете опубликовать эту правку";
-"abuse-filter-disallow-unconstructive" = "Автоматизированный фильтр определил эту правку как потенциально деструктивную или как попытку вандализма. Вернитесь назад и измените правку.";
-"abuse-filter-warning-blanking" = "Удаление частей или полных статей";
-"abuse-filter-warning-caps" = "Заглавными буквами";
-"abuse-filter-warning-heading" = "Эта выглядит как деструктивная правка. Вы уверены, что хотите опубликовать её?";
-"abuse-filter-warning-irrelevant" = "Нерелевантные внешние ссылки или изображения";
-"abuse-filter-warning-repeat" = "Повторяющиеся символы";
-"abuse-filter-warning-spam" = "Добавление спама в статьи";
-"abuse-filter-warning-subheading" = "Ваша правка может содержать:";
 "account-creation-captcha-cannot-see-image" = "Не видите изображение? $1";
 "account-creation-captcha-obtaining" = "Получение новой CAPTCHA...";
 "account-creation-captcha-request-account" = "Запрос учётной записи.";
@@ -136,6 +130,7 @@
 "account-creation-saving" = "Сохраняется…";
 "account-creation-title" = "Создайте новую учётную запись";
 "account-group-title" = "Ваша учётная запись";
+"account-request-vanishing" = "Удалить учётную запись";
 "account-talk-page-title" = "Ваша страница обсуждения";
 "account-talk-preferences-auto-sign-discussions" = "Автоматическая подпись в обсуждениях";
 "account-talk-preferences-auto-sign-discussions-setting-explanation" = "В автоматическом подписывании обсуждений будет использовать та подпись, которая установлена в Настройках";
@@ -171,6 +166,7 @@
 "action-update" = "Обновить";
 "add-articles-to-reading-list" = "Добавить {{PLURAL:$1|$1 статью|$1 статьи|$1 статей}} в список для чтения";
 "add-citation-title" = "Добавить ссылку на источник";
+"additional-information-email-title" = "Дополнительная информация";
 "announcements-dismiss" = "Закрыть";
 "app-store-keywords" = "Википедия, статья, вики, энциклопедия, инфо, знание, прочитать, информация, чтение, определение";
 "app-store-release-notes" = "Лента в приложении теперь сделана полностью настраиваемой и лёгкой в использовании. Были улучшены сообщения локализации, а также повышена производительность приложения и, традиционно, исправлены некоторые ошибки.";
@@ -199,6 +195,7 @@
 "article-toolbar-reading-themes-controls-toolbar-item" = "Настройки темы для чтения";
 "back-button-accessibility-label" = "Назад";
 "back-button-popover-title" = "Нажмите, чтобы вернуться назад";
+"button-go-back" = "Назад";
 "button-next" = "Далее";
 "button-ok" = "OK";
 "button-publish" = "Опубликовать";
@@ -461,7 +458,9 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "Раздел Википедии: $1";
 "explore-random-article-sub-heading-from-wikipedia" = "Из Википедии";
 "explore-randomizer" = "Рандомизатор";
-"featured-article-empty-title" = "Сегодня нет избранных статей";
+"export-user-data-confirmation-message" = "Общий доступ к библиотеке приложений включает данные о списках чтения и истории, предпочтениях и содержании раздела «Лента». Этот файл данных должен передаваться только доверенному получателю для использования в целях технической диагностики.";
+"export-user-data-confirmation-title" = "Поделиться библиотекой приложения?";
+"export-user-data-title" = "Экспорт данных пользователя";
 "featured-widget-content-failure-for-date" = "Избранная статья недоступна для этой даты.";
 "featured-widget-description" = "Откройте для себя лучшие статьи из Википедии, ежедневно отбираемые нашим сообществом.";
 "featured-widget-from-language-wikipedia" = "Из $1 Википедии";
@@ -526,6 +525,7 @@
 "icon-shortcut-random-title" = "Случайная статья";
 "icon-shortcut-search-title" = "Поиск по Википедии";
 "image-gallery-unknown-owner" = "Автор неизвестен.";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Не сейчас";
 "in-the-news-sub-title-from-language-wikipedia" = "Раздел Википедии: $1";
 "in-the-news-sub-title-from-wikipedia" = "Из Википедии";
 "in-the-news-title" = "В новостях";
@@ -591,7 +591,7 @@
 "main-menu-rate-app" = "Оценить приложение";
 "main-menu-terms-of-use" = "Условия использования";
 "main-menu-title" = "Ещё";
-"main-menu-zero-faq" = "ЧаВо по Wikipedia Zero";
+"main-menu-zero-faq" = "ЧЗВ по Wikipedia Zero";
 "menu-cancel-accessibility-label" = "Отмена";
 "more-languages-tooltip-description" = "Искать в Википедии на более чем 300 языках";
 "more-languages-tooltip-title" = "Добавить языки";
@@ -609,6 +609,10 @@
 "no-internet-connection-article-reload-button" = "Вернуться к последней сохранённой версии";
 "notifications-center-agent-description-from-format" = "От $1";
 "notifications-center-alert" = "Оповещение";
+"notifications-center-applied-filters-accessibility-label" = "Фильтр уведомлений: с применёнными фильтрами";
+"notifications-center-applied-project-filters-accessibility-label" = "Фильтр проектов: с применёнными фильтрами";
+"notifications-center-badge-button-accessibility-label" = "Уведомления со значком непрочитанности";
+"notifications-center-cell-notification-type-accessibility-label-format" = "Уведомление «$1»";
 "notifications-center-change-password" = "Изменить пароль";
 "notifications-center-checking-for-notifications" = "Проверка уведомлений…";
 "notifications-center-destination-app" = "В приложке";
@@ -620,9 +624,11 @@
 "notifications-center-feed-card-title" = "Теперь доступно редактирование уведомлений";
 "notifications-center-feed-news-notification-button-text" = "Включить пуш-уведомления";
 "notifications-center-feed-news-notification-dismiss-button-text" = "Не сейчас";
+"notifications-center-filters-accessibility-label" = "Фильтр уведомлений";
 "notifications-center-filters-read-status-item-title-all" = "Все";
 "notifications-center-filters-read-status-item-title-read" = "Читать";
 "notifications-center-filters-read-status-item-title-unread" = "Непрочитанные";
+"notifications-center-filters-read-status-section-title" = "Статус прочтения";
 "notifications-center-filters-title" = "Фильтры";
 "notifications-center-filters-types-item-title-all" = "Все типы";
 "notifications-center-filters-types-section-title" = "Типы уведомлений";
@@ -650,6 +656,7 @@
 "notifications-center-onboarding-modal-filters-title" = "Фильтры";
 "notifications-center-onboarding-modal-learn-more-action" = "Узнать подробнее об уведомлениях";
 "notifications-center-onboarding-modal-notifications-alerts-title" = "Уведомления и оповещения";
+"notifications-center-onboarding-modal-project-inboxes-title" = "Входящие проектов";
 "notifications-center-onboarding-modal-push-notifications-title" = "Пуш-уведомления";
 "notifications-center-onboarding-modal-title" = "Редактирование уведомлений";
 "notifications-center-onboarding-panel-heading" = "Включить пуш-уведомления?";
@@ -660,7 +667,9 @@
 "notifications-center-status-all-notifications" = "Все уведомления";
 "notifications-center-status-double-concatenation" = "$1 в $2";
 "notifications-center-status-filtered-by" = "Отфильтровано по";
+"notifications-center-status-in-projects" = "{{PLURAL:$1|1=В одном проекте|В $1 проектах}}";
 "notifications-center-status-in-projects-plain" = "{{PLURAL:$1|1=1 проект|$1 проекта|$1 проектов}}";
+"notifications-center-status-in-types" = "{{PLURAL:$1|1=1 тип|$1 типа|$1 типов}}";
 "notifications-center-status-read" = "Прочитано";
 "notifications-center-status-triple-concatenation" = "$1 и $2 в $3";
 "notifications-center-status-unread" = "Не прочитано";
@@ -697,9 +706,13 @@
 "notifications-center-type-title-edit-summary-mention" = "Упоминание в описании изменений";
 "notifications-center-type-title-email-from-other-user" = "Эл. письмо от другого участника";
 "notifications-center-type-title-login-attempts" = "Попытки входа";
+"notifications-center-type-title-login-attempts-subtitle" = "Попытки войти в вашу учётную запись не удались.";
 "notifications-center-type-title-login-success" = "Успешный вход";
+"notifications-center-type-title-other" = "Другое";
 "notifications-center-type-title-page-link" = "Ссылка на страницу";
 "notifications-center-type-title-page-review" = "Проверка страниц";
+"notifications-center-type-title-sent-mention-failure" = "Не удалось отправить упоминание";
+"notifications-center-type-title-sent-mention-success" = "Упоминание успешно отправлено";
 "notifications-center-type-title-talk-page-mention" = "Упоминание на странице обсуждения";
 "notifications-center-type-title-thanks" = "Спасибо";
 "notifications-center-type-title-translation-milestone" = "Веха в переводах";
@@ -747,6 +760,8 @@
 "page-similar-titles" = "Похожие страницы";
 "panel-compare-revisions-text" = "Сравнение редакций помогает показать, как статья менялась с течением времени. Сравнение двух редакций статьи покажет разницу между этими редакциями, выделив все содержание, которое было изменено.";
 "panel-compare-revisions-title" = "Сравнение версий";
+"panel-not-logged-in-continue-edit-action-title" = "Редактировать без входа в систему";
+"panel-not-logged-in-title" = "Вы не вошли в систему";
 "pictured" = "иллюстрировано";
 "places-accessibility-clear-saved-searches" = "Очистить сохранённые поисковые запросы";
 "places-accessibility-group" = "$1 статьи";
@@ -798,8 +813,6 @@
 "project-name-wikiversity" = "Викиверситет";
 "project-name-wikivoyage" = "Викигид";
 "project-name-wiktionary" = "Викисловарь";
-"rank-accessibility-label" = "Количество $1";
-"readers-accessibility-label" = "$1 читателей";
 "reading-list-add-generic-hint-title" = "Добавить эту статью в список для чтения?";
 "reading-list-add-hint-title" = "Добавить “$1” в список для чтения";
 "reading-list-add-saved-button-title" = "Да, добавьте их в мои списки чтения";
@@ -991,18 +1004,27 @@
 "tajik-variants-alert-body" = "Приложение Википедия теперь поддерживает следующие варианты Таджикского языка в качестве основных или дополнительных языков в приложении, что упрощает чтение, поиск и редактирование в предпочтительных вариантах:\n\nтоҷикӣ кирилликӣ Tajik, Cyrillic (tg-cyrl)\ntojikī lotinī Tajik, Latin (tg-latn)";
 "tajik-variants-alert-title" = "Обновление поддержки вариантов Таджикского";
 "talk-page-add-discussion-accessibility-label" = "Добавить обсуждение";
+"talk-page-add-topic-button" = "Добавить тему";
+"talk-page-archives" = "Архивы";
+"talk-page-article-about" = "О страницах обсуждения";
+"talk-page-change-language" = "Изменить язык";
 "talk-page-discussion-accessibility-hint" = "Нажмите дважды, чтобы открыть ветку обсуждения";
 "talk-page-discussion-read-accessibility-label" = "Прочитано";
 "talk-page-discussion-read-ipa-accessibility-attribute" = "прочитано";
 "talk-page-discussion-unread-accessibility-label" = "Непрочитано";
 "talk-page-discussion-unread-ipa-accessibility-attribute" = "непрочитано";
+"talk-page-error-alert-title" = "Неожиданная ошибка";
+"talk-page-error-loading-subtitle" = "Что-то пошло не так.";
+"talk-page-error-loading-title" = "Невозможно загрузить страницу обсуждения";
 "talk-page-error-unable-to-post-reply" = "Нет подключения к интернету. Невозможно опубликовать ответ.";
 "talk-page-error-unable-to-post-topic" = "Нет подключения к интернету. Невозможно опубликовать обсуждение.";
+"talk-page-find-in-page-button" = "Найти на странице";
 "talk-page-info-active-conversations" = "Активные обсуждения в википедии $1";
 "talk-page-info-active-conversations-generic" = "Активные обсуждения в Википедии";
 "talk-page-link-user-action-sheet-app" = "Показывать страницу обсуждения участника";
 "talk-page-link-user-action-sheet-safari" = "Показать в Safari страницу участника";
 "talk-page-link-user-action-sheet-title" = "страницы участника";
+"talk-page-menu-open-all" = "Открыть все темы";
 "talk-page-new-banner-subtitle" = "И не забывайте - вы общаетесь с живыми людьми, со всеми вытекающими отсюда последствиями :-)";
 "talk-page-new-banner-title" = "Будьте вежливы";
 "talk-page-new-body-textfield-accessibility-label" = "Текст обсуждения";
@@ -1015,21 +1037,59 @@
 "talk-page-new-topic-body-placeholder-text" = "Создать новое обсуждение";
 "talk-page-new-topic-success-text" = "Ваше обсуждение было опубликовано";
 "talk-page-new-topic-title" = "Новое обсуждение";
+"talk-page-page-info" = "Информация о странице";
+"talk-page-permanent-link" = "Постоянная ссылка";
+"talk-page-publish-reply-error-subtitle" = "Проверьте соединение с интернетом.";
+"talk-page-publish-reply-error-title" = "Не удалось опубликовать ваш комментарий.";
 "talk-page-publish-terms-and-licenses" = "Сохраняя изменения, вы соглашаетесь с $1Условиями использования$2 и публикуете свой вклад под лицензиями $3CC BY-SA 3.0$4 и $5GFDL$6.";
+"talk-page-publish-topic-error-title" = "Невозможно опубликовать новую тему.";
+"talk-page-read-in-web" = "Читать в Интернете";
+"talk-page-related-links" = "Ссылки сюда";
+"talk-page-reply-button" = "Ответить";
+"talk-page-reply-button-accessibility-label" = "Ответить $1";
+"talk-page-reply-placeholder-format" = "Ответить $1";
 "talk-page-reply-title" = "Ответ";
+"talk-page-revision-history" = "История изменений";
+"talk-page-share-button" = "Поделиться страницей обсуждения";
+"talk-page-subscribe-to-topic" = "Подписаться";
+"talk-page-subscribed-alert-subtitle" = "Вы будете получать уведомления о новых сообщениях в этой теме.";
+"talk-page-subscribed-alert-title" = "Вы подписались!";
 "talk-page-title-article-talk" = "Обсуждение статьи";
 "talk-page-title-user-talk" = "Обсуждение участника";
+"talk-page-topic-compose-terms-and-licenses" = "Сохраняя изменения, вы соглашаетесь с $1Условиями использования$2 и безвозвратно соглашаетесь опубликовать свой вклад под лицензиями $3CC BY-SA 3.0$4 и $5GFDL$6.";
 "talk-page-topic-title" = "Обсуждение";
+"talk-page-unsubscribe-to-topic" = "Отписаться";
+"talk-page-unsubscribed-alert-subtitle" = "Вы больше не будете получать уведомления о новых сообщениях в этой теме.";
+"talk-page-unsubscribed-alert-title" = "Вы отписались.";
+"talk-page-user-about" = "О страницах обсуждения участников";
+"talk-page-user-contributions" = "Вклад";
+"talk-pages-archives-view-title" = "Архивы";
+"talk-pages-coffee-roll-read-more" = "Читать далее";
+"talk-pages-comment-added-alert-title" = "Ваш комментарий был добавлен";
+"talk-pages-compose-close-confirmation-keep" = "Продолжить редактирование";
+"talk-pages-empty-view-button-article-add-topic" = "Добавить новую тему";
+"talk-pages-empty-view-button-user-start-discussion" = "Начать обсуждение";
+"talk-pages-empty-view-header-article" = "Разговор начинается здесь";
+"talk-pages-empty-view-header-user" = "Начать обсуждение с $1";
 "talk-pages-reply-button-title" = "Ответить в этом обсуждении";
+"talk-pages-topic-added-alert-title" = "Ваша тема была добавлена";
+"talk-pages-topic-compose-body-placeholder" = "Описание";
+"talk-pages-topic-compose-body-placeholder-accessibility" = "Описание темы";
+"talk-pages-topic-compose-close-confirmation-discard" = "Отменить ответ";
+"talk-pages-topic-compose-close-confirmation-title" = "Вы уверены, что хотите удалить эту новую тему?";
+"talk-pages-topic-compose-navbar-title" = "Тема";
+"talk-pages-topic-compose-title-placeholder" = "Название темы";
+"talk-pages-topic-reply-onboarding-body" = "Страницы обсуждения — это место, где люди обсуждают, как сделать контент в Википедии как можно лучше. Добавьте новую тему для обсуждения, чтобы общаться и сотрудничать с сообществом википедистов.\n\nПожалуйста, будьте приветливы, мы все здесь люди.";
+"talk-pages-topic-reply-onboarding-title" = "Страницы обсуждения";
+"talk-pages-user-groups" = "Группы участников";
+"talk-pages-user-logs" = "Журналы";
+"talk-pages-view-title" = "Обсуждение";
 "theme-black-display-name" = "Чёрное";
 "theme-dark-display-name" = "Тёмная";
 "theme-default-display-name" = "По умолчанию";
 "theme-default-explanation" = "Соответствует системной теме оформления";
 "theme-light-display-name" = "Свет";
 "theme-sepia-display-name" = "Сепия";
-"top-read-header-generic" = "Википедия";
-"top-read-header-with-language" = "Раздел Википедии: $1";
-"top-read-see-more" = "Посмотреть больше самых читаемых статей";
 "top-read-widget-description" = "Узнайте, что мир читает сегодня в Википедии.";
 "top-read-widget-readers-count" = "$1 читателей";
 "top-read-widget-title" = "Самые читаемые";
@@ -1042,6 +1102,16 @@
 "unknown-generic-text" = "Неизвестно";
 "uzbek-variants-alert-body" = "Приложение Википедия теперь поддерживает следующие Узбекские варианты в качестве основных или дополнительных языков в приложении, что упрощает чтение, поиск и редактирование в предпочтительных вариантах:\n\noʻzbekcha lotin Uzbek, Latin (uz-latin)\nўзбекча кирилл Uzbek, Cyrillic (uz-cyrl)";
 "uzbek-variants-alert-title" = "Обновление поддержки вариантов Узбекского";
+"vanish-account-additional-information-field" = "Дополнительная информация";
+"vanish-account-additional-information-placeholder" = "Необязательно";
+"vanish-account-back-confirm-discard" = "Отменить запрос";
+"vanish-account-back-confirm-keep-editing" = "Продолжить редактирование";
+"vanish-account-button-text" = "Послать запрос";
+"vanish-account-continue-button-title" = "Продолжить";
+"vanish-account-learn-more-text" = "Узнать подробности";
+"vanish-account-username-field" = "Имя участника и его страница";
+"vanish-account-warning-title" = "Предупреждение";
+"vanish-modal-title" = "Запрос на исчезновение";
 "variants-alert-dismiss-button" = "Нет, спасибо";
 "variants-alert-preferences-button" = "Просмотреть свои настройки";
 "welcome-exploration-explore-feed-description" = "Рекомендованные записи и ежедневные статьи от нашего сообщества";

@@ -41,30 +41,17 @@ struct NotificationsCenterFilterItemView: View {
                         itemViewModel.toggleSelectionForToggleType()
                     }
                     
-                    if #available(iOS 14.0, *) {
-                        Toggle(isOn: customBinding) {
-                            customLabelForToggle(type: type)
-                        }
-                        .toggleStyle(SwitchToggleStyle(tint: Color(theme.colors.accent)))
-                    } else {
-                        Toggle(isOn: customBinding) {
-                            customLabelForToggle(type: type)
-                        }
+                    Toggle(isOn: customBinding) {
+                        customLabelForToggle(type: type)
                     }
+                    .toggleStyle(SwitchToggleStyle(tint: Color(theme.colors.accent)))
                 }
             case .toggleAll:
-                if #available(iOS 14.0, *) {
-                    Toggle(itemViewModel.title, isOn: $itemViewModel.isSelected.didSet { (state) in
-                        itemViewModel.toggleSelectionForAll()
-                    })
-                    .foregroundColor(Color(theme.colors.primaryText))
-                    .toggleStyle(SwitchToggleStyle(tint: Color(theme.colors.accent)))
-                } else {
-                    Toggle(itemViewModel.title, isOn: $itemViewModel.isSelected.didSet { (state) in
-                        itemViewModel.toggleSelectionForAll()
-                    })
-                    .foregroundColor(Color(theme.colors.primaryText))
-                }
+                Toggle(itemViewModel.title, isOn: $itemViewModel.isSelected.didSet { (state) in
+                    itemViewModel.toggleSelectionForAll()
+                })
+                .foregroundColor(Color(theme.colors.primaryText))
+                .toggleStyle(SwitchToggleStyle(tint: Color(theme.colors.accent)))
             }
         }
         .padding(.horizontal, horizontalSizeClass == .regular ? (UIFont.preferredFont(forTextStyle: .body).pointSize) : 0)
@@ -156,14 +143,17 @@ struct NotificationsCenterFilterView: View {
                             .foregroundColor(Color(viewModel.theme.colors.primaryText))
                         }
             )
-            .background(Color(viewModel.theme.colors.baseBackground).edgesIgnoringSafeArea(.all))
+            .listBackgroundColor(Color(viewModel.theme.colors.baseBackground))
             .navigationBarTitle(Text(WMFLocalizedString("notifications-center-filters-title", value: "Filters", comment: "Navigation bar title text for the filters view presented from notifications center. Allows for filtering by read status and notification type.")), displayMode: .inline)
             .onAppear(perform: {
+                if #unavailable(iOS 16) {
                     UITableView.appearance().backgroundColor = UIColor.clear
+                }
             })
             .onDisappear(perform: {
-                
-                UITableView.appearance().backgroundColor = UIColor.systemGroupedBackground
+                if #unavailable(iOS 16) {
+                    UITableView.appearance().backgroundColor = UIColor.systemGroupedBackground
+                }
             })
     }
 }

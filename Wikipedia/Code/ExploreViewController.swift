@@ -36,6 +36,7 @@ class ExploreViewController: ColumnarCollectionViewController, ExploreCardViewCo
         NotificationCenter.default.addObserver(self, selector: #selector(articleDidChange(_:)), name: NSNotification.Name.WMFArticleUpdated, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(articleDeleted(_:)), name: NSNotification.Name.WMFArticleDeleted, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(pushNotificationBannerDidDisplayInForeground(_:)), name: .pushNotificationBannerDidDisplayInForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewContextDidReset(_:)), name: NSNotification.Name.WMFViewContextDidReset, object: nil)
 
 #if UI_TEST
         if UserDefaults.standard.wmf_isFastlaneSnapshotInProgress() {
@@ -66,7 +67,7 @@ class ExploreViewController: ColumnarCollectionViewController, ExploreCardViewCo
     }
     
     override func viewWillHaveFirstAppearance(_ animated: Bool) {
-         super.viewWillHaveFirstAppearance(animated)
+        super.viewWillHaveFirstAppearance(animated)
         setupFetchedResultsController()
     }
     
@@ -267,8 +268,14 @@ class ExploreViewController: ColumnarCollectionViewController, ExploreCardViewCo
         return searchContainerView
     }()
 
-    @available(iOS 14.0, *)
-    lazy var scribbleIgnoringDelegate = ScribbleIgnoringInteractionDelegate()
+    private var _scribbleIgnoringDelegate: Any? = nil
+    
+    private var scribbleIgnoringDelegate: ScribbleIgnoringInteractionDelegate? {
+        if _scribbleIgnoringDelegate == nil {
+            _scribbleIgnoringDelegate = ScribbleIgnoringInteractionDelegate()
+        }
+        return _scribbleIgnoringDelegate as? ScribbleIgnoringInteractionDelegate
+    }
 
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -278,7 +285,8 @@ class ExploreViewController: ColumnarCollectionViewController, ExploreCardViewCo
         searchBar.placeholder =  WMFLocalizedString("search-field-placeholder-text", value: "Search Wikipedia", comment: "Search field placeholder text")
 
         // Disable Scribble on this placeholder text field
-        if UIDevice.current.userInterfaceIdiom == .pad, #available(iOS 14.0, *) {
+        if UIDevice.current.userInterfaceIdiom == .pad,
+        let scribbleIgnoringDelegate = scribbleIgnoringDelegate {
             let existingInteractions = searchBar.searchTextField.interactions
             existingInteractions.forEach { searchBar.searchTextField.removeInteraction($0) }
             let scribbleIgnoringInteraction = UIScribbleInteraction(delegate: scribbleIgnoringDelegate)
@@ -375,6 +383,7 @@ class ExploreViewController: ColumnarCollectionViewController, ExploreCardViewCo
             } else {
                 DispatchQueue.main.async {
                     self?.showOfflineEmptyViewIfNeeded()
+
                 }
             }
         }
@@ -1004,6 +1013,10 @@ extension ExploreViewController: ExploreCardCollectionViewCellDelegate {
             return
         }
         layoutCache.invalidateArticleKey(articleKey)
+    }
+    
+    @objc func viewContextDidReset(_ note: Notification) {
+        collectionView.reloadData()
     }
 
     private func menuActionSheetForGroup(_ group: WMFContentGroup) -> UIAlertController? {

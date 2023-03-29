@@ -78,7 +78,7 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
 #endif
 
     [[NSUserDefaults standardUserDefaults] wmf_migrateFontSizeMultiplier];
-    NSUserDefaults.standardUserDefaults.shouldRestoreNavigationStackOnResume = [self shouldRestoreNavigationStackOnResumeAfterBecomingActive:[NSDate date]];
+    NSUserDefaults.standardUserDefaults.shouldRestoreNavigationStackOnResume = [self shouldRestoreNavigationStackOnResumeAfterBecomingActive];
 
     self.appNeedsResume = YES;
     WMFAppViewController *vc = [[WMFAppViewController alloc] init];
@@ -116,19 +116,13 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
     }
 }
 
-- (BOOL)shouldRestoreNavigationStackOnResumeAfterBecomingActive:(NSDate *)becomeActiveDate {
+- (BOOL)shouldRestoreNavigationStackOnResumeAfterBecomingActive {
     BOOL shouldOpenAppOnSearchTab = [NSUserDefaults standardUserDefaults].wmf_openAppOnSearchTab;
     if (shouldOpenAppOnSearchTab) {
         return NO;
     }
 
-    NSDate *resignActiveDate = [[NSUserDefaults standardUserDefaults] wmf_appResignActiveDate];
-    if (!resignActiveDate) {
-        return NO;
-    }
-    NSDate *cutoffDate = [[NSCalendar wmf_utcGregorianCalendar] nextDateAfterDate:resignActiveDate matchingHour:5 minute:0 second:0 options:NSCalendarMatchStrictly];
-    BOOL isBeforeCutoffDate = [becomeActiveDate compare:cutoffDate] == NSOrderedAscending;
-    return isBeforeCutoffDate;
+    return YES;
 }
 
 #pragma mark - NSUserActivity Handling
@@ -139,6 +133,12 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
 
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> *__nullable restorableObjects))restorationHandler {
     [self.appViewController showSplashView];
+
+    // Assign deep link user info source before routing
+    NSMutableDictionary *mutableUserInfo = userActivity.userInfo != nil ? [[NSMutableDictionary alloc] initWithDictionary:userActivity.userInfo] : [[NSMutableDictionary alloc] init];
+    mutableUserInfo[WMFRoutingUserInfoKeys.source] = WMFRoutingUserInfoSourceValue.deepLinkRawValue;
+    NSDictionary *newUserInfo = [[NSDictionary alloc] initWithDictionary:mutableUserInfo];
+    userActivity.userInfo = newUserInfo;
 
     BOOL result = [self.appViewController processUserActivity:userActivity
                                                      animated:NO

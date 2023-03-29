@@ -4,12 +4,15 @@
 // Author: A Chinese Wikipedian
 // Author: A Retired User
 // Author: A2B4C
+// Author: Amire80
 // Author: Angrydog001
 // Author: Chixvv
+// Author: Cookai1205
 // Author: Crowley666
 // Author: Cwek
 // Author: Davidzdh
 // Author: Endermoon
+// Author: Evesiesta
 // Author: FakeGreenHand
 // Author: GoForceX
 // Author: GuoPC
@@ -20,9 +23,12 @@
 // Author: Kuailong
 // Author: LNDDYL
 // Author: Lakejason0
+// Author: Lantianjialiang
 // Author: Linforest
+// Author: LittlePaw365
 // Author: Liuxinyu970226
 // Author: Macofe
+// Author: MangoFanFanw
 // Author: Nemo bis
 // Author: NeverBehave
 // Author: NigelSoft
@@ -37,11 +43,13 @@
 // Author: Willy1018
 // Author: Winston Sung
 // Author: Wxyveronica
+// Author: Wzl19371
 // Author: Xiplus
 // Author: Yfdyh000
 // Author: Yining Chen
 // Author: Ywang
 // Author: Zhang8569
+// Author: ZhaoFJx
 // Author: 予弦
 // Author: 佛壁灯
 // Author: 夢蝶葬花
@@ -109,15 +117,6 @@
 "about-translators-details" = "由$1的志愿者翻译";
 "about-wikimedia-foundation" = "维基媒体基金会";
 "about-wikipedia" = "维基百科";
-"abuse-filter-disallow-heading" = "您不能发布该编辑";
-"abuse-filter-disallow-unconstructive" = "自动过滤器已认定此编辑可能不具建设性或存在破坏企图。请返回并检查您的编辑。";
-"abuse-filter-warning-blanking" = "删除段落或条目全文";
-"abuse-filter-warning-caps" = "全部大写文本";
-"abuse-filter-warning-heading" = "这看起来是没有建设性的编辑，您确定要发布它？";
-"abuse-filter-warning-irrelevant" = "无关的外部链接或图像";
-"abuse-filter-warning-repeat" = "重复文字";
-"abuse-filter-warning-spam" = "条目添加了垃圾信息";
-"abuse-filter-warning-subheading" = "您的编辑可能含有：";
 "account-creation-captcha-cannot-see-image" = "看不到图像么？$1";
 "account-creation-captcha-obtaining" = "获得新验证码...";
 "account-creation-captcha-request-account" = "请求账户。";
@@ -130,7 +129,7 @@
 "account-creation-passwords-mismatched" = "密码字段不匹配。";
 "account-creation-saving" = "正在保存...";
 "account-creation-title" = "创建新账户";
-"account-group-title" = "您的帐户";
+"account-group-title" = "您的账户";
 "account-talk-page-title" = "您的讨论页";
 "account-talk-preferences-auto-sign-discussions" = "自动签名讨论";
 "account-talk-preferences-auto-sign-discussions-setting-explanation" = "自动签名的讨论将使用签名设置中定义的签名";
@@ -251,7 +250,7 @@
 "description-welcome-descriptions-title" = "条目描述";
 "description-welcome-promise-title" = "我保证在编辑时不滥用此功能";
 "description-welcome-start-editing-button" = "开始编辑";
-"diff-compare-header-from-info-heading" = "来自：";
+"diff-compare-header-from-info-heading" = "从：";
 "diff-compare-header-heading" = "比较不同修订版本";
 "diff-compare-header-to-info-heading" = "至：";
 "diff-compare-title" = "比较不同修订版本";
@@ -351,6 +350,7 @@
 "editing-welcome-set-knowledge-free-subtitle" = "为了让每个人都能获得世界上的知识，我们需要您通过阅读、编辑和贡献，参与到世界知识的创造中来。";
 "editing-welcome-set-knowledge-free-title" = "解除知识的束缚";
 "editor-exit-confirmation-body" = "您确定要退出编辑模式而不先发布吗？";
+"editor-exit-confirmation-title" = "关闭编辑模式？";
 "empty-diff-compare-title" = "版本间无差异";
 "empty-diff-single-title" = "没有可以观察到的变化";
 "empty-insert-media-title" = "从维基共享资源中选择一个文件";
@@ -455,7 +455,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "来自$1维基百科";
 "explore-random-article-sub-heading-from-wikipedia" = "来自维基百科";
 "explore-randomizer" = "随机条目产生器";
-"featured-article-empty-title" = "今天没有典范条目";
 "featured-widget-content-failure-for-date" = "迄今为止特色条目并不可用。";
 "featured-widget-description" = "发现维基百科上最好的文章，每日由我们的社区选择。";
 "featured-widget-from-language-wikipedia" = "来自$1维基百科";
@@ -603,6 +602,9 @@
 "no-internet-connection-article-reload-button" = "返回至最近保存的版本";
 "notifications-center-agent-description-from-format" = "来自$1";
 "notifications-center-alert" = "提醒";
+"notifications-center-applied-filters-accessibility-label" = "通知过滤器 - 已应用过滤器";
+"notifications-center-applied-project-filters-accessibility-label" = "项目过滤器 - 已应用过滤器";
+"notifications-center-badge-button-accessibility-label" = "带有未读标记的通知";
 "notifications-center-cell-notification-type-accessibility-label-format" = "$1通知";
 "notifications-center-change-password" = "更改密码";
 "notifications-center-checking-for-notifications" = "正在检查通知…";
@@ -612,7 +614,9 @@
 "notifications-center-empty-no-messages" = "您没有消息";
 "notifications-center-empty-not-subscribed" = "您目前没有订阅任何维基百科通知";
 "notifications-center-empty-state-filters-subtitle" = "修改$1来查看更多消息";
+"notifications-center-empty-state-no-projects-selected" = "添加项目以查看更多消息";
 "notifications-center-empty-state-num-filters" = "{{PLURAL:$1|$1 种筛选}}";
+"notifications-center-feed-card-title" = "编辑通知现已可用";
 "notifications-center-feed-news-notification-button-text" = "打开推送通知";
 "notifications-center-feed-news-notification-dismiss-button-text" = "不是现在";
 "notifications-center-filters-accessibility-label" = "通知过滤器";
@@ -653,6 +657,7 @@
 "notifications-center-onboarding-modal-title" = "编辑通知";
 "notifications-center-onboarding-panel-heading" = "打开推送通知";
 "notifications-center-onboarding-panel-secondary-button" = "不用了，谢谢";
+"notifications-center-project-filters-accessibility-label" = "项目过滤器";
 "notifications-center-status-all" = "全部";
 "notifications-center-status-all-notifications" = "所有通知";
 "notifications-center-status-read" = "已读";
@@ -788,8 +793,6 @@
 "project-name-wikiversity" = "维基学院";
 "project-name-wikivoyage" = "维基导游";
 "project-name-wiktionary" = "维基词典";
-"rank-accessibility-label" = "第$1";
-"readers-accessibility-label" = "$1位读者";
 "reading-list-add-generic-hint-title" = "添加此条目至阅读列表么？";
 "reading-list-add-hint-title" = "添加“$1”至阅读列表么？";
 "reading-list-add-saved-button-title" = "是，将他们添加到我的阅读列表";
@@ -975,12 +978,15 @@
 "table-of-contents-close-accessibility-label" = "关闭目录";
 "table-of-contents-heading" = "目录";
 "table-of-contents-hide-button-label" = "隐藏目录";
-"table-of-contents-subheading-label" = "子标题$1";
+"table-of-contents-subheading-label" = "$1级子标题";
 "tachelhit-variants-alert-body" = "维基百科应用现在支持以下塔切尔特语变体作为应用内的主要语言或次要语言，从而使您更易于阅读，搜索和编辑首选变体：\n\nⵜⴰⵛⵍⵃⵉⵜ Tachelhit, Tifinagh (shi-tfng)\nTaclḥit Tachelhit, Latin (shi-latn)";
 "tachelhit-variants-alert-title" = "更新塔切尔特语变体支持";
 "tajik-variants-alert-body" = "维基百科应用现在支持以下塔吉克语变体作为应用内的主要语言或次要语言，从而使您更易于阅读，搜索和编辑首选变体：\n\nтоҷикӣ кирилликӣ Tajik, Cyrillic (tg-cyrl)\ntojikī lotinī Tajik, Latin (tg-latn)";
 "tajik-variants-alert-title" = "更新塔吉克语变体支持";
 "talk-page-add-discussion-accessibility-label" = "添加讨论";
+"talk-page-archives" = "存档";
+"talk-page-article-about" = "关于讨论页";
+"talk-page-change-language" = "更改语言";
 "talk-page-discussion-accessibility-hint" = "轻按两下以开启讨论话题";
 "talk-page-discussion-read-accessibility-label" = "已读";
 "talk-page-discussion-read-ipa-accessibility-attribute" = "i˨˩˦tu˧˥";
@@ -1005,21 +1011,46 @@
 "talk-page-new-topic-body-placeholder-text" = "撰写新讨论";
 "talk-page-new-topic-success-text" = "您的讨论已成功发布";
 "talk-page-new-topic-title" = "新讨论";
+"talk-page-page-info" = "页面信息";
+"talk-page-permanent-link" = "固定链接";
 "talk-page-publish-terms-and-licenses" = "一旦保存，即表示您认同$1使用条款$2，并采用$3CC BY-SA 3.0$4和$5GFDL$6许可协议发表您的贡献。";
+"talk-page-related-links" = "链入页面";
+"talk-page-replies-count-accessibilty-label" = "{{PLURAL:$1|$1条回复}}";
+"talk-page-reply-button" = "回复";
+"talk-page-reply-button-accessibility-label" = "回复$1";
+"talk-page-reply-depth-accessibility-label" = "回复深度：$1";
+"talk-page-reply-placeholder-format" = "回复$1";
 "talk-page-reply-title" = "回复";
+"talk-page-revision-history" = "版本历史";
+"talk-page-subscribe-to-topic" = "订阅";
+"talk-page-subscribed-alert-subtitle" = "您将收到有关此话题中新留言的通知。";
+"talk-page-subscribed-alert-title" = "您已订阅！";
 "talk-page-title-article-talk" = "条目讨论";
 "talk-page-title-user-talk" = "用户讨论";
 "talk-page-topic-title" = "讨论";
+"talk-page-unsubscribed-alert-subtitle" = "您将不再收到对于此话题的新留言的通知。";
+"talk-page-unsubscribed-alert-title" = "您已取消订阅。";
+"talk-page-user-contributions" = "贡献";
+"talk-pages-coffee-roll-read-more" = "阅读更多";
+"talk-pages-empty-view-body-article" = "讨论页是人们讨论如何使维基百科上的内容达到最佳状态的地方。 **首先添加一个新的讨论主题**，以便与维基百科社区建立联系和协作。";
+"talk-pages-empty-view-body-user" = "讨论页是人们讨论如何使维基百科上的内容达到最佳状态的地方。开始新的讨论以与$1建立联系和协作。您在此处所说的内容将公开给其他人查看。";
+"talk-pages-empty-view-button-article-add-topic" = "添加新话题";
+"talk-pages-empty-view-button-user-start-discussion" = "发起讨论";
+"talk-pages-empty-view-header-article" = "对话从这里开始";
+"talk-pages-empty-view-header-user" = "用$1开始讨论";
 "talk-pages-reply-button-title" = "回复该讨论";
+"talk-pages-topic-added-alert-title" = "已添加您的话题";
+"talk-pages-topic-compose-body-placeholder" = "描述";
+"talk-pages-topic-compose-navbar-title" = "主题";
+"talk-pages-user-groups" = "用户组";
+"talk-pages-user-logs" = "日志";
+"talk-pages-view-title" = "讨论";
 "theme-black-display-name" = "黑暗";
 "theme-dark-display-name" = "夜间";
 "theme-default-display-name" = "默认";
 "theme-default-explanation" = "跟随系统主题";
 "theme-light-display-name" = "日间";
 "theme-sepia-display-name" = "棕褐色";
-"top-read-header-generic" = "维基百科";
-"top-read-header-with-language" = "$1维基百科";
-"top-read-see-more" = "查看更多热门阅读";
 "top-read-widget-description" = "在维基百科上学习世界今天在读什么。";
 "top-read-widget-readers-count" = "$1位读者";
 "top-read-widget-title" = "热门阅读";
@@ -1032,6 +1063,10 @@
 "unknown-generic-text" = "未知";
 "uzbek-variants-alert-body" = "维基百科应用现在支持以下乌兹别克语变体作为应用内的主要语言或次要语言，从而使您更易于阅读，搜索和编辑首选变体：\n\noʻzbekcha lotin Uzbek, Latin (uz-latin)\nўзбекча кирилл Uzbek, Cyrillic (uz-cyrl)";
 "uzbek-variants-alert-title" = "更新乌兹别克语变体支持";
+"vanish-account-learn-more-text" = "了解更多";
+"vanish-modal-item" = "如果您完成了删除你的账号的请求，请等待几天，以便管理员处理该请求。";
+"vanish-modal-item-3" = "如果您对删除请求还有其他疑问，请访问 Meta:Right_to_vanish";
+"vanish-modal-item-3-ios15" = "如果您对删除请求还有其他疑问，请访问$1 Meta:Right_to_vanish $2 $3";
 "variants-alert-dismiss-button" = "不，谢谢";
 "variants-alert-preferences-button" = "查看您的参数设置";
 "welcome-exploration-explore-feed-description" = "来自我们社群的推荐阅读和每日条目";

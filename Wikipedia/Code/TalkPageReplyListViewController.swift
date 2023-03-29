@@ -35,7 +35,7 @@ class TalkPageReplyListViewController: ColumnarCollectionViewController {
     private var replyBarButtonItem: UIBarButtonItem?
     
     private var shouldFocusVoiceOver = false
-    private var headerView: TalkPageHeaderView?
+    private var headerView: OldTalkPageHeaderView?
     
     var repliesAreDisabled = true {
         didSet {
@@ -70,9 +70,7 @@ class TalkPageReplyListViewController: ColumnarCollectionViewController {
                 publishButton.isEnabled = false
                 navigationItem.rightBarButtonItem = publishButton
                 navigationItem.title = replyString
-                if #available(iOS 14.0, *) {
-                    navigationItem.backButtonTitle = replyString
-                }
+                navigationItem.backButtonTitle = replyString
                 navigationBar.updateNavigationItems()
             } else {
                 navigationItem.rightBarButtonItem = replyBarButtonItem
@@ -205,7 +203,7 @@ class TalkPageReplyListViewController: ColumnarCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TalkPageReplyCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? OldTalkPageReplyCell else {
                 return UICollectionViewCell()
         }
         
@@ -215,7 +213,7 @@ class TalkPageReplyListViewController: ColumnarCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, estimatedHeightForItemAt indexPath: IndexPath, forColumnWidth columnWidth: CGFloat) -> ColumnarCollectionViewLayoutHeightEstimate {
         var estimate = ColumnarCollectionViewLayoutHeightEstimate(precalculated: false, height: 54)
-        guard let placeholderCell = layoutManager.placeholder(forCellWithReuseIdentifier: reuseIdentifier) as? TalkPageReplyCell else {
+        guard let placeholderCell = layoutManager.placeholder(forCellWithReuseIdentifier: reuseIdentifier) as? OldTalkPageReplyCell else {
             return estimate
         }
         configure(cell: placeholderCell, at: indexPath)
@@ -283,7 +281,7 @@ class TalkPageReplyListViewController: ColumnarCollectionViewController {
 extension TalkPageReplyListViewController: CollectionViewUpdaterDelegate {
     func collectionViewUpdater<T>(_ updater: CollectionViewUpdater<T>, didUpdate collectionView: UICollectionView) where T : NSFetchRequestResult {
         for indexPath in collectionView.indexPathsForVisibleItems {
-            guard let cell = collectionView.cellForItem(at: indexPath) as? TalkPageTopicCell,
+            guard let cell = collectionView.cellForItem(at: indexPath) as? OldTalkPageTopicCell,
                 let title = fetchedResultsController.object(at: indexPath).text else {
                     continue
             }
@@ -302,7 +300,7 @@ extension TalkPageReplyListViewController: CollectionViewUpdaterDelegate {
 private extension TalkPageReplyListViewController {
     
     func registerCells() {
-        layoutManager.register(TalkPageReplyCell.self, forCellWithReuseIdentifier: reuseIdentifier, addPlaceholder: true)
+        layoutManager.register(OldTalkPageReplyCell.self, forCellWithReuseIdentifier: reuseIdentifier, addPlaceholder: true)
         layoutManager.register(TalkPageReplyFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: TalkPageReplyFooterView.identifier, addPlaceholder: true)
     }
     
@@ -322,7 +320,7 @@ private extension TalkPageReplyListViewController {
         replyBarButtonItem?.isEnabled = !repliesAreDisabled
         navigationBar.updateNavigationItems()
         
-        if let headerView = TalkPageHeaderView.wmf_viewFromClassNib(),
+        if let headerView = OldTalkPageHeaderView.wmf_viewFromClassNib(),
             let title = topic.title {
             configure(headerView: headerView)
             navigationBar.isBarHidingEnabled = false
@@ -333,7 +331,7 @@ private extension TalkPageReplyListViewController {
 
             let titleWithoutHTML = title.removingHTML
             navigationBar.title = titleWithoutHTML
-            if #available(iOS 14.0, *), !titleWithoutHTML.isEmpty {
+            if !titleWithoutHTML.isEmpty {
                 navigationItem.backButtonDisplayMode = .generic
                 navigationItem.backButtonTitle = titleWithoutHTML
             }
@@ -366,7 +364,7 @@ private extension TalkPageReplyListViewController {
         view.endEditing(true)
     }
     
-    func configure(headerView: TalkPageHeaderView) {
+    func configure(headerView: OldTalkPageHeaderView) {
         
         guard let title = topic.title else {
                 return
@@ -374,7 +372,7 @@ private extension TalkPageReplyListViewController {
         
         let headerText = WMFLocalizedString("talk-page-topic-title", value: "Discussion", comment: "This header label is displayed at the top of a talk page topic thread.").localizedUppercase
         
-        let viewModel = TalkPageHeaderView.ViewModel(header: headerText, title: title, info: nil, intro: nil)
+        let viewModel = OldTalkPageHeaderView.ViewModel(header: headerText, title: title, info: nil, intro: nil)
         
         headerView.delegate = self
         headerView.configure(viewModel: viewModel)
@@ -392,7 +390,7 @@ private extension TalkPageReplyListViewController {
         footer.composeButtonIsDisabled = repliesAreDisabled
     }
     
-    func configure(cell: TalkPageReplyCell, at indexPath: IndexPath) {
+    func configure(cell: OldTalkPageReplyCell, at indexPath: IndexPath) {
         let item = fetchedResultsController.object(at: indexPath)
         guard let title = item.text,
         item.depth >= 0 else {
@@ -415,8 +413,8 @@ private extension TalkPageReplyListViewController {
 
 // MARK: TalkPageReplyCellDelegate
 
-extension TalkPageReplyListViewController: TalkPageReplyCellDelegate {
-    func tappedLink(_ url: URL, cell: TalkPageReplyCell, sourceView: UIView, sourceRect: CGRect?) {
+extension TalkPageReplyListViewController: OldTalkPageReplyCellDelegate {
+    func tappedLink(_ url: URL, cell: OldTalkPageReplyCell, sourceView: UIView, sourceRect: CGRect?) {
         
         delegate?.tappedLink(url, viewController: self, sourceView: sourceView, sourceRect: sourceRect)
     }
@@ -443,12 +441,12 @@ extension TalkPageReplyListViewController: ReplyButtonFooterViewDelegate {
 
 // MARK: TalkPageHeaderViewDelegate
 
-extension TalkPageReplyListViewController: TalkPageHeaderViewDelegate {
-    func tappedLink(_ url: URL, headerView: TalkPageHeaderView, sourceView: UIView, sourceRect: CGRect?) {
+extension TalkPageReplyListViewController: OldTalkPageHeaderViewDelegate {
+    func tappedLink(_ url: URL, headerView: OldTalkPageHeaderView, sourceView: UIView, sourceRect: CGRect?) {
         delegate?.tappedLink(url, viewController: self, sourceView: sourceView, sourceRect: sourceRect)
     }
     
-    func tappedIntro(headerView: TalkPageHeaderView) {
+    func tappedIntro(headerView: OldTalkPageHeaderView) {
         assertionFailure("Should not be able to tap intro text view from replies screen")
     }
 }

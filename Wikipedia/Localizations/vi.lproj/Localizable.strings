@@ -13,6 +13,7 @@
 // Author: Nghiemtrongdai VN
 // Author: Ngoxuannguyenchuong
 // Author: NguyenHung
+// Author: Nguyenphutrong2
 // Author: Nguyên Lê
 // Author: Phjtieudoc
 // Author: TARGET6tidiem
@@ -76,15 +77,6 @@
 "about-translators-details" = "Biên dịch bởi những tình nguyện viên tại $1";
 "about-wikimedia-foundation" = "Quỹ Wikimedia";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Bạn không thể đăng sửa đổi này. Vui lòng quay lại và thay đổi nó.";
-"abuse-filter-disallow-unconstructive" = "Một bộ lọc sai phạm tự động đã xác định rằng sửa đổi này có thể không có tính xây dựng hoặc là một âm mưu phá hoại. Vui lòng quay lại và thay đổi sửa đổi của bạn.";
-"abuse-filter-warning-blanking" = "Xóa một phần hoặc toàn bộ bài viết";
-"abuse-filter-warning-caps" = "Viết toàn chữ hoa";
-"abuse-filter-warning-heading" = "Sửa đổi này có vẻ không có tính xây dựng. Bạn có chắc chắn muốn đăng nó?";
-"abuse-filter-warning-irrelevant" = "Đặt liên kết ngoài hoặc tập tin không có liên quan";
-"abuse-filter-warning-repeat" = "Lặp lại ký tự (nghịch cú pháp)";
-"abuse-filter-warning-spam" = "Thêm rác (spam) vào trang";
-"abuse-filter-warning-subheading" = "Sửa đổi của bạn có thể có những vấn đề sau:";
 "account-creation-captcha-cannot-see-image" = "Không thấy được hình này? $1";
 "account-creation-captcha-obtaining" = "Đang lấy CAPTCHA mới…";
 "account-creation-captcha-request-account" = "Yêu cầu tài khoản.";
@@ -202,7 +194,7 @@
 "description-help-tips-example-description-one" = "lời tóm lược bài viết về Mona Lisa";
 "description-help-tips-example-description-two" = "lời tóm lược bài viết về đỉnh Everest";
 "description-help-tips-example-title-one" = "bức tranh của Leonardo Da Vinci";
-"description-help-tips-example-title-two" = "Ngọn núi cao nhất trên Trái Đất";
+"description-help-tips-example-title-two" = "ngọn núi cao nhất trên Trái Đất";
 "description-help-tips-for-example" = "Ví dụ:";
 "description-help-tips-title" = "Cách tóm lược bài viết";
 "description-help-title" = "Trợ giúp tóm lược bài viết";
@@ -414,7 +406,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "Từ Wikipedia $1";
 "explore-random-article-sub-heading-from-wikipedia" = "Từ Wikipedia";
 "explore-randomizer" = "Ngẫu nhiên";
-"featured-article-empty-title" = "Hôm nay không có bài viết chọn lọc";
 "featured-widget-content-failure-for-date" = "Không có sẵn bài viết chọn lọc vào ngày này.";
 "featured-widget-from-language-wikipedia" = "Từ Wikipedia $1";
 "featured-widget-from-wikipedia" = "Từ Wikipedia";
@@ -686,8 +677,6 @@
 "potd-widget-title" = "Hình ảnh trong ngày";
 "preference-summary-eventlogging-opt-in" = "Cho phép Quỹ Wikimedia thu thập thông tin về cách bạn sử dụng ứng dụng để giúp làm ứng dụng tốt hơn";
 "preference-title-eventlogging-opt-in" = "Gửi báo cáo sử dụng";
-"rank-accessibility-label" = "Hạng $1";
-"readers-accessibility-label" = "$1 người đọc";
 "reading-list-add-generic-hint-title" = "Thêm bài này vào danh sách đọc?";
 "reading-list-add-hint-title" = "Thêm “$1” vào danh sách đọc?";
 "reading-list-add-saved-button-title" = "Có, thêm chúng vào các danh sách đọc của tôi";
@@ -907,6 +896,7 @@
 "talk-page-new-topic-title" = "Đề tài mới";
 "talk-page-publish-terms-and-licenses" = "Với việc lưu các thay đổi, bạn chấp nhận các $1Điều khoản sử dụng$2 và đồng ý phát hành đóng góp của bạn theo các giấy phép $3CC BY-SA 3.0$4 và $5GFDL$6.";
 "talk-page-reply-title" = "Trả lời";
+// Fuzzy
 "talk-page-title-article-talk" = "Thảo luận Bài viết";
 "talk-page-title-user-talk" = "Thảo luận Người dùng";
 "talk-page-topic-title" = "Đề tài thảo luận";
@@ -917,9 +907,6 @@
 "theme-default-explanation" = "Phù hợp với chủ đề hệ thống";
 "theme-light-display-name" = "Sáng";
 "theme-sepia-display-name" = "Nâu";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "Wikipedia $1";
-"top-read-see-more" = "Xem thêm bài đọc nhiều nhất";
 "top-read-widget-readers-count" = "$1 người đọc";
 "top-read-widget-title" = "Bài đọc nhiều nhất";
 "two-factor-login-continue" = "Tiếp tục đăng nhập";
@@ -931,6 +918,9 @@
 "unknown-generic-text" = "Không rõ";
 "uzbek-variants-alert-body" = "Ứng dụng Wikipedia mới hỗ trợ các hệ chữ viết tiếng Uzbek là ngôn ngữ giao diện chính hoặc phụ để cho bạn dễ tra cứu, tìm kiếm, và sửa đổi trong hệ chữ viết của bạn:\n\noʻzbekcha lotin Uzbek chữ Latinh (uz-latin)\nўзбекча кирилл Uzbek chữ Kirin (uz-cyrl)";
 "uzbek-variants-alert-title" = "Cập nhật hỗ trợ biến thể trong tiếng Uzbek";
+"vanish-modal-item" = "Nếu bạn đã hoàn thành yêu cầu biến mất của mình, vui lòng đợi vài ngày để quản trị viên xử lý yêu cầu";
+"vanish-modal-item-3" = "Nếu bạn có thêm câu hỏi về biến mất, vui lòng truy cập Meta:Right_to_nguyenphutrong2";
+"vanish-modal-item-3-ios15" = "Nếu bạn có thêm câu hỏi về biến mất, vui lòng truy cập $1Meta:Right_to_nguyenphutrong2$2$3";
 "variants-alert-dismiss-button" = "Thôi";
 "variants-alert-preferences-button" = "Xem tùy chọn cá nhân của bạn";
 "welcome-exploration-explore-feed-description" = "Các bài đọc được cộng đồng gợi ý hằng ngày";
