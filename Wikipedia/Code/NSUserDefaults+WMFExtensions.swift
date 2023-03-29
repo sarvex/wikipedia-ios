@@ -27,8 +27,11 @@ let WMFAppInstallId = "WMFAppInstallId"
 let WMFSendUsageReports = "WMFSendUsageReports"
 let WMFShowNotificationsExploreFeedCard = "WMFShowNotificationsExploreFeedCard"
 let WMFUserHasOnboardedToNotificationsCenter = "WMFUserHasOnboardedToNotificationsCenter"
+let WMFUserHasOnboardedToContributingToTalkPages = "WMFUserHasOnboardedToContributingToTalkPages"
 let WMFDidShowNotificationsCenterPushOptInPanel = "WMFDidShowNotificationsCenterPushOptInPanel"
 let WMFSubscribedToEchoNotifications = "WMFSubscribedToEchoNotifications"
+let WMFTappedToImportSharedReadingListSurvey = "WMFTappedToImportSharedReadingListSurvey"
+public let WMFAlwaysDisplayEditNotices = "WMFAlwaysDisplayEditNotices"
 
 @objc public enum WMFAppDefaultTabType: Int {
     case explore
@@ -418,6 +421,15 @@ let WMFSubscribedToEchoNotifications = "WMFSubscribedToEchoNotifications"
         }
     }
 
+    @objc var wmf_userHasOnboardedToContributingToTalkPages: Bool {
+        get {
+            return bool(forKey: WMFUserHasOnboardedToContributingToTalkPages)
+        }
+        set {
+            set(newValue, forKey: WMFUserHasOnboardedToContributingToTalkPages)
+        }
+    }
+
     @objc var wmf_didShowNotificationsCenterPushOptInPanel: Bool {
         get {
             return bool(forKey: WMFDidShowNotificationsCenterPushOptInPanel)
@@ -501,6 +513,28 @@ let WMFSubscribedToEchoNotifications = "WMFSubscribedToEchoNotifications"
             set(newValue, forKey: WMFShowNotificationsExploreFeedCard)
         }
     }
+    
+    @objc var wmf_tappedToImportSharedReadingListSurvey: Bool {
+        get {
+           return bool(forKey: WMFTappedToImportSharedReadingListSurvey)
+        }
+        set {
+            set(newValue, forKey: WMFTappedToImportSharedReadingListSurvey)
+        }
+    }
+
+    @objc var wmf_alwaysDisplayEditNotices: Bool {
+        get {
+            if object(forKey: WMFAlwaysDisplayEditNotices) == nil {                
+                return true
+            }
+            return bool(forKey: WMFAlwaysDisplayEditNotices)
+        }
+        set {
+            set(newValue, forKey: WMFAlwaysDisplayEditNotices)
+        }
+    }
+
 
 #if UI_TEST
     @objc func wmf_isFastlaneSnapshotInProgress() -> Bool {

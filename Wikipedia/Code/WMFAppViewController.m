@@ -233,27 +233,35 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                                                object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(talkPageReplyWasPublished:) name:WMFTalkPageContainerViewController.WMFReplyPublishedNotificationName
+                                             selector:@selector(talkPageReplyWasPublished:)
+                                                 name:WMFTalkPageContainerViewController.WMFReplyPublishedNotificationName
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(talkPageTopicWasPublished:) name:WMFTalkPageContainerViewController.WMFTopicPublishedNotificationName
+                                             selector:@selector(talkPageTopicWasPublished:)
+                                                 name:WMFTalkPageContainerViewController.WMFTopicPublishedNotificationName
                                                object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(referenceLinkTapped:) name:WMFReferenceLinkTappedNotification
+                                             selector:@selector(referenceLinkTapped:)
+                                                 name:WMFReferenceLinkTappedNotification
                                                object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(voiceOverStatusDidChange)
-                                                 name: UIAccessibilityVoiceOverStatusDidChangeNotification object:nil];
+                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(showErrorBanner:)
+                                                     name:NSNotification.showErrorBanner
+                                                   object:nil];
 
     [self setupReadingListsHelpers];
     self.editHintController = [[WMFEditHintController alloc] init];
     self.talkPageReplyHintController = [[WMFTalkPageReplyHintController alloc] init];
     self.talkPageTopicHintController = [[WMFTalkPageTopicHintController alloc] init];
-    if (@available(iOS 14.0, *)) {
-        self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeGeneric;
-    }
+
+    self.navigationItem.backButtonDisplayMode = UINavigationItemBackButtonDisplayModeGeneric;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -390,7 +398,7 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
     if (![self uiIsLoaded]) {
         return;
     }
-    
+
     if ([self visibleViewController] == self.exploreViewController) {
         self.exploreViewController.isGranularUpdatingEnabled = YES;
     }
@@ -405,9 +413,9 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
     if (![self uiIsLoaded]) {
         return;
     }
-    
+
     self.exploreViewController.isGranularUpdatingEnabled = NO;
-    
+
     [self.navigationStateController saveNavigationStateFor:self.navigationController
                                                         in:self.dataStore.viewContext];
     NSError *saveError = nil;
@@ -521,6 +529,13 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
     [self.exploreViewController updateNavigationBarVisibility];
 }
 
+- (void)showErrorBanner:(NSNotification *)notification {
+    if ([notification.userInfo[NSNotification.showErrorBannerNSErrorKey] isKindOfClass:[NSError class]]) {
+        NSError *error = notification.userInfo[NSNotification.showErrorBannerNSErrorKey];
+        [[WMFAlertManager sharedInstance] showErrorAlert:error sticky:NO dismissPreviousAlerts:YES tapCallBack:nil];
+    }
+}
+
 #pragma mark - Explore feed preferences
 
 - (void)updateDefaultTab {
@@ -623,7 +638,7 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
 #pragma mark - Background Processing
 
 - (void)performDatabaseHousekeepingWithCompletion:(void (^)(NSError *))completion {
-    
+
     WMFDatabaseHousekeeper *housekeeper = [WMFDatabaseHousekeeper new];
 
     NSError *housekeepingError = nil;
@@ -632,7 +647,10 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
         DDLogError(@"Error on cleanup: %@", housekeepingError);
         housekeepingError = nil;
     }
-    
+
+    /// Housekeeping for the new talk page cache
+    [SharedContainerCacheHousekeeping deleteStaleCachedItemsIn:SharedContainerCacheCommonNames.talkPageCache];
+
     completion(housekeepingError);
 }
 
@@ -1271,7 +1289,7 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                 return NO;
             }
             [NSUserActivity wmf_makeActivityActive:activity];
-            return [self.router routeURL:linkURL completion:done];
+            return [self.router routeURL:linkURL userInfo:activity.userInfo completion:done];
         }
     }
     done();
@@ -1498,6 +1516,12 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
 static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
 
 - (BOOL)shouldShowOnboarding {
+    
+    if (self.unprocessedUserActivity.shouldSkipOnboarding) {
+        [self setDidShowOnboarding];
+        return NO;
+    }
+    
     NSNumber *didShow = [[NSUserDefaults standardUserDefaults] objectForKey:WMFDidShowOnboarding];
     return !didShow.boolValue;
 }
@@ -1700,11 +1724,11 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
 
 // The method will be called on the delegate only if the application is in the foreground. If the method is not implemented or the handler is not called in a timely manner then the notification will not be presented. The application can choose to have the notification presented as a sound, badge, alert and/or in the notification list. This decision should be based on whether the information in the notification is otherwise visible to the user.
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
-    if([notification.request.content.threadIdentifier isEqualToString:EchoModelVersion.current]) {
+    if ([notification.request.content.threadIdentifier isEqualToString:EchoModelVersion.current]) {
         [NSNotificationCenter.defaultCenter postNotificationName:NSNotification.pushNotificationBannerDidDisplayInForeground object:nil userInfo:notification.request.content.userInfo];
     }
 
-    completionHandler(UNNotificationPresentationOptionAlert);
+    completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
 }
 
 // The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from applicationDidFinishLaunching:.
@@ -1916,7 +1940,7 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
     }
 
     // This next block fixes a weird bug: https://phabricator.wikimedia.org/T305112#7936784
-    if ([NSStringFromClass([presented class]) isEqualToString: @"DDParsecCollectionViewController"] && presented.presentingViewController != nil) {
+    if ([NSStringFromClass([presented class]) isEqualToString:@"DDParsecCollectionViewController"] && presented.presentingViewController != nil) {
         presented = presented.presentingViewController;
     }
 
@@ -1965,6 +1989,15 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
 
     [nc pushViewController:searchVC
                   animated:true];
+}
+
+- (void)showImportedReadingList:(ReadingList *)readingList {
+    [self dismissPresentedViewControllers];
+    [self setSelectedIndex:WMFAppTabTypeSaved];
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.savedViewController toggleCurrentView:WMFSavedViewControllerView.readingListsViewRawValue];
+    ReadingListDetailViewController *detailVC = [[ReadingListDetailViewController alloc] initFor:readingList with:self.dataStore fromImport:YES theme:self.theme];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (nonnull WMFSettingsViewController *)settingsViewController {

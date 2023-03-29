@@ -93,8 +93,16 @@ extension NotificationsCenterDetailViewController: UITableViewDelegate, UITableV
         }
 
         if let actionData = actionCell.action?.actionData, let url = actionData.url {
+            
             logNotificationInteraction(with: actionCell.action)
-            navigate(to: url)
+            
+            var userInfo: [AnyHashable : Any] = [RoutingUserInfoKeys.source: RoutingUserInfoSourceValue.notificationsCenter.rawValue]
+            
+            if let replyText = viewModel.contentBody {
+                userInfo[RoutingUserInfoKeys.talkPageReplyText] = replyText as Any
+            }
+            
+            navigate(to: url, userInfo: userInfo)
         }
 
         tableView.deselectRow(at: indexPath, animated: true)

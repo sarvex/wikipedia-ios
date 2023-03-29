@@ -105,13 +105,17 @@ class ArticleViewController: ViewController, HintPresenting {
         super.init(theme: theme)
         
         self.surveyTimerController = ArticleSurveyTimerController(delegate: self)
+
+        // `viewDidLoad` isn't called when re-creating the navigation stack on an iPad, and hence a cold launch on iPad doesn't properly show article names when long-pressing the back button if this code is in `viewDidLoad`
+        self.navigationItem.backButtonTitle = articleURL.wmf_title
+        self.navigationItem.backButtonDisplayMode = .generic
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
         contentSizeObservation?.invalidate()
         messagingController.removeScriptMessageHandler()
         articleLoadWaitGroup = nil
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: WebView
@@ -322,10 +326,6 @@ class ArticleViewController: ViewController, HintPresenting {
             
             self.showSurveyAnnouncementPanel(surveyAnnouncementResult: result, linkState: self.articleAsLivingDocController.surveyLinkState)
         }
-        if #available(iOS 14.0, *) {
-            self.navigationItem.backButtonTitle = articleURL.wmf_title
-            self.navigationItem.backButtonDisplayMode = .generic
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -418,8 +418,14 @@ class ArticleViewController: ViewController, HintPresenting {
             return
         }
         
+        var oldFeedPreview: WMFFeedArticlePreview?
+        if isWidgetCachedFeaturedArticle {
+            oldFeedPreview = article.feedArticlePreview()
+        }
+        
         articleLoadWaitGroup?.enter()
         let cachePolicy: URLRequest.CachePolicy? = oldState == .reloading ? .reloadRevalidatingCacheData : nil
+        
         self.dataStore.articleSummaryController.updateOrCreateArticleSummaryForArticle(withKey: key, cachePolicy: cachePolicy) { (article, error) in
             defer {
                 self.articleLoadWaitGroup?.leave()
@@ -429,6 +435,14 @@ class ArticleViewController: ViewController, HintPresenting {
                 return
             }
             self.article = article
+            
+            if let oldFeedPreview,
+               let newFeedPreview = article.feedArticlePreview(),
+            oldFeedPreview != newFeedPreview {
+                SharedContainerCacheClearFeaturedArticleWrapper.clearOutFeaturedArticleWidgetCache()
+                WidgetController.shared.reloadFeaturedArticleWidgetIfNecessary()
+            }
+            
             // Handle redirects
             guard let newKey = article.inMemoryKey, newKey != key, let newURL = article.url else {
                 return
@@ -443,12 +457,20 @@ class ArticleViewController: ViewController, HintPresenting {
             callLoadCompletionIfNecessary()
         }
         
-        guard let request = try? fetcher.mobileHTMLRequest(articleURL: articleURL, revisionID: revisionID, scheme: schemeHandler.scheme, cachePolicy: cachePolicy, isPageView: true) else {
+        guard var request = try? fetcher.mobileHTMLRequest(articleURL: articleURL, revisionID: revisionID, scheme: schemeHandler.scheme, cachePolicy: cachePolicy, isPageView: true) else {
             showGenericError()
             state = .error
             return
         }
 
+        // Add the URL fragment to request, if the fragment exists
+        if let articleFragment = URLComponents(url: articleURL, resolvingAgainstBaseURL: true)?.fragment,
+           let url = request.url,
+           var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+            urlComponents.fragment = articleFragment
+            request.url = urlComponents.url
+        }
+        
         articleAsLivingDocController.articleContentWillBeginLoading(traitCollection: traitCollection, theme: theme)
 
         webView.load(request)
@@ -774,7 +796,10 @@ class ArticleViewController: ViewController, HintPresenting {
         }
         // Check if this is the same article by comparing in-memory keys
         guard resolvedURL.wmf_inMemoryKey == articleURL.wmf_inMemoryKey else {
-            navigate(to: resolvedURL)
+            
+            let userInfo: [AnyHashable : Any] = [RoutingUserInfoKeys.source: RoutingUserInfoSourceValue.article.rawValue]
+            navigate(to: resolvedURL, userInfo: userInfo)
+            
             return
         }
         // Check for a fragment - if this is the same article and there's no fragment just do nothing?
@@ -783,6 +808,7 @@ class ArticleViewController: ViewController, HintPresenting {
         }
         
         articleAsLivingDocController.handleArticleAsLivingDocLinkForAnchor(anchor, articleURL: articleURL)
+        scroll(to: anchor, animated: true)
     }
     
     // MARK: Table of contents
@@ -1010,6 +1036,16 @@ private extension ArticleViewController {
         toolbarController.apply(theme: theme)
         toolbarController.setSavedState(isSaved: article.isAnyVariantSaved)
         setToolbarHidden(false, animated: false)
+    }
+    
+    var isWidgetCachedFeaturedArticle: Bool {
+        let sharedCache = SharedContainerCache<WidgetCache>(fileName: SharedContainerCacheCommonNames.widgetCache, defaultCache: { WidgetCache(settings: .default, featuredContent: nil) })
+        guard let widgetFeaturedArticleURLString = sharedCache.loadCache().featuredContent?.featuredArticle?.contentURL.desktop.page,
+              let widgetFeaturedArticleURL = URL(string: widgetFeaturedArticleURLString) else {
+            return false
+        }
+        
+        return widgetFeaturedArticleURL == articleURL
     }
     
 }

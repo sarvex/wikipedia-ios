@@ -23,20 +23,6 @@
 "about-translators-details" = "ეს აპლიკაცია ნათარგმნია მოხალისეების მიერ $1-ზე";
 "about-wikimedia-foundation" = "ფონდი ვიკიმედია";
 "about-wikipedia" = "ვიკიპედია";
-// Fuzzy
-"abuse-filter-disallow-heading" = "ამ ცვლილების გამოქვეყნება არ შეგიძლიათ. დაბრუნდით უკან და შეცვალეთ.";
-// Fuzzy
-"abuse-filter-disallow-unconstructive" = "ავტომატურმა ფილტრმა ეს რედაქტირება მიიჩნია შესაძლო არაკონსტრუქციულად ან ვანდალიზმით მცდელობად.";
-// Fuzzy
-"abuse-filter-warning-blanking" = "სტატიების დაცარიელება ან სპამი";
-// Fuzzy
-"abuse-filter-warning-caps" = "იკრიფება დიდ ასოებზე";
-"abuse-filter-warning-heading" = "თქვენი რედაქტირება არაკონსტრუქციულს ჰგავს, დარწმუნებული ხართ, რომ გსურთ მისი გამოქვეყნება?";
-"abuse-filter-warning-irrelevant" = "შეუსაბამო გარე ბმულები ან სურათები";
-// Fuzzy
-"abuse-filter-warning-repeat" = "სიმბოლოების გამეორება";
-// Fuzzy
-"abuse-filter-warning-subheading" = "თქვენი რედაქტირება შესაძლოა შეიცავდეს ერთ ან რამდენიმე შემდეგ ელემენტს:";
 "account-creation-captcha-obtaining" = "ახალი CAPTCHA-ს მიღება...";
 "account-creation-log-in" = "შესვლა.";
 "account-creation-logging-in" = "შედიხართ სისტემაში...";
@@ -137,6 +123,7 @@
 "main-menu-title" = "მეტი";
 "main-menu-zero-faq" = "ვიკიპედია ზეროს ხშირი შეკითხვები";
 "menu-cancel-accessibility-label" = "გაუქმება";
+"more-languages-tooltip-title" = "ენების დამატება";
 "navbar-title-mode-edit-wikitext-preview" = "წინასწარ გადახედვა";
 "nearby-distance-label-feet" = "$1 ფუტი";
 "nearby-distance-label-km" = "$1 კმ";
@@ -189,8 +176,6 @@
 "table-of-contents-close-accessibility-hint" = "დახურვა";
 "table-of-contents-close-accessibility-label" = "სარჩევის დახურვა";
 "table-of-contents-heading" = "შინაარსი";
-"top-read-header-generic" = "ვიკიპედია";
-"top-read-header-with-language" = "$1 ვიკიპედია";
 "two-factor-login-continue" = "შესვლის გაგრძელება";
 "two-factor-login-instructions" = "გთხოვთ, შეიყვანოთ ორფაქტორიანი დადასტურების კოდი";
 "two-factor-login-title" = "თქვენ ანგარიშში შესვლა";

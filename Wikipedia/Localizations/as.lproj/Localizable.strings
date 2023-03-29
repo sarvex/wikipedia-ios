@@ -41,14 +41,6 @@
 "about-translators-details" = "$1ত স্বেচ্ছাসেৱকৰ দ্বাৰা অনূদিত";
 "about-wikimedia-foundation" = "ৱিকিমিডিয়া ফাউণ্ডেশ্যন";
 "about-wikipedia" = "ৱিকিপিডিয়া";
-"abuse-filter-disallow-heading" = "আপুনি এই সম্পাদনা প্ৰকাশ কৰিব নোৱাৰে।";
-// Fuzzy
-"abuse-filter-disallow-unconstructive" = "এটা স্বয়ংক্ৰিয় পৰিশোধকে এই সম্পাদনাটো সম্ভাব্য অগঠনমূলক বা ধ্বংসপ্ৰৱণতাৰ চেষ্টা হিচাপে চিহ্নিত কৰিছে।";
-// Fuzzy
-"abuse-filter-warning-blanking" = "প্ৰবন্ধ খালি কৰা বা স্পামিং কৰা";
-"abuse-filter-warning-heading" = "এইটো সম্ভৱ এটা অগঠনমূলক সম্পাদনা। আপুনি এইটো প্ৰকাশ কৰিব বুলি নিশ্চিতনে?";
-"abuse-filter-warning-irrelevant" = "অপ্ৰাসংগিক বাহ্যিক সংযোগ বা ছবি";
-"abuse-filter-warning-subheading" = "আপোনাৰ সম্পাদনাত থাকিব পাৰে:";
 "account-creation-captcha-cannot-see-image" = "ছবিখন দেখা পোৱা নাই? $1";
 "account-creation-captcha-obtaining" = "এটা নতুন কেপ্‌চা লোৱা হৈছে...";
 "account-creation-captcha-request-account" = "একাউণ্টৰ বাবে অনুৰোধ কৰক";
@@ -152,7 +144,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "$1 ৱিকিপিডিয়াৰ পৰা";
 "explore-random-article-sub-heading-from-wikipedia" = "ৱিকিপিডিয়াৰ পৰা";
 "explore-randomizer" = "যাদৃচ্ছিক";
-"featured-article-empty-title" = "আজি কোনো নিৰ্বাচিত প্ৰবন্ধ উপলব্ধ নহয়";
 "field-email-placeholder" = "example@example.org";
 "field-email-title" = "ইমেইল";
 "field-email-title-optional" = "ইমেইল (বৈকল্পিক)";
@@ -290,8 +281,6 @@
 "theme-default-explanation" = "ছিষ্টেমৰ থীমৰ সৈতে একে";
 "theme-light-display-name" = "পোহৰ";
 "theme-sepia-display-name" = "ছেপিয়া";
-"top-read-header-generic" = "ৱিকিপিডিয়া";
-"top-read-header-with-language" = "$1 ৱিকিপিডিয়া";
 "unknown-generic-text" = "অজ্ঞাত";
 "variants-alert-dismiss-button" = "নালাগে দিয়ক";
 "welcome-explore-tell-me-more-done-button" = "বুজিছোঁ";

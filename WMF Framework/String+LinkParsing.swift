@@ -9,7 +9,7 @@ extension String {
         return WikipediaURLTranslations.commonNamespace(for: namespaceString, in: languageCode) ?? .main
     }
     
-    func namespaceAndTitleOfWikiResourcePath(with languageCode: String) -> (namespace: PageNamespace, title: String) {
+    public func namespaceAndTitleOfWikiResourcePath(with languageCode: String) -> (namespace: PageNamespace, title: String) {
         guard let result = String.namespaceRegex.firstMatch(in: self) else {
             return (.main, self)
         }
@@ -34,6 +34,17 @@ extension String {
     public var fullRange: NSRange {
         return NSRange(startIndex..<endIndex, in: self)
     }
+
+    public func extractingArticleTitleFromTalkPage(languageCode: String) -> String? {
+        if let namespaceString = String.namespaceRegex.firstReplacementString(in: self) {
+            let namespaceStringWithColon = "\(namespaceString):"
+            if namespaceOfWikiResourcePath(with: languageCode) == .talk {
+                return replacingOccurrences(of: namespaceStringWithColon, with: "")
+            }
+        }
+        return nil
+    }
+
 }
 
 /// Page title transformation

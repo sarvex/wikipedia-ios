@@ -1,8 +1,40 @@
 import UIKit
 import AVKit
 
+// Wrapper class for access in Objective-C
+@objc class WMFRoutingUserInfoKeys: NSObject {
+    @objc static var source: String {
+        return RoutingUserInfoKeys.source
+    }
+}
+
+// Wrapper class for access in Objective-C
+@objc class WMFRoutingUserInfoSourceValue: NSObject {
+    @objc static var deepLinkRawValue: String {
+        return RoutingUserInfoSourceValue.deepLink.rawValue
+    }
+}
+
+struct RoutingUserInfoKeys {
+    static let talkPageReplyText = "talk-page-reply-text"
+    static let source = "source"
+}
+
+enum RoutingUserInfoSourceValue: String {
+    case talkPage
+    case talkPageArchives
+    case article
+    case notificationsCenter
+    case deepLink
+    case account
+    case search
+    case inAppWebView
+    case unknown
+}
+
 @objc(WMFViewControllerRouter)
 class ViewControllerRouter: NSObject {
+
     @objc let router: Router
     unowned let appViewController: WMFAppViewController
     @objc(initWithAppViewController:router:)
@@ -20,6 +52,11 @@ class ViewControllerRouter: NSObject {
         let showNewVC = {
             if viewController is AVPlayerViewController {
                 navigationController.present(viewController, animated: true, completion: completion)
+            } else if let createReadingListVC = viewController as? CreateReadingListViewController,
+                       createReadingListVC.isInImportingMode {
+
+                 let createReadingListNavVC = WMFThemeableNavigationController(rootViewController: createReadingListVC, theme: self.appViewController.theme)
+                 navigationController.present(createReadingListNavVC, animated: true, completion: completion)
             } else {
                 navigationController.pushViewController(viewController, animated: true)
                 completion()
@@ -49,8 +86,8 @@ class ViewControllerRouter: NSObject {
         return true
     }
     
-    @objc(routeURL:completion:)
-    public func route(_ url: URL, completion: @escaping () -> Void) -> Bool {
+    @objc(routeURL:userInfo:completion:)
+    public func route(_ url: URL, userInfo: [AnyHashable: Any]? = nil, completion: @escaping () -> Void) -> Bool {
         let theme = appViewController.theme
         let destination = router.destination(for: url)
         switch destination {
@@ -90,20 +127,32 @@ class ViewControllerRouter: NSObject {
             vc.player = player
             return presentOrPush(vc, with: completion)
         case .talk(let linkURL):
-            
-            guard let newTalkPage = TalkPageViewController(url: linkURL, theme: theme) else {
+            let source = source(from: userInfo)
+            guard let viewModel = TalkPageViewModel(pageType: .article, pageURL: linkURL, source: source, articleSummaryController: appViewController.dataStore.articleSummaryController, authenticationManager: appViewController.dataStore.authenticationManager, languageLinkController: appViewController.dataStore.languageLinkController) else {
                 completion()
                 return false
             }
+            
+            if let deepLinkData = talkPageDeepLinkData(linkURL: linkURL, userInfo: userInfo) {
+                viewModel.deepLinkData = deepLinkData
+            }
+            
+            let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel)
             return presentOrPush(newTalkPage, with: completion)
-            
         case .userTalk(let linkURL):
-            
             if FeatureFlags.needsNewTalkPage {
-                guard let newTalkPage = TalkPageViewController(url: linkURL, theme: theme) else {
+                
+                let source = source(from: userInfo)
+                guard let viewModel = TalkPageViewModel(pageType: .user, pageURL: linkURL, source: source, articleSummaryController: appViewController.dataStore.articleSummaryController, authenticationManager: appViewController.dataStore.authenticationManager, languageLinkController: appViewController.dataStore.languageLinkController) else {
                     completion()
                     return false
                 }
+                
+                if let deepLinkData = talkPageDeepLinkData(linkURL: linkURL, userInfo: userInfo) {
+                    viewModel.deepLinkData = deepLinkData
+                }
+                
+                let newTalkPage = TalkPageViewController(theme: theme, viewModel: viewModel)
                 return presentOrPush(newTalkPage, with: completion)
             } else {
                 guard let talkPageVC = TalkPageContainerViewController.userTalkPageContainer(url: linkURL, dataStore: appViewController.dataStore, theme: theme) else {
@@ -124,10 +173,41 @@ class ViewControllerRouter: NSObject {
                 onThisDayVC.initialEvent = selectedEvent
             }
             return presentOrPush(onThisDayVC, with: completion)
+            
+        case .readingListsImport(let encodedPayload):
+            guard appViewController.editingFlowViewControllerInHierarchy == nil else {
+                // Do not show reading list import if user is in the middle of editing
+                completion()
+                return false
+            }
+
+            let createReadingListVC = CreateReadingListViewController(theme: theme, articles: [], encodedPageIds: encodedPayload, dataStore: appViewController.dataStore)
+            createReadingListVC.delegate = appViewController
+            return presentOrPush(createReadingListVC, with: completion)
         default:
             completion()
             return false
         }
     }
     
+    private func talkPageDeepLinkData(linkURL: URL, userInfo: [AnyHashable: Any]?) -> TalkPageViewModel.DeepLinkData? {
+        
+        guard let topicTitle = linkURL.fragment else {
+            return nil
+        }
+        
+        let replyText = userInfo?[RoutingUserInfoKeys.talkPageReplyText] as? String
+            
+        let deepLinkData = TalkPageViewModel.DeepLinkData(topicTitle: topicTitle, replyText: replyText)
+        return deepLinkData
+    }
+    
+    private func source(from userInfo: [AnyHashable: Any]?) -> RoutingUserInfoSourceValue {
+        guard let sourceString = userInfo?[RoutingUserInfoKeys.source] as? String,
+              let source = RoutingUserInfoSourceValue(rawValue: sourceString) else {
+            return .unknown
+        }
+
+        return source
+    }
 }

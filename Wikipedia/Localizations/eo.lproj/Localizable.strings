@@ -38,15 +38,6 @@
 "about-translators-details" = "Tradukita de volontuloj ĉe $1";
 "about-wikimedia-foundation" = "Fondaĵo Vikimedio";
 "about-wikipedia" = "Vikipedio";
-"abuse-filter-disallow-heading" = "Vi ne povas publikigi ĉi tiun modifon";
-"abuse-filter-disallow-unconstructive" = "Aŭtomatigita filtrilo identigis ĉi tiun redakton kiel potenciale malhelpan aŭ provon je vandalismo. Bonvolu reiri kaj korekti vian redakton.";
-"abuse-filter-warning-blanking" = "Forigi paragrafojn aŭ tutajn artikolojn";
-"abuse-filter-warning-caps" = "Tute majuskla teksto";
-"abuse-filter-warning-heading" = "Tio ĉi eble estas malhelpa redakto. Ĉu vi certas, ke vi volas publikigi ĝin?";
-"abuse-filter-warning-irrelevant" = "Senrilata ekstera ligilo aŭ bildo";
-"abuse-filter-warning-repeat" = "Ripetado de skribsignoj";
-"abuse-filter-warning-spam" = "Aldoni trudaĵon al artikolo";
-"abuse-filter-warning-subheading" = "Via redakto eble enhavas la jenon:";
 "account-creation-captcha-cannot-see-image" = "Ĉu vi ne povas vidi la bildon? $1";
 "account-creation-captcha-obtaining" = "Akiras novan CAPTCHA...";
 "account-creation-captcha-request-account" = "Peti konton.";
@@ -343,7 +334,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "De $1 Vikipedio";
 "explore-random-article-sub-heading-from-wikipedia" = "De Vikipedio";
 "explore-randomizer" = "Hazardumilo";
-"featured-article-empty-title" = "Neniu elstara artikolo estas havebla hodiaŭ";
 "fetcher-error-generic" = "Io misfunkciis. Bonvolu reprovi poste.";
 "fetcher-error-unexpected-response" = "La aplikaĵo ricevis ne atenditan respondon el la servilo. Bonvolu reprovi poste.";
 "field-alert-captcha-invalid" = "Nevalida CAPTCHA";
@@ -530,8 +520,6 @@
 "potd-empty-error-description" = "Malsukcesis ricevi bildon de la tago por $1";
 "preference-summary-eventlogging-opt-in" = "Permesi al Vikipedio kolekti informojn pri kiel vi uzas la aplikaĵon por helpi ĝin plibonigi";
 "preference-title-eventlogging-opt-in" = "Sendi raporton pri uzado";
-"rank-accessibility-label" = "Numero $1";
-"readers-accessibility-label" = "$1 legantoj";
 "reading-list-add-generic-hint-title" = "Ĉu aldoni ĉi tiun artikolon al legolisto?";
 "reading-list-add-hint-title" = "Ĉu aldoni \"$1\" al legolisto?";
 "reading-list-add-saved-button-title" = "Jes, aldonu ilin al miaj legolistoj";
@@ -735,6 +723,7 @@
 "talk-page-new-topic-title" = "Nova diskuto";
 "talk-page-publish-terms-and-licenses" = "Per konservado de ŝanĝoj, vi konsentas al la $1Kondiĉoj de Uzo$2, kaj konsentas al distribuado de via kontribuaĵo sub la permesiloj $3CC BY-SA 3.0$4 kaj $5GFDL$6.";
 "talk-page-reply-title" = "Respondi";
+// Fuzzy
 "talk-page-title-article-talk" = "Diskutpaĝo de artikolo";
 "talk-page-title-user-talk" = "Diskutpaĝo de Uzanto";
 "talk-page-topic-title" = "Diskuto";
@@ -744,9 +733,6 @@
 "theme-default-display-name" = "Defaŭlta";
 "theme-light-display-name" = "Hela";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Vikipedio";
-"top-read-header-with-language" = "$1 Vikipedio";
-"top-read-see-more" = "Vidi pli da ofte legitaj artikoloj";
 "two-factor-login-continue" = "Daŭrigi la ensalutadon";
 "two-factor-login-instructions" = "Bonvolu enigi la dupaŝan kontrolkodon";
 "two-factor-login-title" = "Ensaluti en vian konton";

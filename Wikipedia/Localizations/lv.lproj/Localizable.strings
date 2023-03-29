@@ -175,7 +175,6 @@
 "places-title" = "Vietas";
 "places-unknown-distance" = "nezināms attālums";
 "preference-title-eventlogging-opt-in" = "Sūtīt lietošanas ziņojumus";
-"readers-accessibility-label" = "$1 lasītāji";
 "reading-list-create-new-list-description" = "Apraksts";
 "reading-list-limit-hit-for-unsorted-articles-button-title" = "Kārtot rakstus";
 "reading-list-sync-disabled-panel-title" = "Sinhronizācija izslēgta";
@@ -230,12 +229,11 @@
 "talk-page-new-subject-textfield-accessibility-label" = "Temats";
 "talk-page-new-topic-title" = "Jauna diskusija";
 "talk-page-reply-title" = "Atbildēt";
+// Fuzzy
 "talk-page-title-article-talk" = "raksta diskusija";
 "talk-page-topic-title" = "Diskusija";
 "theme-default-display-name" = "Noklusējuma";
 "theme-sepia-display-name" = "Sēpija";
-"top-read-header-generic" = "Vikipēdija";
-"top-read-header-with-language" = "$1 Vikipēdija";
 "welcome-exploration-on-this-day-title" = "Šajā dienā";
 "welcome-explore-tell-me-more-done-button" = "Sapratu";
 "welcome-intro-free-encyclopedia-more" = "Uzzini vairāk par Vikipēdiju";

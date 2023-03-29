@@ -70,15 +70,6 @@
 "about-translators-details" = "Tradusă de traducătorii voluntari de la $1";
 "about-wikimedia-foundation" = "Fundația Wikimedia";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Nu puteți publica această modificare";
-"abuse-filter-disallow-unconstructive" = "Un filtru automat a identificat această modificare ca fiind potențial neconstructivă sau ca o tentativă de vandalism. Vă rugăm să vă întoarceți și să modificați editarea dvs.";
-"abuse-filter-warning-blanking" = "Ștergerea secțiunilor sau a articolelor complete";
-"abuse-filter-warning-caps" = "Scrierea INTEGRALĂ CU MAJUSCULE";
-"abuse-filter-warning-heading" = "Acesta arată ca o editare neconstructivă, sunteți sigur că doriți să o publicați?";
-"abuse-filter-warning-irrelevant" = "Legături externe sau imagini irelevante";
-"abuse-filter-warning-repeat" = "Repetarea caracterelor";
-"abuse-filter-warning-spam" = "Adăugarea de spam în articole";
-"abuse-filter-warning-subheading" = "Modificarea dumnevoastră poate conține:";
 "account-creation-captcha-cannot-see-image" = "Nu pot vedea imaginea? $1";
 "account-creation-captcha-obtaining" = "Se obține un nou CAPTCHA...";
 "account-creation-captcha-request-account" = "Cereți un cont.";
@@ -417,7 +408,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "De la $1 Wikipedia";
 "explore-random-article-sub-heading-from-wikipedia" = "De la Wikipedia";
 "explore-randomizer" = "Aleatorizare";
-"featured-article-empty-title" = "Nu există niciun articol recomandat astăzi disponibil";
 "featured-widget-content-failure-for-date" = "Un articol de calitate nu este disponibil pentru această dată.";
 "featured-widget-description" = "Descoperă cele mai bune articole de pe Wikipedia, selectate zilnic de comunitatea noastră.";
 "featured-widget-from-language-wikipedia" = "De la $1 Wikipedia";
@@ -780,8 +770,6 @@
 "project-name-wikiversity" = "Wikiversitate";
 "project-name-wikivoyage" = "Wikivoyage";
 "project-name-wiktionary" = "Wikționar";
-"rank-accessibility-label" = "Numărul $1";
-"readers-accessibility-label" = "$1 cititori";
 "reading-list-add-generic-hint-title" = "Adăugați acest articol la o listă de citire?";
 "reading-list-add-hint-title" = "Adăugați “$1” la o listă de lectură?";
 "reading-list-add-saved-button-title" = "Da, adăugați-le la listele mele de lectură";
@@ -1000,6 +988,7 @@
 "talk-page-new-topic-title" = "Discuție nouă";
 "talk-page-publish-terms-and-licenses" = "Prin salvarea modificărilor, sunteți de acord cu $1Termeni de utilizare$2, și sunteți de acord să eliberați contribuția dvs. sub licențele $3CC BY-SA 3.0$4 și li $5GFDL$6.";
 "talk-page-reply-title" = "Răspunde";
+// Fuzzy
 "talk-page-title-article-talk" = "discuție articol";
 "talk-page-title-user-talk" = "Discuție Utilizator";
 "talk-page-topic-title" = "Discuție";
@@ -1010,9 +999,6 @@
 "theme-default-explanation" = "Potrivește tema sistemului";
 "theme-light-display-name" = "Deschis";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "$1 Wikipedia";
-"top-read-see-more" = "Vezi mai mult cele mai citite";
 "top-read-widget-description" = "Aflați ce citește lumea astăzi pe Wikipedia.";
 "top-read-widget-readers-count" = "$1 cititori";
 "top-read-widget-title" = "Cele mai citite";

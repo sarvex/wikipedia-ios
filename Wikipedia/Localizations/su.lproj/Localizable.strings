@@ -26,20 +26,6 @@
 "about-translators-details" = "Ditarjamahkeun ku rélawan di $1";
 "about-wikimedia-foundation" = "Yayasan Wikimédia";
 "about-wikipedia" = "Wikipédia";
-// Fuzzy
-"abuse-filter-disallow-heading" = "Anjeun teu bisa medalkeun ieu éditan. Pék balik deui tuluy robah.";
-// Fuzzy
-"abuse-filter-disallow-unconstructive" = "Panyaring otomatis geus ngidéntifikasi ieu éditan minangka poténsial teu konstruktif, atawa tarékah vandalismeu.";
-// Fuzzy
-"abuse-filter-warning-blanking" = "Ngosongkeun artikel atawa spam";
-// Fuzzy
-"abuse-filter-warning-caps" = "Ngetik ku HURUP KAPITAL KABÉH";
-"abuse-filter-warning-heading" = "Kawasna mah ieu éditan téh teu konstruktif, anjeun yakin rék medalkeunna?";
-"abuse-filter-warning-irrelevant" = "Tutumbu luar atawa gambar teu luyu";
-// Fuzzy
-"abuse-filter-warning-repeat" = "Karakter puuuulang anting";
-// Fuzzy
-"abuse-filter-warning-subheading" = "Éditan anjeun bisa waé ngandung hiji atawa leuwih hal ieu:";
 "account-creation-captcha-cannot-see-image" = "Teu bisa nempo gambar? $1";
 "account-creation-captcha-obtaining" = "Nyokot CAPTCHA anyar...";
 "account-creation-captcha-request-account" = "Ménta akun.";
@@ -261,8 +247,6 @@
 "potd-empty-error-description" = "Gagal pikeun nampa gambar poé ieu dina $1";
 "preference-summary-eventlogging-opt-in" = "Heugbaékeun Wikimédia pikeun ngumpulkeun info ngeunaan cara anjeun migunakeun aplikasi nu leuwih hadé";
 "preference-title-eventlogging-opt-in" = "Kirim laporan pamakéan";
-"rank-accessibility-label" = "Réngking $1";
-"readers-accessibility-label" = "$1 pamaca";
 "reading-list-limit-hit-for-unsorted-articles-button-title" = "Runtuykeun artikel";
 "reading-list-sync-enable-button-title" = "Hurungkeun singkronan";
 "reading-lists-sort-saved-articles" = "Runtuykeun artikel kasimpen";
@@ -338,9 +322,6 @@
 "theme-dark-display-name" = "Poék";
 "theme-default-display-name" = "Bawaan";
 "theme-sepia-display-name" = "Sépia";
-"top-read-header-generic" = "Wikipédia";
-"top-read-header-with-language" = "$1 Wikipédia";
-"top-read-see-more" = "Ilikan bacaan pangluhurna séjén";
 "two-factor-login-continue" = "Tuluykeun asup log";
 "two-factor-login-instructions" = "Sok asupkeun kodeu vérifikasi dua faktor";
 "two-factor-login-title" = "Asup log kana akun anjeun";

@@ -109,7 +109,7 @@ public typealias ReadingListsController = WMFReadingListsController
     @objc public static let userDidSaveOrUnsaveArticleNotification = NSNotification.Name(rawValue: "WMFUserDidSaveOrUnsaveArticleNotification")
 
     internal weak var dataStore: MWKDataStore!
-    internal let apiController: ReadingListsAPIController
+    public let apiController: ReadingListsAPIController
         
     private let operationQueue = OperationQueue()
     
@@ -307,6 +307,12 @@ public typealias ReadingListsController = WMFReadingListsController
             guard let key = article.key, !existingKeys.contains(key) else {
                 continue
             }
+
+            // Need this to add to default reading list, otherwise article doesn't show up in "All articles" on SavedVC
+            if !article.isSaved, let articleUrl = article.url {
+                dataStore.savedPageList.toggleSavedPage(for: articleUrl)
+            }
+
             guard let entry = moc.wmf_create(entityNamed: "ReadingListEntry", withValue: key, forKey: "articleKey") as? ReadingListEntry else {
                 return
             }

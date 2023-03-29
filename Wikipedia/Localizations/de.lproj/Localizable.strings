@@ -1,16 +1,20 @@
 // Messages for German (Deutsch)
 // Exported from translatewiki.net
 // Author: 1233qwer1234qwer4
+// Author: Amire80
 // Author: BodminPill
 // Author: Brettchenweber
 // Author: DraconicDark
+// Author: Duke of Wikipädia
 // Author: Envlh
 // Author: FF-11
 // Author: Ferdinand0101
 // Author: Fitoschido
 // Author: Hikemaniac
 // Author: Hwboehm
+// Author: Ideophagous
 // Author: JanRei
+// Author: Justman10000
 // Author: Kghbln
 // Author: Killarnee
 // Author: Lucas Werkmeister
@@ -19,6 +23,8 @@
 // Author: Mirzali
 // Author: Nemo bis
 // Author: Purodha
+// Author: ThisCarthing
+// Author: Tsevener
 // Author: Ubahnverleih
 // Author: Umlaut
 // Author: ZiqiLiang
@@ -32,14 +38,25 @@
 "aaald-characters-text-description" = "{{PLURAL:$1|0=Zeichen|Zeichen|Zeichen}}";
 "aaald-deleted-text-description-2" = "$1 gelöscht";
 "aaald-error-subitle" = "Aktualisieren, um es erneut zu versuchen";
+"aaald-error-title" = "Inline-Artikelverlauf kann nicht geladen werden";
+"aaald-many-sections-description" = "in $1 Abschnitten";
+"aaald-multiple-changes-description" = "Mehrere Änderungen vorgenommen";
+"aaald-multiple-references-added-description" = "Mehrere Referenzen hinzugefügt";
 "aaald-new-book-reference-title" = "Buch";
 "aaald-new-discussion" = "Neue Diskussion";
+"aaald-new-journal-reference-database" = "über $1";
 "aaald-new-journal-reference-title" = "Zeitschrift";
 "aaald-new-journal-reference-volume" = "Band $1:";
+"aaald-new-news-reference-retrieved-date" = "Abgerufen $1";
 "aaald-new-news-reference-title" = "Nachrichten";
+"aaald-new-talk-topic-description-format" = "$1 über diesen Artikel";
+"aaald-new-website-reference-archive-date-text" = "vom Original auf $1";
 "aaald-new-website-reference-archive-url-text" = "Archive.org URL";
 "aaald-new-website-reference-title" = "Webseite";
+"aaald-numerical-multiple-references-added-description" = "{{PLURAL:$1|0=0 Referenzen|$1 Referenz|$1 Referenzen}} hinzugefügt";
+"aaald-one-section-description" = "im Abschnitt $1";
 "aaald-revision-by-anonymous" = "Bearbeitung durch einen nicht angemeldeten Benutzer";
+"aaald-revision-userInfo" = "Bearbeitung von $1 ($2 Bearbeitungen)";
 "aaald-vandalism-revert-description" = "Mutmaßlicher Vandalismus zurückgesetzt";
 "aaald-view-full-history-button" = "Vollständige Versionsgeschichte anzeigen";
 "about-content-license" = "Inhaltslizenz";
@@ -65,15 +82,6 @@
 "about-translators-details" = "Diese App wurde von freiwilligen Übersetzern auf $1 übersetzt";
 "about-wikimedia-foundation" = "Wikimedia Foundation";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Du kannst diese Bearbeitung nicht veröffentlichen.";
-"abuse-filter-disallow-unconstructive" = "Ein automatischer Filter hat diese Bearbeitung als potenziell unkonstruktiv oder als Vandalismusversuch identifiziert. Bitte gehe zurück und ändere deine Bearbeitung ab.";
-"abuse-filter-warning-blanking" = "Abschnitte oder ganze Artikel gelöscht";
-"abuse-filter-warning-caps" = "Text in Kapitalschrift";
-"abuse-filter-warning-heading" = "Dies sieht nach einer unkonstruktiven Bearbeitung aus. Bist du sicher, dass du sie veröffentlichen möchtest?";
-"abuse-filter-warning-irrelevant" = "Irrelevante Weblinks oder Bilder";
-"abuse-filter-warning-repeat" = "Zeichen wiederholt";
-"abuse-filter-warning-spam" = "Spam in Artikeln hinzugefügt";
-"abuse-filter-warning-subheading" = "Deine Bearbeitung könnte enthalten:";
 "account-creation-captcha-cannot-see-image" = "Kannst du das Bild nicht sehen? $1";
 "account-creation-captcha-obtaining" = "Rufe ein neues CAPTCHA ab …";
 "account-creation-captcha-request-account" = "Benutzerkonto beantragen.";
@@ -122,6 +130,7 @@
 "action-update" = "Aktualisieren";
 "add-articles-to-reading-list" = "{{PLURAL:$1|Ein|$1}} Artikel zu einer Leseliste hinzufügen";
 "add-citation-title" = "Zitat hinzufügen";
+"additional-information-email-title" = "Zusätzliche Informationen";
 "announcements-dismiss" = "Ausblenden";
 "app-store-keywords" = "Wikipedia, Referenz, Wiki, Enzyklopädie, Information, Info, Wissen, Forschung, Entdecken, Lernen";
 "app-store-release-notes" = "Vollständig anpassbarer und leichter zu lesender Entdecken-Feed. Lokalisierung, Verbesserungen an der Leistung und Fehlerbehebungen.";
@@ -402,7 +411,7 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "Von der Wikipedia auf $1";
 "explore-random-article-sub-heading-from-wikipedia" = "Von Wikipedia";
 "explore-randomizer" = "Zufallsgenerator";
-"featured-article-empty-title" = "Heute kein vorgestellter Artikel verfügbar";
+"export-user-data-title" = "Benutzerdaten exportieren";
 "featured-widget-content-failure-for-date" = "Für dieses Datum ist kein vorgestellter Artikel verfügbar.";
 "featured-widget-description" = "Entdecke die besten Artikel auf Wikipedia, die täglich von unserer Gemeinschaft ausgewählt werden.";
 "featured-widget-from-language-wikipedia" = "Von der Wikipedia auf $1";
@@ -465,6 +474,12 @@
 "icon-shortcut-random-title" = "Zufälliger Artikel";
 "icon-shortcut-search-title" = "Wikipedia durchsuchen";
 "image-gallery-unknown-owner" = "Autor unbekannt.";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Jetzt nicht";
+"import-shared-reading-list-survey-prompt-button-take-survey" = "Umfrage durchführen";
+"import-shared-reading-list-survey-prompt-footer" = "Sieh dir unsere $1Datenschutzerklärung$2 an. Die Umfrage wird durch Dritte durchgeführt. Sieh dir deren $3Datenschutzerklärungen$4 an.";
+"import-shared-reading-list-survey-prompt-subtitle" = "\"Leselisten teilen\" ist eine Testfunktion und wir brauchen dein Feedback, um sie zu verbessern oder zu entfernen.";
+"import-shared-reading-list-survey-prompt-title" = "Kannst du uns helfen, \"Leselisten teilen\" zu verbessern?";
+"import-shared-reading-list-title" = "Gemeinsame Leseliste importieren";
 "in-the-news-sub-title-from-language-wikipedia" = "Von der Wikipedia auf $1";
 "in-the-news-sub-title-from-wikipedia" = "Von Wikipedia";
 "in-the-news-title" = "In den Nachrichten";
@@ -544,9 +559,9 @@
 "notifications-center-empty-not-subscribed" = "Du hast derzeit keine Wikipedia-Benachrichtigungen abonniert";
 "notifications-center-empty-state-filters-subtitle" = "Ändere $1, um mehr Nachrichten zu sehen";
 "notifications-center-empty-state-no-projects-selected" = "Projekte hinzufügen, um mehr Nachrichten zu sehen";
-// Fuzzy
-"notifications-center-feed-news-notification-button-text" = "Benachrichtigungen anschalten";
+"notifications-center-feed-news-notification-button-text" = "Push-Benachrichtigungen anschalten";
 "notifications-center-feed-news-notification-dismiss-button-text" = "Nicht jetzt";
+"notifications-center-feed-news-notification-text" = "Bearbeitungsbenachrichtigungen für alle Wikimedia-Projekte sind jetzt über die App verfügbar. Melde dich für Push-Benachrichtigungen an, um auch unterwegs über deine Nachrichten auf Wikipedia auf dem Laufenden zu bleiben.";
 "notifications-center-filters-accessibility-label" = "Benachrichtigungsfilter";
 "notifications-center-filters-read-status-item-title-all" = "Alle";
 "notifications-center-filters-read-status-item-title-read" = "Gelesen";
@@ -557,22 +572,32 @@
 "notifications-center-filters-types-item-title-all" = "Alle Typen";
 "notifications-center-filters-types-section-title" = "Benachrichtigungstypen";
 "notifications-center-go-to-article" = "Artikel";
-// Fuzzy
-"notifications-center-go-to-talk-page" = "Zur Diskussionsseite gehen";
-// Fuzzy
-"notifications-center-go-to-wikidata-item" = "Zum Wikidata-Datenobjekt gehen";
-// Fuzzy
-"notifications-center-go-to-your-talk-page" = "Zu deine Diskussionsseite gehen";
+"notifications-center-go-to-article-talk-format" = "$1 Diskussionsseite";
+"notifications-center-go-to-talk-page" = "Diskussionsseite";
+"notifications-center-go-to-user-page" = "Benutzerseite von $1";
+"notifications-center-go-to-wikidata-item" = "Wikidata-Objekt";
+"notifications-center-go-to-your-talk-page" = "Deine Diskussionsseite";
 "notifications-center-inbox-title" = "Projekte";
+"notifications-center-inbox-wikimedia-projects-section-footer" = "Nur Projekte, für die du ein Konto erstellt hast, erscheinen hier";
 "notifications-center-inbox-wikimedia-projects-section-title" = "Wikimedia-Projekte";
+"notifications-center-inbox-wikipedias-section-title" = "Wikipedias";
+"notifications-center-language-project-name-format" = "$1 $2";
+"notifications-center-login-notifications" = "Anmeldungsbenachrichtigungen";
 "notifications-center-mark" = "Markieren";
 "notifications-center-mark-all-as-read" = "Alle als gelesen markieren";
 "notifications-center-mark-as-read" = "Als gelesen markieren";
 "notifications-center-mark-as-unread" = "Als ungelesen markieren";
 "notifications-center-more-action-accessibility-label" = "Mehr";
+"notifications-center-notifications-settings" = "Benachrichtigungseinstellungen";
+"notifications-center-num-selected-messages-format" = "{{PLURAL:$1|$1 Nachricht|$1 Nachrichten}}";
 "notifications-center-onboarding-modal-continue-action" = "Fortfahren";
 "notifications-center-onboarding-modal-filters-title" = "Filter";
+"notifications-center-onboarding-modal-push-notifications-title" = "Push-Benachrichtigungen";
 "notifications-center-onboarding-panel-secondary-button" = "Nein danke";
+"notifications-center-status-all" = "Alle";
+"notifications-center-status-all-notifications" = "Alle Benachrichtigungen";
+"notifications-center-status-in-projects" = "{{PLURAL:$1|1=In 1 Projekt|In $1 Projekten}}";
+"notifications-center-status-in-projects-plain" = "{{PLURAL:$1|1=1 Projekt|$1 Projekte}}";
 "notifications-center-status-read" = "Gelesen";
 "notifications-center-status-triple-concatenation" = "$1 und $2 in $3";
 "notifications-center-status-unread" = "Ungelesen";
@@ -581,15 +606,34 @@
 "notifications-center-subheader-email-from-other-user" = "Neue E-Mail";
 "notifications-center-subheader-login-fail-known-device" = "Mehrere fehlgeschlagene Anmeldeversuche";
 "notifications-center-subheader-login-fail-unknown-device" = "Fehlgeschlagener Anmeldeversuch";
-// Fuzzy
 "notifications-center-subheader-login-success-unknown-device" = "Anmeldung von einem unbekannten Gerät";
+"notifications-center-subheader-page-link" = "Seitenlink";
+"notifications-center-subheader-thanks" = "Dankeschön";
 "notifications-center-subheader-translate-milestone" = "Übersetzungsmeilenstein";
 "notifications-center-subheader-user-rights-change" = "Änderung der Benutzerrechte";
 "notifications-center-subheader-welcome" = "Willkommen!";
 "notifications-center-swipe-mark-as-read" = "Als gelesen markieren";
 "notifications-center-swipe-mark-as-unread" = "Als ungelesen markieren";
 "notifications-center-swipe-more" = "Mehr";
+"notifications-center-title" = "Benachrichtigungen";
 "notifications-center-type-item-description-mentions" = "Erwähnungen";
+"notifications-center-type-item-description-welcome-verbose" = "Willkommensnachricht";
+"notifications-center-type-title-connection-with-wikidata" = "Verbindung mit Wikidata";
+"notifications-center-type-title-edit-milestone" = "Bearbeitungsmeilenstein";
+"notifications-center-type-title-edit-reverted" = "Bearbeitung rückgängig gemacht";
+"notifications-center-type-title-email-from-other-user" = "E-Mail von einem anderen Benutzer";
+"notifications-center-type-title-login-attempts" = "Anmeldeversuche";
+"notifications-center-type-title-login-success" = "Erfolgreiche Anmeldung";
+"notifications-center-type-title-other" = "Andere";
+"notifications-center-type-title-page-link" = "Seitenlink";
+"notifications-center-type-title-page-review" = "Seitenüberprüfung";
+"notifications-center-type-title-talk-page-mention" = "Erwähnung auf Diskussionsseite";
+"notifications-center-type-title-thanks" = "Dankeschön";
+"notifications-center-type-title-translation-milestone" = "Übersetzungsmeilenstein";
+"notifications-center-type-title-user-rights-change" = "Änderung der Benutzerrechte";
+"notifications-center-type-title-user-talk-page-messsage" = "Nachricht auf Diskussionsseite";
+"notifications-center-type-title-welcome" = "Willkommen";
+"notifications-push-fallback-body-text" = "Neue Aktivität auf Wikipedia";
 "number-billions" = "$1 Mrd.";
 "number-millions" = "$1 Mio.";
 "number-thousands" = "$1 T";
@@ -615,6 +659,7 @@
 "page-history-revisions-comparison-warning" = "Nur zwei Versionen können angezeigt werden";
 "page-history-stats-text" = "{{PLURAL:$1|$1 Bearbeitung|$1 Bearbeitungen}} seit $2";
 "page-history-user-edits" = "Benutzerbearbeitungen";
+"page-issues" = "Seitenprobleme";
 "page-location" = "Auf einer Karte ansehen";
 "page-protected-autoconfirmed" = "Diese Seite wurde halbgesperrt.";
 "page-protected-can-not-edit" = "Du hast nicht die Rechte, diese Seite zu bearbeiten.";
@@ -624,6 +669,7 @@
 "page-similar-titles" = "Ähnliche Seiten";
 "panel-compare-revisions-text" = "Der Versionsvergleich hilft dabei zu sehen, wie sich ein Artikel über die Zeit verändert hat. Der Vergleich zweier Versionen zeigt die Unterschiede zwischen den Versionen und hebt hervor was sich geändert hat.";
 "panel-compare-revisions-title" = "Versionen vergleichen";
+"panel-not-logged-in-title" = "Du bist nicht angemeldet";
 "pictured" = "Bild";
 "places-accessibility-clear-saved-searches" = "Gespeicherte Suchanfragen löschen";
 "places-accessibility-group" = "$1 Artikel";
@@ -663,8 +709,17 @@
 "potd-widget-title" = "Bild des Tages";
 "preference-summary-eventlogging-opt-in" = "Der Wikimedia Foundation erlauben, Informationen über deine Verwendung der App zu sammeln, um die App zu verbessern.";
 "preference-title-eventlogging-opt-in" = "Nutzungsberichte senden";
-"rank-accessibility-label" = "Platz $1";
-"readers-accessibility-label" = "$1 Leser";
+"project-name-mediawiki" = "MediaWiki";
+"project-name-wikibooks" = "Wikibooks";
+"project-name-wikidata" = "Wikidata";
+"project-name-wikimedia-commons" = "Wikimedia Commons";
+"project-name-wikinews" = "Wikinews";
+"project-name-wikiquote" = "Wikiquote";
+"project-name-wikisource" = "Wikisource";
+"project-name-wikispecies" = "Wikispecies";
+"project-name-wikiversity" = "Wikiversity";
+"project-name-wikivoyage" = "Wikivoyage";
+"project-name-wiktionary" = "Wiktionary";
 "reading-list-add-generic-hint-title" = "Diesen Artikel zu einer Leseliste hinzufügen?";
 "reading-list-add-hint-title" = "„$1“ zu einer Leseliste hinzufügen?";
 "reading-list-add-saved-button-title" = "Ja, füge sie zu meinen Leselisten hinzu";
@@ -750,6 +805,8 @@
 "relative-date-hours-abbreviated" = "$1h";
 "relative-date-hours-ago" = "{{PLURAL:$1|0=Kürzlich|Vor einer Stunde|Vor $1 Stunden}}";
 "relative-date-hours-ago-abbreviated" = "Vor $1 Stunden";
+"relative-date-hrs-ago" = "{{PLURAL:$1|0=Kürzlich|Vor $1 Stunde|Vor $1 Stunden}}";
+"relative-date-min-ago" = "{{PLURAL:$1|0=Gerade eben|Vor $1 Minute|Vor $1 Minuten}}";
 "relative-date-minutes-abbreviated" = "$1m";
 "relative-date-minutes-ago" = "{{PLURAL:$1|0=Gerade eben|Vor einer Minute|Vor $1 Minuten}}";
 "relative-date-minutes-ago-abbreviated" = "Vor $1 Minuten";
@@ -801,8 +858,8 @@
 "settings-language-bar" = "Sprachen in der Suche anzeigen";
 "settings-languages-feed-customization" = "Du kannst bestimmen, welche Sprachen auf deinem Entdecken-Feed angezeigt werden, indem du die Einstellungen für deinen Entdecken-Feed anpasst.";
 "settings-my-languages" = "Meine Sprachen";
-// Fuzzy
-"settings-notifications" = "Benachrichtigungen";
+"settings-notifications" = "Push-Benachrichtigungen";
+"settings-notifications-echo-failure-try-again" = "Erneut versuchen";
 "settings-notifications-info" = "Werde über beliebte Artikel auf Wikipedia benachrichtigt mit unseren Push-Benachrichtigungen. Alles wird hinsichtlich des Datenschutzes und bis zu den Minutendaten zur Verfügung gestellt.";
 "settings-notifications-learn-more" = "Mehr über Benachrichtigungen erfahren";
 "settings-notifications-push-notifications" = "Push-Benachrichtigungen";
@@ -828,20 +885,17 @@
 "settings-support" = "Wikipedia unterstützen";
 "settings-title" = "Einstellungen";
 "share-a-fact-made-with" = "Erstellt mit der Wikipedia-App";
-// Fuzzy
-"share-article-name-on-wikipedia" = "„$1“ auf @Wikipedia:";
+"share-article-name-on-wikipedia" = "„$1“ auf Wikipedia:";
 "share-building" = "Erstelle Teile-einen-Fakt-Karte …";
 "share-default-format" = "„$1“ von „$2“: $3";
 "share-email-format" = "„$1“\n\nvon „$2“\n\n$3";
 "share-get-directions-in-maps" = "Richtungen abrufen";
 "share-menu-item" = "Teilen …";
 "share-message-format" = "„$1“ $2";
-// Fuzzy
-"share-on-twitter-sign-off" = "über @Wikipedia";
+"share-on-twitter-sign-off" = "über Wikipedia";
 "share-open-in-maps" = "In Karten öffnen";
 "share-social-format" = "„$1“ über Wikipedia: $2";
-// Fuzzy
-"share-social-mention-format" = "„$1“ über @Wikipedia: $2";
+"share-social-mention-format" = "„$1“ über Wikipedia: $2";
 "sort-by-recently-added-action" = "Kürzlich hinzugefügt";
 "sort-by-title-action" = "Titel";
 "table-of-contents-button-label" = "Inhaltsverzeichnis";
@@ -850,13 +904,20 @@
 "table-of-contents-heading" = "Inhalte";
 "table-of-contents-hide-button-label" = "Inhaltsverzeichnis ausblenden";
 "talk-page-add-discussion-accessibility-label" = "Diskussion hinzufügen";
+"talk-page-add-topic-button" = "Thema hinzufügen";
+"talk-page-archives" = "Archive";
+"talk-page-article-about" = "Über Diskussionsseiten";
+"talk-page-change-language" = "Sprache ändern";
 "talk-page-discussion-read-accessibility-label" = "Gelesen";
 "talk-page-discussion-unread-accessibility-label" = "Ungelesen";
 "talk-page-error-unable-to-post-reply" = "Keine Internetverbindung. Antwort konnte nicht gesendet werden.";
 "talk-page-error-unable-to-post-topic" = "Keine Internetverbindung. Diskussion konnte nicht gesendet werden.";
+"talk-page-find-in-page-button" = "In Seite finden";
 "talk-page-link-user-action-sheet-app" = "Öffne Benutzerdiskussionsseite in App";
 "talk-page-link-user-action-sheet-safari" = "Öffne Benutzerseite in Safari";
 "talk-page-link-user-action-sheet-title" = "Benutzerseiten";
+"talk-page-menu-open-all" = "Alle Threads öffnen";
+"talk-page-new-banner-subtitle" = "Denke daran, dass wir hier alle Menschen sind";
 "talk-page-new-banner-title" = "Bitte sei freundlich";
 "talk-page-new-reply-success-text" = "Deine Antwort wurde erfolgreich veröffentlicht";
 "talk-page-new-subject-clear-button-accessibility" = "Betreff löschen";
@@ -864,20 +925,50 @@
 "talk-page-new-subject-textfield-accessibility-label" = "Betreff";
 "talk-page-new-topic-success-text" = "Deine Diskussion wurde erfolgreich veröffentlicht";
 "talk-page-new-topic-title" = "Neue Diskussion";
+"talk-page-page-info" = "Seiteninformationen";
+"talk-page-permanent-link" = "Permanenter Link";
+"talk-page-publish-reply-error-subtitle" = "Bitte überprüfe deine Internetverbindung.";
 "talk-page-publish-terms-and-licenses" = "Indem du die Änderungen speicherst, stimmst du den $1Nutzungsbedingungen$2 zu und erklärst dich damit einverstanden, deinen Beitrag unter den $3CC BY-SA 3.0$4 und den $5GFDL$6 Lizenzen zu veröffentlichen.";
+"talk-page-read-in-web" = "Im Browser lesen";
+"talk-page-related-links" = "Was hier verlinkt";
+"talk-page-reply-button" = "Antworten";
+"talk-page-reply-placeholder-format" = "$1 antworten";
+"talk-page-reply-terms-and-licenses" = "Bitte beachte, dass deine Antwort automatisch mit deinem Benutzernamen signiert wird. Indem du die Änderungen speicherst, stimmst du $1den Nutzungsbedingungen$2 zu und erklärst dich damit einverstanden, deinen Beitrag unter den Lizenzen $3CC BY-SA 3.0$4 und $5GFDL$6 zu veröffentlichen.";
 "talk-page-reply-title" = "Antworten";
+"talk-page-revision-history" = "Versionsgeschichte";
+"talk-page-share-button" = "Diskussionsseite teilen";
+"talk-page-subscribe-to-topic" = "Abonnieren";
+"talk-page-subscribed-alert-subtitle" = "Du wirst über neue Kommentare in diesem Thema benachrichtigt.";
+"talk-page-subscribed-alert-title" = "Du hast dich eingetragen!";
 "talk-page-title-article-talk" = "Artikeldiskussionsseite";
 "talk-page-title-user-talk" = "Benutzerdiskussionsseite";
+"talk-page-topic-compose-terms-and-licenses" = "Indem du die Änderungen speicherst, stimmst du den $1Nutzungsbedingungen$2 zu und erklärst dich damit einverstanden, deinen Beitrag unter den $3CC BY-SA 3.0$4 und den $5GFDL$6 Lizenzen zu veröffentlichen.";
 "talk-page-topic-title" = "Diskussion";
+"talk-page-unsubscribe-to-topic" = "Abbestellen";
+"talk-page-unsubscribed-alert-subtitle" = "Du wirst keine Benachrichtigungen mehr über neue Kommentare in diesem Thema erhalten.";
+"talk-page-unsubscribed-alert-title" = "Du hast dich ausgetragen";
+"talk-page-user-about" = "Über Benutzer-Diskussionsseiten";
+"talk-page-user-contributions" = "Beiträge";
+"talk-pages-coffee-roll-read-more" = "Mehr lesen";
+"talk-pages-comment-added-alert-title" = "Dein Kommentar wurde hinzugefügt";
+"talk-pages-compose-close-confirmation-keep" = "Weiter bearbeiten";
 "talk-pages-reply-button-title" = "Auf diese Diskussion antworten";
+"talk-pages-reply-compose-close-confirmation-title" = "Bist du sicher, dass du diese neue Antwort verwerfen willst?";
+"talk-pages-topic-added-alert-title" = "Dein Thema wurde hinzugefügt";
+"talk-pages-topic-compose-body-placeholder" = "Beschreibung";
+"talk-pages-topic-compose-close-confirmation-discard" = "Antwort verwerfen";
+"talk-pages-topic-compose-navbar-title" = "Thema";
+"talk-pages-topic-compose-title-placeholder" = "Thementitel";
+"talk-pages-topic-reply-onboarding-body-ios15" = "Auf den Diskussionsseiten diskutieren $1Menschen darüber, wie man den Inhalt von Wikipedia so gut wie möglich gestalten kann.$1 Füge ein neues Diskussionsthema hinzu, um dich mit einer Gemeinschaft von Wikipedianern zu verbinden und zusammenzuarbeiten.";
+"talk-pages-topic-reply-onboarding-body-note-ios15" = "Bitte sei freundlich, wir sind hier alle Menschen.";
+"talk-pages-user-groups" = "Benutzergruppen";
+"talk-pages-user-logs" = "Logs";
+"talk-pages-view-title" = "Diskussion";
 "theme-black-display-name" = "Schwarz";
 "theme-dark-display-name" = "Dunkel";
 "theme-default-display-name" = "Standard";
 "theme-light-display-name" = "Hell";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "$1 Wikipedia";
-"top-read-see-more" = "Weitere meistgelesene Artikel ansehen";
 "top-read-widget-description" = "Erfahre auf Wikipedia, was die Welt heute liest.";
 "top-read-widget-title" = "Meistgelesen";
 "two-factor-login-continue" = "Mit der Anmeldung fortfahren";
@@ -887,6 +978,9 @@
 "two-factor-login-with-regular-code" = "Verifizierungscode verwenden";
 "unable-to-load-talk-page-title" = "Diskussionsseite kann nicht geladen werden";
 "unknown-generic-text" = "Unbekannt";
+"vanish-account-additional-information-placeholder" = "Optional";
+"vanish-account-learn-more-text" = "Mehr erfahren";
+"vanish-account-username-field" = "Benutzername und Benutzerseite";
 "variants-alert-dismiss-button" = "Nein danke";
 "variants-alert-preferences-button" = "Überprüfe deine Einstellungen";
 "welcome-exploration-explore-feed-description" = "Empfohlener Lesestoff und täglich wechselnde Artikel aus unserer Gemeinschaft";

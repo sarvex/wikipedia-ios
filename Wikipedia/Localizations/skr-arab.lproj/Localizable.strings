@@ -4,7 +4,7 @@
 
 "aaald-article-insert-new-changes" = "نویاں تبدیلیاں";
 "about-content-license" = "مواد دا لائسینس";
-"about-contributors" = "ونڳاراں";
+"about-contributors" = "ونگاراں";
 "about-libraries-complete-list" = "مکمل فہرست";
 "about-libraries-license" = "لائیسنس";
 "about-title" = "تعارف";
@@ -49,6 +49,7 @@
 "article-reference-view-title" = "حوالہ$1";
 "article-share" = "شیئر";
 "back-button-accessibility-label" = "پچھوں";
+"button-go-back" = "واپس ڄُلو";
 "button-next" = "اڳوں تے ونڄو";
 "button-ok" = "ٹھیک ہے";
 "button-publish" = "چھاپو";
@@ -120,6 +121,7 @@
 "icon-shortcut-random-title" = "کُݨے نال چوݨواں مضمون";
 "icon-shortcut-search-title" = "وکیپیڈیا وچ ڳولو";
 "image-gallery-unknown-owner" = "نامعلوم مصنف";
+"import-shared-reading-list-survey-prompt-button-cancel" = "ہُݨ نہ";
 "in-the-news-title" = "خبراں وچ";
 "insert-action-title" = "درج کرو";
 "insert-media-caption-title" = "عنوان";
@@ -160,7 +162,6 @@
 "places-search-top-articles-that-match-scope" = "نیڑے";
 "places-title" = "جاہیں";
 "places-unknown-distance" = "نامعلوم پندھ";
-"rank-accessibility-label" = "نمبر$1";
 "reading-list-create-new-list-description" = "تفصیل";
 "reading-list-create-new-list-title" = "نویں لسٹ بݨاؤ";
 "reading-list-limit-hit-for-unsorted-articles-button-title" = "مضموناں دی چھانٹی کرو";
@@ -201,12 +202,21 @@
 "talk-page-new-subject-placeholder-text" = "موضوع";
 "talk-page-new-subject-textfield-accessibility-label" = "موضوع";
 "talk-page-reply-title" = "جواب";
+"talk-page-user-contributions" = "ونگاراں";
+"talk-pages-archives-view-title" = "آرکائیواں";
+"talk-pages-empty-view-body-article" = "ڳالھ مہاڑ ورقے تے تے بھُوم ڳوجھی تے مواد کوں بہتر بݨاوݨ کیتے لوک بحث کریندے ہن۔ وکی پیڈیا برادری نال رل تے کم کرݨ تے رابطے کیتے  ** نواں بحث دا موضوع شامل کرݨ نال شروع کرو۔ **";
+"talk-pages-empty-view-body-user" = "ڳالھ مہاڑ ورقے تے بھُوم ڳوجھی تے مواد کوں ممکن حد تائیں بہتر بݨاوݨ کیتے لوک بحث کریندے ہن۔ $1 نال رل تے کم کرݨ تے رابطے کیتے  نواں بحث دا موضوع شامل کرݨ نال شروع کرو۔ تساں اتھاں جو کجھ وی آکھسو لوکاں دے ݙیکھݨ کیتے عوامی ہوسی۔";
+"talk-pages-empty-view-button-article-add-topic" = "نواں عنوان شامل کرو";
+"talk-pages-empty-view-button-user-start-discussion" = "بحت شروع کرو";
+"talk-pages-empty-view-header-user" = "$1 نال بحث شروع کرو";
+"talk-pages-topic-reply-onboarding-body" = "ڳالھ مہاڑ ورقے تے بھُوم ڳوجھی تے مواد کوں ممکن حد تائیں بہتر بݨاوݨ کیتے لوک بحث کریندے ہن۔ وکی پیڈیا برادری نال رل تے کم کرݨ تے رابطے کیتے  نواں بحث دا موضوع شامل کرݨ نال شروع کرو۔\nسوہݨا، مہربانی کرو، اتھ اساں سارے انسان ہیں۔";
+"talk-pages-topic-reply-onboarding-title" = "ڳالھ مہاڑ ورقے";
 "theme-black-display-name" = "کالا";
 "theme-dark-display-name" = "گہرا";
 "theme-default-display-name" = "پہلے کنوں طے تھیا ہویا";
 "theme-light-display-name" = "پھکّا";
-"top-read-header-generic" = "وکیپیڈیا";
-"top-read-header-with-language" = "وکیپیڈیا$1";
+"vanish-account-continue-button-title" = "جاری رکھو";
+"vanish-account-learn-more-text" = "ٻیا سِکھو";
 "welcome-exploration-on-this-day-title" = "ایں ݙینہ کوں";
 "welcome-explore-tell-me-more-done-button" = "گھن گھندا";
 "welcome-intro-free-encyclopedia-more-about" = "وکیپیڈیا دا تعارف";

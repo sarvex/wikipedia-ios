@@ -4,6 +4,7 @@
 // Author: Ahmetlii
 // Author: Alikaan
 // Author: Alpkant
+// Author: Amire80
 // Author: Ayrıntılı Bilgi
 // Author: BaRaN6161 TURK
 // Author: Betseg
@@ -100,15 +101,6 @@
 "about-translators-details" = "$1'deki gönüllülerce tercüme edilmiştir";
 "about-wikimedia-foundation" = "Wikimedia Vakfı";
 "about-wikipedia" = "Vikipedi";
-"abuse-filter-disallow-heading" = "Bu düzenlemeyi yayınlayamazsınız";
-"abuse-filter-disallow-unconstructive" = "Bir otomatik filtre, bu değişikliği, potansiyel olarak yıkıcı ya da vandalizm girişimi olarak belirledi. Lütfen geri dönün ve düzenlemenizi değiştirin.";
-"abuse-filter-warning-blanking" = "Bölümleri veya tüm maddeleri silme";
-"abuse-filter-warning-caps" = "Tümü büyük harfle yazım";
-"abuse-filter-warning-heading" = "Bu yapıcı olmayan bir düzenleme gibi görünüyor; yayınlamak istediğinize emin misiniz?";
-"abuse-filter-warning-irrelevant" = "Konu dışı dış bağlantılar veya resimler";
-"abuse-filter-warning-repeat" = "Tekrarlayan karakterler";
-"abuse-filter-warning-spam" = "Makalelere spam eklendi";
-"abuse-filter-warning-subheading" = "Değişikliğiniz şunları içeriyor olabilir:";
 "account-creation-captcha-cannot-see-image" = "Resmi göremiyor musunuz? $1";
 "account-creation-captcha-obtaining" = "Yeni CAPTCHA alınıyor...";
 "account-creation-captcha-request-account" = "Hesap iste.";
@@ -122,6 +114,7 @@
 "account-creation-saving" = "Kaydediliyor...";
 "account-creation-title" = "Yeni bir hesap oluştur";
 "account-group-title" = "Hesabınız";
+"account-request-vanishing" = "Hesabı yok et";
 "account-talk-page-title" = "Mesaj sayfanız";
 "account-talk-preferences-auto-sign-discussions" = "Otomatik imza tartışmaları";
 "account-talk-preferences-auto-sign-discussions-setting-explanation" = "Tartışmaların otomatik olarak imzalanması, İmza ayarlarında tanımlanan imzayı kullanır";
@@ -130,6 +123,7 @@
 "action-add-to-reading-list" = "Okuma listesine ekle";
 "action-add-to-reading-list-short" = "Listeye ekle";
 "action-cancel" = "İptal";
+"action-discard-edits" = "Düzenlemeleri sil";
 "action-find-in-page" = "Sayfada bul";
 "action-language-accessibility" = "Dil değiştir";
 "action-move-to" = "Taşı...";
@@ -156,6 +150,7 @@
 "action-update" = "Güncelle";
 "add-articles-to-reading-list" = "{{PLURAL:$1|$1 maddeyi|$1 maddeyi}} okuma listesine ekleyin";
 "add-citation-title" = "Kaynak ekle";
+"additional-information-email-title" = "Ek bilgi";
 "announcements-dismiss" = "Kapat";
 "app-store-keywords" = "Vikipedi, referans, viki, ansiklopedi, bilgi, bilgilenme, araştırma, bilme, keşfet, öğren";
 "app-store-release-notes" = "Tamamen özelleştirilebilir beslemeleri keşfedin. Yerelleştirme, performans iyileştirmeleri ve hata düzeltmeleri.";
@@ -184,9 +179,11 @@
 "article-toolbar-reading-themes-controls-toolbar-item" = "Okuma Tema Ayarları";
 "back-button-accessibility-label" = "Geri";
 "back-button-popover-title" = "Geri dönmek için dokunun";
+"button-go-back" = "Geri dön";
 "button-next" = "Sonraki";
 "button-ok" = "Tamam";
 "button-publish" = "Yayımla";
+"button-publish-anyway" = "Yine de yayımla";
 "button-read-now" = "Şimdi oku";
 "button-report-a-bug" = "Hata bildir";
 "button-save-for-later" = "Sonrası için kaydet";
@@ -340,6 +337,8 @@
 "editing-welcome-impartial-tone-title" = "Tarafsız bir bakış açısıyla yazın";
 "editing-welcome-set-knowledge-free-subtitle" = "Herkesin dünyadaki bilgiye erişimini sağlamak için en önemli olan konuları okumada, düzenlemede ve katkıda bulunmada size ihtiyacımız var.";
 "editing-welcome-set-knowledge-free-title" = "Bilgiyi özgür kıl";
+"editor-exit-confirmation-body" = "Öncelikle yayımlamadan düzenleme modundan çıkmak istediğinizden emin misiniz?";
+"editor-exit-confirmation-title" = "Düzenleme modu kapatılsın mı?";
 "empty-diff-compare-title" = "Revizyonlar arasında fark yok";
 "empty-diff-single-title" = "Görüntülenebilir değişiklik yapılmadı";
 "empty-insert-media-title" = "Wikimedia Commons'tan bir dosya seç";
@@ -444,7 +443,10 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "$1 Vikipedi'den";
 "explore-random-article-sub-heading-from-wikipedia" = "Vikipedi'den";
 "explore-randomizer" = "Rastgele";
-"featured-article-empty-title" = "Bugün için seçkin madde mevcut değil";
+"export-user-data-confirmation-title" = "Uygulama kütüphanesi paylaşılsın mı?";
+"export-user-data-generic-error" = "Verileriniz dışa aktarılırken bir hata oluştu. Lütfen daha sonra tekrar deneyin.";
+"export-user-data-space-error" = "Kullanıcı verilerinizi dışa aktarmak için cihazınızda yeterli alan yok. Lütfen daha sonra tekrar deneyin.";
+"export-user-data-title" = "Kullanıcı Verilerini Dışa Aktar";
 "featured-widget-content-failure-for-date" = "Bu tarih için seçkin bir madde mevcut değil.";
 "featured-widget-description" = "Topluluğumuz tarafından günlük olarak seçilen Vikipedi'deki en iyi maddeleri keşfedin.";
 "featured-widget-from-language-wikipedia" = "$1 Vikipedi'den";
@@ -509,6 +511,9 @@
 "icon-shortcut-random-title" = "Rastgele madde";
 "icon-shortcut-search-title" = "Vikipedi'de Ara";
 "image-gallery-unknown-owner" = "Yazar bilinmiyor.";
+"import-shared-reading-list-default-title" = "Okuma Listem";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Şimdi değil";
+"import-shared-reading-list-survey-prompt-button-take-survey" = "Ankete katıl";
 "in-the-news-sub-title-from-language-wikipedia" = "$1 Vikipedi'den";
 "in-the-news-sub-title-from-wikipedia" = "Vikipedi'den";
 "in-the-news-title" = "Haberlerde";
@@ -566,11 +571,12 @@
 "main-menu-account-login" = "Oturum aç";
 "main-menu-account-logout" = "Oturumu kapat";
 "main-menu-account-logout-are-you-sure" = "Oturumu kapatmak istediğinizden emin misiniz?";
+"main-menu-account-logout-are-you-sure-message" = "Çıkış yapmak, yerel olarak depolanan hesap verilerinizi (bildirimler ve mesajlar) siler ancak hesap verileriniz web'de bulunmaya devam eder ve tekrar giriş yaparsanız yeniden indirilir.";
 "main-menu-account-logout-cancel" = "İptal";
 "main-menu-account-title-logged-in" = "$1 olarak oturum açıldı";
 "main-menu-heading-legal" = "Gizlilik ve Şartlar";
 "main-menu-nearby" = "Yakınımdakiler";
-"main-menu-privacy-policy" = "Gizlilik ilkesi";
+"main-menu-privacy-policy" = "Gizlilik politikası";
 "main-menu-rate-app" = "Uygulamayı puanla";
 "main-menu-terms-of-use" = "Kullanım Şartları";
 "main-menu-title" = "Daha fazla";
@@ -591,16 +597,25 @@
 "no-internet-connection-article-reload" = "Bu maddenin daha yeni bir sürümü mevcut olabilir ancak internet bağlantısı olmadan yüklenemez";
 "no-internet-connection-article-reload-button" = "En son kaydedilen sürüme dön";
 "notifications-center-agent-description-from-format" = "$1 kaynağından";
+"notifications-center-alert" = "Uyarı";
 "notifications-center-applied-filters-accessibility-label" = "Bildirim Filtresi - uygulanan filtreler var";
+"notifications-center-applied-project-filters-accessibility-label" = "Proje Filtresi - filtre uygulanmış";
+"notifications-center-badge-button-accessibility-label" = "Okunmamış rozeti olan bildirimler";
+"notifications-center-cell-notification-type-accessibility-label-format" = "$1 bildirimi";
 "notifications-center-change-password" = "Parolayı Değiştir";
 "notifications-center-checking-for-notifications" = "Bildirimler kontrol ediliyor...";
+"notifications-center-destination-app" = "Uygulamada";
+"notifications-center-destination-web" = "Web'de";
 "notifications-center-empty-checking-for-notifications" = "Bildirimler kontrol ediliyor...";
 "notifications-center-empty-no-messages" = "Mesajınız yok";
 "notifications-center-empty-not-subscribed" = "Herhangi bir Vikipedi Bildirimine üye değilsiniz";
 "notifications-center-empty-state-filters-subtitle" = "Daha fazla mesaj görmek için $1 kısmını değiştirin";
+"notifications-center-empty-state-no-projects-selected" = "Daha fazla mesaj görmek için proje ekleyin";
 "notifications-center-empty-state-num-filters" = "{{PLURAL:$1|$1 filtre|$1 filtre}}";
+"notifications-center-feed-card-title" = "Bildirimleri düzenleme artık mevcut";
 "notifications-center-feed-news-notification-button-text" = "BAnında iletme bildirimlerini aç";
 "notifications-center-feed-news-notification-dismiss-button-text" = "Şimdi değil";
+"notifications-center-feed-news-notification-text" = "Tüm Wikimedia projeleri için değişiklik bildirimleri artık uygulama aracılığıyla kullanılabilir. Hareket halindeyken Vikipedi'deki mesajlarınızdan haberdar olmak için push bildirimlerini seçin.";
 "notifications-center-filters-accessibility-label" = "Bildirim filtresi";
 "notifications-center-filters-read-status-item-title-all" = "Tümü";
 "notifications-center-filters-read-status-item-title-read" = "Oku";
@@ -609,6 +624,8 @@
 "notifications-center-filters-title" = "Filtreler";
 "notifications-center-filters-types-item-title-all" = "Tüm türler";
 "notifications-center-filters-types-section-title" = "Bildirim türleri";
+"notifications-center-go-to-article" = "Madde";
+"notifications-center-go-to-article-talk-format" = "$1 tartışma sayfası";
 "notifications-center-go-to-diff" = "Fark";
 "notifications-center-go-to-talk-page" = "Tartışma sayfası";
 "notifications-center-go-to-user-page" = "$1'in kullanıcı sayfası";
@@ -616,16 +633,34 @@
 "notifications-center-go-to-your-talk-page" = "Mesaj sayfanız";
 "notifications-center-header-alert-from-agent" = "$1 kaynağından uyarı";
 "notifications-center-inbox-title" = "Projeler";
+"notifications-center-inbox-wikimedia-projects-section-footer" = "Burada sadece hesap oluşturduğunuz projeler görünecek";
 "notifications-center-inbox-wikimedia-projects-section-title" = "Wikimedia Projeleri";
 "notifications-center-inbox-wikipedias-section-title" = "Vikipediler";
 "notifications-center-language-project-name-format" = "$1 $2";
 "notifications-center-login-notifications" = "Giriş Bildirimleri";
 "notifications-center-mark" = "İşaretle";
 "notifications-center-mark-all-as-read" = "Tümünü okundu olarak işaretle";
+"notifications-center-mark-all-as-read-missing-number" = "Tüm bildirimlerinizi okundu olarak işaretlemek istediğinizden emin misiniz? Bildirimleriniz tüm cihazlarınızda okundu olarak işaretlenecek.";
 "notifications-center-mark-as-read" = "Okunmuş olarak İşaretle";
 "notifications-center-mark-as-unread" = "Okunmamış olarak İşaretle";
+"notifications-center-more-action-accessibility-label" = "Daha fazla";
 "notifications-center-notifications-settings" = "Bildirim ayarları";
 "notifications-center-num-selected-messages-format" = "{{PLURAL:$1|$1 mesaj|$1 mesaj}}";
+"notifications-center-onboarding-modal-continue-action" = "Devam et";
+"notifications-center-onboarding-modal-filters-message" = "Gelen kutunuzu kolayca daraltmak için bildirimlerinizi okuma durumuna ve türüne göre filtreleyin.";
+"notifications-center-onboarding-modal-filters-title" = "Filtreler";
+"notifications-center-onboarding-modal-learn-more-action" = "Bildirimler hakkında daha fazla bilgi edinin";
+"notifications-center-onboarding-modal-notifications-alerts-message" = "Bildirimler, düzenlemeleriniz ve hesabınızla ilgili etkinliklerden haberdar olmanıza yardımcı olur.";
+"notifications-center-onboarding-modal-notifications-alerts-title" = "Bildirimler ve uyarılar";
+"notifications-center-onboarding-modal-project-inboxes-message" = "Farklı dillerdeki Vikipedi'lerden ve Wikimedia projelerinden tüm okunmamış mesajlarınızı tek bir yerde görüntüleyin.";
+"notifications-center-onboarding-modal-project-inboxes-title" = "Proje gelen kutuları";
+"notifications-center-onboarding-modal-push-notifications-message" = "Hareket halindeyken değişiklik mesajlarınızı ve uyarılarınızı takip etmek için anında iletme bildirimlerini etkinleştirin.";
+"notifications-center-onboarding-modal-push-notifications-title" = "Anlık bildirimler";
+"notifications-center-onboarding-modal-title" = "Bildirimleri düzenleme";
+"notifications-center-onboarding-panel-heading" = "Anında iletme bildirimleri açılsın mı?";
+"notifications-center-onboarding-panel-primary-button" = "Anında iletme bildirimlerini açın";
+"notifications-center-onboarding-panel-secondary-button" = "Hayır, teşekkürler";
+"notifications-center-onboarding-panel-subheading" = "Vikipedi ortak bir projedir ve anında anında iletme bildirimlerini açmak; diğer editörlerden gelen mesajlar, uyarılar ve \"teşekkürler\" ile güncel kalmayı kolaylaştırabilir.";
 "notifications-center-project-filters-accessibility-label" = "Proje filtresi";
 "notifications-center-status-all" = "Tümü";
 "notifications-center-status-all-notifications" = "Bütün bildirimler";
@@ -652,6 +687,7 @@
 "notifications-center-subheader-page-link" = "Sayfa bağlantısı";
 "notifications-center-subheader-page-reviewed" = "Sayfa incelendi";
 "notifications-center-subheader-thanks" = "Teşekkürler";
+"notifications-center-subheader-translate-milestone" = "Çeviri kilometre taşı";
 "notifications-center-subheader-user-rights-change" = "Kullanıcı hakları değişikliği";
 "notifications-center-subheader-welcome" = "Hoş geldiniz!";
 "notifications-center-subheader-wikidata-connection" = "Vikiveri bağlantısı oluşturuldu";
@@ -660,6 +696,23 @@
 "notifications-center-swipe-more" = "Daha fazla";
 "notifications-center-title" = "Bildirimler";
 "notifications-center-toolbar-mark-accessibility-label" = "Seçili bildirimleri işaretle";
+"notifications-center-type-item-description-mentions" = "Bahsetmeler";
+"notifications-center-type-item-description-notice" = "Bildirim";
+"notifications-center-type-item-description-welcome-verbose" = "Karşılama mesajı";
+"notifications-center-type-title-connection-with-wikidata" = "Vikiveri ile bağlantı";
+"notifications-center-type-title-edit-milestone" = "Kilometre taşını düzenle";
+"notifications-center-type-title-edit-reverted" = "Değişiklikler geri alındı";
+"notifications-center-type-title-email-from-other-user" = "Diğer kullanıcıdan e-posta";
+"notifications-center-type-title-login-attempts" = "Giriş denemeleri";
+"notifications-center-type-title-login-attempts-subtitle" = "Hesabınıza başarısız giriş denemeleri";
+"notifications-center-type-title-login-success" = "Giriş başarılı";
+"notifications-center-type-title-other" = "Diğer";
+"notifications-center-type-title-page-link" = "Sayfa bağlantısı";
+"notifications-center-type-title-page-review" = "Sayfa incelemesi";
+"notifications-center-type-title-thanks" = "Teşekkürler";
+"notifications-center-type-title-translation-milestone" = "Çeviri kilometre taşı";
+"notifications-center-type-title-user-rights-change" = "Kullanıcı hakları değişikliği";
+"notifications-center-type-title-user-talk-page-messsage" = "Tartışma sayfası mesajı";
 "notifications-center-type-title-welcome" = "Hoş geldiniz";
 "notifications-push-fallback-body-text" = "Vikipedi'de yeni etkinlik";
 "notifications-push-talk-body-format" = "$2 sayfasında {{PLURAL:$1|$1 yeni mesaj|$1 yeni mesajlar}}";
@@ -753,8 +806,6 @@
 "project-name-wikiversity" = "Vikiversite";
 "project-name-wikivoyage" = "Vikigezgin";
 "project-name-wiktionary" = "Vikisözlük";
-"rank-accessibility-label" = "Sıra $1";
-"readers-accessibility-label" = "$1 okuyucu";
 "reading-list-add-generic-hint-title" = "Bu makaleyi bir okuma listesine eklemek istediğinize emin misiniz?";
 "reading-list-add-hint-title" = "“$1” maddesi okuma listesine eklesin mi?";
 "reading-list-add-saved-button-title" = "Evet, bunları okuma listeme ekleye";
@@ -896,7 +947,9 @@
 "settings-languages-feed-customization" = "Keşfet akış ayarlarınızı özelleştirerek Keşfet özet akışınızda hangi dillerin gösterileceğini yönetebilirsiniz.";
 "settings-my-languages" = "Dillerim";
 "settings-notifications" = "Anlık bildirimler";
+"settings-notifications-echo-failure-message" = "Hesabınızla ilgili bildirim abonelikleri kontrol edilirken bir hata oluştu.";
 "settings-notifications-echo-failure-try-again" = "Tekrar dene";
+"settings-notifications-header" = "Diğer katkıda bulunanlardan gelen mesajlar, uyarılar ve bildirimler gibi hesabınızla ilgili etkinliklerden haberdar olun. Hepsi gizliliğe ve en güncel verilere göre sağlanmıştır.";
 "settings-notifications-info" = "Anlık bildirimlerimizle, gündemde olan ve en çok okunan Vikipedi makalelerinden haberdar olun. Hepsi, gizliliğe ve güncel verilere bağlı olarak sunulmaktadır.";
 "settings-notifications-learn-more" = "Bildirimler hakkında daha fazla bilgi edinin";
 "settings-notifications-push-notifications" = "Anlık bildirimler";
@@ -972,19 +1025,17 @@
 "talk-page-new-topic-title" = "Yeni tartışma";
 "talk-page-publish-terms-and-licenses" = "Değişiklikleri kaydederek $1Kullanım Koşullarını$2 kabul etmiş olursunuz ve katkılarınızı $3CC BY-SA 3.0$4 ve $5GFDL$6 lisansları altında yayımlamayı kabul edersiniz.";
 "talk-page-reply-title" = "Yanıtla";
-"talk-page-title-article-talk" = "madde Tartışma";
+"talk-page-title-article-talk" = "Madde Tartışma";
 "talk-page-title-user-talk" = "Kullanıcı mesajı";
 "talk-page-topic-title" = "Tartışma";
 "talk-pages-reply-button-title" = "Bu tartışmayı cevapla";
+"talk-pages-view-title" = "Tartışma";
 "theme-black-display-name" = "Siyah";
 "theme-dark-display-name" = "Koyu";
 "theme-default-display-name" = "Varsayılan";
 "theme-default-explanation" = "Sistem temasıyla eşleş";
 "theme-light-display-name" = "Açık";
 "theme-sepia-display-name" = "Sepya";
-"top-read-header-generic" = "Vikipedi";
-"top-read-header-with-language" = "$1 Vikipedi";
-"top-read-see-more" = "En çok okunanları gör";
 "top-read-widget-description" = "Dünyanın bugün Vikipedi'de ne okuduğunu öğrenin.";
 "top-read-widget-readers-count" = "$1 okuyucu";
 "top-read-widget-title" = "En çok okunanlar";
@@ -997,6 +1048,7 @@
 "unknown-generic-text" = "Bilinmiyor";
 "uzbek-variants-alert-body" = "Vikipedi uygulaması artık aşağıdaki Özbekçe biçimlerini birincil veya ikincil dil olarak uygulama içinde destekliyor, bu şekilde tercih ettiğiniz biçimle daha kolay okuyabilir, aratabilir ve değişiklik yapabilirsiniz:\n\noʻzbekcha lotin Özbekçe, Latin (uz-latin)\nўзбекча кирилл Özbekçe, Kiril (uz-cyrl)";
 "uzbek-variants-alert-title" = "Özbekçe biçim desteği güncellemeleri";
+"vanish-account-learn-more-text" = "Daha fazla bilgi";
 "variants-alert-dismiss-button" = "Hayır teşekkürler";
 "variants-alert-preferences-button" = "Tercihlerinizi gözden geçirin";
 "welcome-exploration-explore-feed-description" = "Önerilen okumalar ve topluluğumuzdan günlük maddeler";

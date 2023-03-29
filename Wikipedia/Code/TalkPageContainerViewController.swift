@@ -1,4 +1,5 @@
 import UIKit
+import WMF
 
 fileprivate enum TalkPageContainerViewState {
     case initial
@@ -57,7 +58,7 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
     
     let talkPageTitle: String
     private(set) var siteURL: URL
-    let type: TalkPageType
+    let type: OldTalkPageType
     private let dataStore: MWKDataStore
     private(set) var controller: OldTalkPageController
     private(set) var talkPageSemanticContentAttribute: UISemanticContentAttribute
@@ -77,7 +78,7 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
     private var topicListViewController: TalkPageTopicListViewController?
     private var replyListViewController: TalkPageReplyListViewController?
     private var emptyView: WMFEmptyView?
-    private var headerView: TalkPageHeaderView?
+    private var headerView: OldTalkPageHeaderView?
     private var addButton: UIBarButtonItem?
     
     private var shareIcon: IconBarButtonItem?
@@ -158,7 +159,7 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
         }
     }
     
-    required init(title: String, sectionTitleFragment: String? = nil, siteURL: URL, type: TalkPageType, dataStore: MWKDataStore, controller: OldTalkPageController? = nil, theme: Theme) {
+    required init(title: String, sectionTitleFragment: String? = nil, siteURL: URL, type: OldTalkPageType, dataStore: MWKDataStore, controller: OldTalkPageController? = nil, theme: Theme) {
         self.talkPageTitle = title
         self.siteURL = siteURL
         self.type = type
@@ -180,10 +181,8 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
         
         self.theme = theme
 
-        if #available(iOS 14.0, *) {
-            navigationItem.backButtonDisplayMode = .generic
-            navigationItem.backButtonTitle = title
-        }
+        navigationItem.backButtonDisplayMode = .generic
+        navigationItem.backButtonTitle = title
     }
     
     @objc(userTalkPageContainerWithURL:dataStore:theme:)
@@ -199,9 +198,9 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
         return TalkPageContainerViewController.talkPageContainer(title: title, sectionTitleFragment: sectionTitleFragment, siteURL: siteURL, type: .user, dataStore: dataStore, theme: theme)
     }
 
-    public static func talkPageContainer(title: String, sectionTitleFragment: String? = nil, siteURL: URL, type: TalkPageType, dataStore: MWKDataStore, theme: Theme) -> TalkPageContainerViewController {
-        let strippedTitle = TalkPageType.user.titleWithoutNamespacePrefix(title: title)
-        let titleWithPrefix = TalkPageType.user.titleWithCanonicalNamespacePrefix(title: strippedTitle, siteURL: siteURL)
+    public static func talkPageContainer(title: String, sectionTitleFragment: String? = nil, siteURL: URL, type: OldTalkPageType, dataStore: MWKDataStore, theme: Theme) -> TalkPageContainerViewController {
+        let strippedTitle = OldTalkPageType.user.titleWithoutNamespacePrefix(title: title)
+        let titleWithPrefix = OldTalkPageType.user.titleWithCanonicalNamespacePrefix(title: strippedTitle, siteURL: siteURL)
         return TalkPageContainerViewController(title: titleWithPrefix, sectionTitleFragment: sectionTitleFragment, siteURL: siteURL, type: type, dataStore: dataStore, theme: theme)
     }
 
@@ -409,7 +408,7 @@ private extension TalkPageContainerViewController {
     
     func matchingTopicFromFragment(in talkPage: TalkPage) -> TalkPageTopic? {
 
-        guard let normalizedSectionTitleFragment = sectionTitleFragment?.normalizedPageTitle,
+        guard let normalizedSectionTitleFragment = sectionTitleFragment?.removingPercentEncoding?.normalizedPageTitle,
               let topics = talkPage.topics as? Set<TalkPageTopic> else {
             return nil
         }
@@ -514,7 +513,7 @@ private extension TalkPageContainerViewController {
         
         setupAddBarButton()
         
-        if let headerView = TalkPageHeaderView.wmf_viewFromClassNib() {
+        if let headerView = OldTalkPageHeaderView.wmf_viewFromClassNib() {
             self.headerView = headerView
             configure(header: headerView, introTopic: nil)
             headerView.delegate = self
@@ -530,14 +529,14 @@ private extension TalkPageContainerViewController {
         }
     }
     
-    func configure(header: TalkPageHeaderView, introTopic: TalkPageTopic?) {
+    func configure(header: OldTalkPageHeaderView, introTopic: TalkPageTopic?) {
         
         var headerText: String
         switch type {
         case .user:
-            headerText = WMFLocalizedString("talk-page-title-user-talk", value: "User Talk", comment: "This title label is displayed at the top of a talk page topic list, if the talk page type is a user talk page.").localizedUppercase
+            headerText = CommonStrings.talkPageTitleUserTalk(languageCode: nil).localizedUppercase
         case .article:
-            headerText = WMFLocalizedString("talk-page-title-article-talk", value: "article Talk", comment: "This title label is displayed at the top of a talk page topic list, if the talk page type is an article talk page.").localizedUppercase
+            headerText = CommonStrings.talkPageTitleArticleTalk(languageCode: nil).localizedUppercase
         }
         
         let languageTextFormat = WMFLocalizedString("talk-page-info-active-conversations", value: "Active conversations on %1$@ Wikipedia", comment: "This information label is displayed at the top of a talk page discussion list. %1$@ is replaced by the language wiki they are using - for example, 'Active conversations on English Wikipedia'.")
@@ -553,7 +552,7 @@ private extension TalkPageContainerViewController {
             introText = replyTexts.joined(separator: "<br />")
         }
         
-        let viewModel = TalkPageHeaderView.ViewModel(header: headerText, title: controller.displayTitle, info: infoText, intro: introText)
+        let viewModel = OldTalkPageHeaderView.ViewModel(header: headerText, title: controller.displayTitle, info: infoText, intro: introText)
         
         header.configure(viewModel: viewModel)
         header.delegate = self
@@ -820,12 +819,12 @@ extension TalkPageContainerViewController: TalkPageReplyListViewControllerDelega
 
 // MARK: TalkPageHeaderViewDelegate
 
-extension TalkPageContainerViewController: TalkPageHeaderViewDelegate {
-    func tappedLink(_ url: URL, headerView: TalkPageHeaderView, sourceView: UIView, sourceRect: CGRect?) {
+extension TalkPageContainerViewController: OldTalkPageHeaderViewDelegate {
+    func tappedLink(_ url: URL, headerView: OldTalkPageHeaderView, sourceView: UIView, sourceRect: CGRect?) {
         tappedLink(url, loadingViewController: self, sourceView: sourceView, sourceRect: sourceRect)
     }
     
-    func tappedIntro(headerView: TalkPageHeaderView) {
+    func tappedIntro(headerView: OldTalkPageHeaderView) {
         if let introTopic = self.introTopic {
             pushToReplyThread(topic: introTopic)
         }

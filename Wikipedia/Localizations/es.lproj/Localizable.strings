@@ -8,7 +8,9 @@
 // Author: Canaan9801
 // Author: Carlosmg.dg
 // Author: Chopan050
+// Author: Csbotero
 // Author: DannyS712
+// Author: DarkGames26
 // Author: David.novella
 // Author: Dgstranz
 // Author: DiegoAmbrocio
@@ -46,7 +48,9 @@
 // Author: Rodm23
 // Author: Rodney Araujo
 // Author: Ryo567
+// Author: SpikeShroom
 // Author: Tiberius1701
+// Author: Tsevener
 // Author: VegaDark
 // Author: Vivaelcelta
 // Author: Wifidel
@@ -100,15 +104,6 @@
 "about-translators-details" = "Traducido por voluntarios en $1";
 "about-wikimedia-foundation" = "Fundación Wikimedia";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "No puedes publicar esta edición";
-"abuse-filter-disallow-unconstructive" = "Un filtro automático ha identificado esta edición como potencialmente no constructiva o un intento de vandalismo. Por favor, retrocede y cambia tu edición.";
-"abuse-filter-warning-blanking" = "Borrar secciones o artículos completos";
-"abuse-filter-warning-caps" = "Texto solo en mayúsculas";
-"abuse-filter-warning-heading" = "Esto parece una edición no constructiva. ¿Estás seguro de que quieres publicarla?";
-"abuse-filter-warning-irrelevant" = "Enlaces o imágenes externas irrelevantes";
-"abuse-filter-warning-repeat" = "Caracteres repetidos";
-"abuse-filter-warning-spam" = "Añadiendo spam a artículos";
-"abuse-filter-warning-subheading" = "Tu edición puede contener:";
 "account-creation-captcha-cannot-see-image" = "¿No puedes ver la imagen? $1";
 "account-creation-captcha-obtaining" = "Obteniendo un nuevo CAPTCHA...";
 "account-creation-captcha-request-account" = "Solicitar cuenta.";
@@ -184,9 +179,11 @@
 "article-toolbar-reading-themes-controls-toolbar-item" = "Controles de los temas de lectura";
 "back-button-accessibility-label" = "Volver";
 "back-button-popover-title" = "Toque aquí para regresar";
+"button-go-back" = "Volver";
 "button-next" = "Siguiente";
 "button-ok" = "Aceptar";
 "button-publish" = "Publicar";
+"button-publish-anyway" = "Publicar de todos modos";
 "button-read-now" = "Leer ahora";
 "button-report-a-bug" = "Informar de un error";
 "button-save-for-later" = "Guardar para después";
@@ -444,7 +441,6 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "De Wikipedia en $1";
 "explore-random-article-sub-heading-from-wikipedia" = "De Wikipedia";
 "explore-randomizer" = "Aleatorio";
-"featured-article-empty-title" = "No hay artículo destacado hoy";
 "featured-widget-from-language-wikipedia" = "De Wikipedia en $1";
 "featured-widget-from-wikipedia" = "De Wikipedia";
 "featured-widget-language-failure" = "Su idioma principal de Wikipedia no soporta Artículo destacado. Puede actualizar su Wikipedia principal en el menú de Configuración de la aplicación.";
@@ -507,6 +503,13 @@
 "icon-shortcut-random-title" = "Artículo aleatorio";
 "icon-shortcut-search-title" = "Buscar en Wikipedia";
 "image-gallery-unknown-owner" = "Autor desconocido.";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Ahora no";
+"import-shared-reading-list-survey-prompt-button-take-survey" = "Responder a la encuesta";
+"import-shared-reading-list-survey-prompt-footer" = "Consulta nuestra $1declaración de privacidad$2. Encuesta creada con tecnología de terceros. Consulta su $3política de privacidad$4.";
+// Fuzzy
+"import-shared-reading-list-survey-prompt-subtitle" = "\"Compartir listas de lectura\" es una función de prueba y necesitamos tus comentarios para mejorarla o eliminarla.";
+// Fuzzy
+"import-shared-reading-list-survey-prompt-title" = "¿Podrías ayudarnos a mejorar \"Compartir listas de lectura\"?";
 "in-the-news-sub-title-from-language-wikipedia" = "De Wikipedia en $1";
 "in-the-news-sub-title-from-wikipedia" = "De Wikipedia";
 "in-the-news-title" = "Actualidad";
@@ -694,8 +697,6 @@
 "potd-widget-title" = "Imagen del día";
 "preference-summary-eventlogging-opt-in" = "Permitir que la Fundación Wikimedia recopile información acerca de cómo utilizas la aplicación para mejorarla";
 "preference-title-eventlogging-opt-in" = "Enviar informes de uso";
-"rank-accessibility-label" = "Número $1";
-"readers-accessibility-label" = "$1 lectores";
 "reading-list-add-generic-hint-title" = "¿Añadir este artículo a la lista de lectura?";
 "reading-list-add-hint-title" = "¿Quieres añadir «$1» a una lista de lectura?";
 "reading-list-add-saved-button-title" = "Sí, añadirlos a mis listas de lectura";
@@ -891,11 +892,13 @@
 "tajik-variants-alert-body" = "La aplicación de Wikipedia ahora soporta las variantes del tayiko siguientes como lenguas primarias o secundarias dentro de la aplicación, haciéndolo más fácil de leer, buscar y editar en tus variantes preferidas:\n\nтоҷикӣ кирилликӣ tayiko, cirílico (tg-cyrl)\ntojikī lotinī tayiko, latino (tg-latn)";
 "tajik-variants-alert-title" = "Actualizaciones a soporte de variantes del tayiko";
 "talk-page-add-discussion-accessibility-label" = "Añadir discusión";
+"talk-page-add-topic-button" = "Añadir tema";
 "talk-page-discussion-accessibility-hint" = "Toca dos veces para abrir el hilo de discusión";
 "talk-page-discussion-read-accessibility-label" = "Leer";
 "talk-page-discussion-unread-accessibility-label" = "Sin leer";
 "talk-page-error-unable-to-post-reply" = "No hay conexión a Internet. No se puede enviar la respuesta.";
 "talk-page-error-unable-to-post-topic" = "No hay conexión a Internet. No se puede publicar la discusión.";
+"talk-page-find-in-page-button" = "Buscar en la página";
 "talk-page-info-active-conversations" = "Conversaciones activas en Wikipedia en $1";
 "talk-page-info-active-conversations-generic" = "Conversaciones activas en Wikipedia";
 "talk-page-link-user-action-sheet-app" = "Ver página de Conversaciones en la app";
@@ -915,19 +918,20 @@
 "talk-page-new-topic-title" = "Discusión nueva";
 "talk-page-publish-terms-and-licenses" = "Al guardar tus cambios aceptas los $1términos de uso$ e igualmente aceptas publicar tus contribuciones bajo los términos de las licencias $3CC BY-SA 3.0$4 y $5GFDL$6.";
 "talk-page-reply-title" = "Responder";
+"talk-page-revision-history" = "Historial de revisiones";
+"talk-page-share-button" = "Compartir página de discusión";
+// Fuzzy
 "talk-page-title-article-talk" = "discusión";
 "talk-page-title-user-talk" = "Conversaciones";
 "talk-page-topic-title" = "Discusión";
 "talk-pages-reply-button-title" = "Responder a esta discusión";
+"talk-pages-topic-reply-onboarding-body-note-ios15" = "Por favor sea amable, todos somos humanos aquí.";
 "theme-black-display-name" = "Negro";
 "theme-dark-display-name" = "Oscuro";
 "theme-default-display-name" = "Predeterminado";
 "theme-default-explanation" = "Coincidir con tema del sistema";
 "theme-light-display-name" = "Claro";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "Wikipedia en $1";
-"top-read-see-more" = "Ver otros de los más leídos";
 "top-read-widget-description" = "Entérate lo que el mundo está leyendo hoy en Wikipedia.";
 "top-read-widget-readers-count" = "$1 lectores";
 "top-read-widget-title" = "Más leídos";
@@ -940,6 +944,7 @@
 "unknown-generic-text" = "Desconocido";
 "uzbek-variants-alert-body" = "La aplicación de Wikipedia ahora soporta las variantes del uzbeko siguientes como lenguas primarias o secundarias dentro de la aplicación, haciéndolo más fácil de leer, buscar y editar en tus variantes preferidas:\n\noʻzbekcha lotin uzbeko, latino (uz-latin)\nўзбекча кирилл uzbeko, cirílico (uz-cyrl)";
 "uzbek-variants-alert-title" = "Actualizaciones a soporte de variantes del uzbeko";
+"vanish-account-learn-more-text" = "Más información";
 "variants-alert-dismiss-button" = "No, gracias";
 "variants-alert-preferences-button" = "Revisar tus preferencias";
 "welcome-exploration-explore-feed-description" = "Lecturas recomendadas y artículos diarios de nuestra comunidad";

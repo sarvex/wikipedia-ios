@@ -8,6 +8,7 @@
 // Author: Haxpett
 // Author: Jenniesarina
 // Author: Johan
+// Author: JohanahoJ
 // Author: Jopparn
 // Author: Josve05a
 // Author: Lokal Profil
@@ -22,6 +23,7 @@
 // Author: Skalman
 // Author: Smetanakaviar
 // Author: Technic2
+// Author: Tore
 // Author: Tsevener
 // Author: WikiPhoenix
 
@@ -82,15 +84,6 @@
 "about-translators-details" = "Denna app översattes av frivilliga översättare på $1";
 "about-wikimedia-foundation" = "Wikimedia Foundation";
 "about-wikipedia" = "Wikipedia";
-"abuse-filter-disallow-heading" = "Du kan inte publicera denna redigering.";
-"abuse-filter-disallow-unconstructive" = "Ett automatiskt filter har identifierat denna redigering som potentiellt icke-konstruktivt eller ett försök till vandalism. Var vänlig gå tillbaka och ändra din redigering.";
-"abuse-filter-warning-blanking" = "Borttagning av stycken eller hela artiklar";
-"abuse-filter-warning-caps" = "Text skriven helt med VERSALER";
-"abuse-filter-warning-heading" = "Detta ser ut som en icke-konstruktiv redigering. Är du säker på att du vill publicera den?";
-"abuse-filter-warning-irrelevant" = "Irrelevanta externa länkar eller bilder";
-"abuse-filter-warning-repeat" = "Upprepade tecken";
-"abuse-filter-warning-spam" = "Tillägg av skräp till artiklar";
-"abuse-filter-warning-subheading" = "Din redigering kan innehålla:";
 "account-creation-captcha-cannot-see-image" = "Kan du inte se bilden? $1";
 "account-creation-captcha-obtaining" = "Hämtar en ny CAPTCHA...";
 "account-creation-captcha-request-account" = "Begär konto.";
@@ -104,6 +97,7 @@
 "account-creation-saving" = "Sparar...";
 "account-creation-title" = "Skapa ett nytt konto";
 "account-group-title" = "Ditt konto";
+"account-request-vanishing" = "Få kontot att försvinna";
 "account-talk-page-title" = "Din diskussionssida";
 "account-talk-preferences-auto-sign-discussions" = "Signera diskussioner automatiskt";
 "account-talk-preferences-auto-sign-discussions-setting-explanation" = "Automatisk signering av diskussioner använder signaturen som definieras i signaturinställningarna";
@@ -139,6 +133,7 @@
 "action-update" = "Uppdatera";
 "add-articles-to-reading-list" = "Lägg till {{PLURAL:$1|$1 artikel|$1 artiklar}} i läslista";
 "add-citation-title" = "Lägg till källa";
+"additional-information-email-title" = "Ytterligare information";
 "announcements-dismiss" = "Stäng";
 "app-store-keywords" = "Wikipedia, referens, wiki, encyklopedi, info, kunskap, efterforskning, information, utforska, lär";
 "app-store-release-notes" = "Helt anpassningsbart och mer lättläst utforskarflöde. Lokalisering, prestandaförbättringar och buggfixar.";
@@ -167,9 +162,11 @@
 "article-toolbar-reading-themes-controls-toolbar-item" = "Kontroller för lästeman";
 "back-button-accessibility-label" = "Tillbaka";
 "back-button-popover-title" = "Tryck för att gå tillbaka";
+"button-go-back" = "Gå tillbaka";
 "button-next" = "Nästa";
 "button-ok" = "OK";
 "button-publish" = "Publicera";
+"button-publish-anyway" = "Publicera ändå";
 "button-read-now" = "Läs nu";
 "button-report-a-bug" = "Rapportera ett fel";
 "button-save-for-later" = "Spara till senare";
@@ -281,6 +278,9 @@
 "edit-menu-item-could-not-find-selection-alert-title" = "Texten du markerade kunde inte hittas";
 "edit-minor-learn-more-text" = "Läs mer om mindre redigeringar";
 "edit-minor-text" = "Detta är en mindre redigering";
+"edit-notices" = "Redigeringsnotiser";
+"edit-notices-always-display" = "Visa alltid redigeringsnotiser";
+"edit-notices-please-read" = "Var god läs detta innan du redigerar";
 "edit-ordered-list-accessibility-label" = "Gör nuvarande rad till en ordnad lista";
 "edit-ordered-list-remove-accessibility-label" = "Ta bort ordnad lista från nuvarande rad";
 "edit-published" = "Redigeringen publicerades";
@@ -429,7 +429,11 @@
 "explore-random-article-sub-heading-from-language-wikipedia" = "Från Wikipedia på $1";
 "explore-random-article-sub-heading-from-wikipedia" = "Från Wikipedia";
 "explore-randomizer" = "Slumpgenerator";
-"featured-article-empty-title" = "Inga tillgängliga utmärkta artiklar idag";
+"export-user-data-confirmation-message" = "Att dela ditt appbibliotek inkluderar data om dina läslistor och historik, inställningar och innehållet i utforskarflödet. Denna datafil bör endast delas med en betrodd mottagare för att användas i tekniska diagnostiska ändamål.";
+"export-user-data-confirmation-title" = "Dela appbibliotek?";
+"export-user-data-generic-error" = "Det uppstod ett fel när din data skulle exporteras. Var god försök igen senare.";
+"export-user-data-space-error" = "Du har inte tillräckligt med enhetsutrymme för att exportera dina användardata. Var god försök igen senare.";
+"export-user-data-title" = "Exportera användardata";
 "featured-widget-content-failure-for-date" = "Det finns ingen utmärkt artikel för detta datum.";
 "featured-widget-description" = "Upptäck de bästa artiklarna på Wikipedia som väljs ut dagligen av vår gemenskap.";
 "featured-widget-from-language-wikipedia" = "Från Wikipedia på $1";
@@ -494,6 +498,13 @@
 "icon-shortcut-random-title" = "Slumpartikel";
 "icon-shortcut-search-title" = "Sök på Wikipedia";
 "image-gallery-unknown-owner" = "Okänd författare.";
+"import-shared-reading-list-default-title" = "Min läslista";
+"import-shared-reading-list-survey-prompt-button-cancel" = "Inte nu";
+"import-shared-reading-list-survey-prompt-button-take-survey" = "Delta i undersökning";
+"import-shared-reading-list-survey-prompt-footer" = "Se vår $1sekretesspolicy$2. Enkäten drivs av tredje part. Se deras $3sekretesspolicy$4.";
+"import-shared-reading-list-survey-prompt-subtitle" = "\"Dela läslistor\" är en testfunktion och vi behöver din återkoppling för att förbättra eller ta bort den.";
+"import-shared-reading-list-survey-prompt-title" = "Kan du hjälpa oss att förbättra \"Dela läslistor\"?";
+"import-shared-reading-list-title" = "Importera delad läslista";
 "in-the-news-sub-title-from-language-wikipedia" = "Från Wikipedia på $1";
 "in-the-news-sub-title-from-wikipedia" = "Från Wikipedia";
 "in-the-news-title" = "I nyheterna";
@@ -741,6 +752,9 @@
 "page-similar-titles" = "Liknande sidor";
 "panel-compare-revisions-text" = "Jämför sidversioner för att se hur en artikel har ändrats med tiden. När två sidversioner av en artikel jämförs kommer skillnaden mellan dessa sidversioner visas genom att färgmarkera innehållet som ändrades.";
 "panel-compare-revisions-title" = "Jämför sidversioner";
+"panel-not-logged-in-continue-edit-action-title" = "Redigera utan att logga in";
+"panel-not-logged-in-subtitle" = "Din nuvarande IP-adress kommer att offentliggöras om du redigerar. Om du $1loggar$2 in eller $3skapar ett konto$4 kommer dina redigeringar tillskrivas till ditt användarnamn, tillsammans med andra fördelar.";
+"panel-not-logged-in-title" = "Du är inte inloggad";
 "pictured" = "i bild";
 "places-accessibility-clear-saved-searches" = "Rensa sparade sökningar";
 "places-accessibility-group" = "$1 artikel";
@@ -792,8 +806,6 @@
 "project-name-wikiversity" = "Wikiversity";
 "project-name-wikivoyage" = "Wikivoyage";
 "project-name-wiktionary" = "Wiktionary";
-"rank-accessibility-label" = "Nummer $1";
-"readers-accessibility-label" = "$1 läsare";
 "reading-list-add-generic-hint-title" = "Lägg till denna artikel i en läslista?";
 "reading-list-add-hint-title" = "Lägg till \"$1\" i en läslista?";
 "reading-list-add-saved-button-title" = "Ja, lägg till dem i mina läslistor";
@@ -987,19 +999,32 @@
 "tachelhit-variants-alert-title" = "Uppdaterades till stöd för tachelhit varianter";
 "tajik-variants-alert-body" = "Wikipediaappen stödjer följande tadzjikiska varianter som primära eller sekundära språk i appen, vilket gör det enklare att läsa, söka och redigera på dina föredragna varianter:\n\nтоҷикӣ кирилликӣ tadzjikiska, kyrilliska (tg-cyrl)\ntojikī lotinī tadzjikiska, latinska (tg-latn)";
 "tajik-variants-alert-title" = "Uppdaterades till stöd för tadzjikiska varianter";
+"talk-page-active-users-accessibilty-label" = "{{PLURAL:$1|$1 aktiv användare|$1 aktiva användare}}";
 "talk-page-add-discussion-accessibility-label" = "Lägg till diskussion";
+"talk-page-add-topic-button" = "Lägg till ämne";
+"talk-page-archives" = "Arkiv";
+"talk-page-article-about" = "Om diskussionssidor";
+"talk-page-change-language" = "Ändra språk";
+"talk-page-collapse-thread-button" = "Minimera tråd";
 "talk-page-discussion-accessibility-hint" = "Dubbelknacka för att öppna diskussionstråden";
 "talk-page-discussion-read-accessibility-label" = "Läst";
 "talk-page-discussion-read-ipa-accessibility-attribute" = "lɛ'st";
 "talk-page-discussion-unread-accessibility-label" = "Oläst";
 "talk-page-discussion-unread-ipa-accessibility-attribute" = "ʊ:'lɛ'st";
+"talk-page-error-alert-subtitle" = "Appen fick ett oväntat svar från servern. Försök igen senare.";
+"talk-page-error-alert-title" = "Oväntat fel";
+"talk-page-error-loading-subtitle" = "Någonting gick fel.";
+"talk-page-error-loading-title" = "Kan inte läsa in diskussionssida";
 "talk-page-error-unable-to-post-reply" = "Internetanslutning saknas. Kunde inte skicka svaret.";
 "talk-page-error-unable-to-post-topic" = "Internetanslutning saknas. Kunde inte skapa diskussion.";
+"talk-page-expand-thread-button" = "Expandera tråd";
+"talk-page-find-in-page-button" = "Hitta på sidan";
 "talk-page-info-active-conversations" = "Aktiva konversationer på $1 Wikipedia";
 "talk-page-info-active-conversations-generic" = "Aktiva konversationer på Wikipedia";
 "talk-page-link-user-action-sheet-app" = "Visa användardiskussionssidan i appen";
 "talk-page-link-user-action-sheet-safari" = "Visa Användarsidan i Safari";
 "talk-page-link-user-action-sheet-title" = "Användarsidor";
+"talk-page-menu-open-all" = "Öppna alla trådar";
 "talk-page-new-banner-subtitle" = "Kom ihåg, alla här är människor";
 "talk-page-new-banner-title" = "Var snäll";
 "talk-page-new-body-textfield-accessibility-label" = "Diskussionsinnehåll";
@@ -1012,21 +1037,74 @@
 "talk-page-new-topic-body-placeholder-text" = "Skapa ny diskussion";
 "talk-page-new-topic-success-text" = "Din diskussion publicerades";
 "talk-page-new-topic-title" = "Ny diskussion";
+"talk-page-onboarding-button-accessibility-label" = "Tryck två gånger för att återgå till svaret";
+"talk-page-overflow-menu-accessibility" = "Fler alternativ för diskussionssidor";
+"talk-page-page-info" = "Sidinformation";
+"talk-page-permanent-link" = "Permanent länk";
+"talk-page-publish-reply-error-subtitle" = "Kontrollera din internetanslutning.";
+"talk-page-publish-reply-error-title" = "Kunde inte publicera din kommentar.";
 "talk-page-publish-terms-and-licenses" = "Genom att spara ändringar samtycker du till $1användningsvillkoren$2 och att släppa ditt bidrag under licenserna $3CC BY-SA 3.0$4 och $5GFDL$6.";
+"talk-page-publish-topic-error-title" = "Kunde inte publicera nytt ämne.";
+"talk-page-read-in-web" = "Läs på webben";
+"talk-page-related-links" = "Vad som länkar hit";
+"talk-page-replies-count-accessibilty-label" = "{{PLURAL:$1|$1 svar}}";
+"talk-page-reply-button" = "Svara";
+"talk-page-reply-button-accessibility-label" = "Svara på $1";
+"talk-page-reply-depth-accessibility-label" = "Svarsdjup: $1";
+"talk-page-reply-placeholder-format" = "Svara på $1";
+"talk-page-reply-terms-and-licenses" = "Observera att ditt svar automatiskt kommer att signeras med ditt användarnamn. Genom att spara ändringarna samtycker du till $1användarvillkoren$2 och att släppa ditt bidrag under licenserna $3CC BY-SA 3.0$4 och $5GFDL$6.";
 "talk-page-reply-title" = "Svara";
-"talk-page-title-article-talk" = "artikeldiskussion";
+"talk-page-revision-history" = "Versionshistorik";
+"talk-page-rply-close-button-accessibility-hint" = "Stäng svarsvy";
+"talk-page-share-button" = "Dela diskussionssida";
+"talk-page-subscribe-to-topic" = "Prenumerera";
+"talk-page-subscribed-alert-subtitle" = "Du kommer få aviseringar om nya kommentarer i det här ämnet.";
+"talk-page-subscribed-alert-title" = "Du prenumererar!";
+"talk-page-subscription-failed-alert" = "Misslyckades att prenumerera på ämne, försök igen.";
+"talk-page-title-article-talk" = "Artikeldiskussion";
 "talk-page-title-user-talk" = "Användardiskussion";
+"talk-page-topic-close-button-hint" = "Stäng nytt ämne";
+"talk-page-topic-compose-terms-and-licenses" = "Genom att publicera ändringar samtycker du till $1användningsvillkoren$2 och att släppa ditt bidrag under licenserna $3CC BY-SA 3.0$4 och $5GFDL$6.";
 "talk-page-topic-title" = "Diskussion";
+"talk-page-unsubscribe-to-topic" = "Avsluta prenumeration";
+"talk-page-unsubscribed-alert-subtitle" = "Du kommer inte längre få aviseringar om nya kommentarer i det här ämnet.";
+"talk-page-unsubscribed-alert-title" = "Du har avslutat prenumerationen.";
+"talk-page-unsubscription-failed-alert" = "Misslyckades att sluta prenumerera på ämne, försök igen.";
+"talk-page-user-about" = "Om användardiskussionssidor";
+"talk-page-user-contributions" = "Bidrag";
+"talk-pages-archives-empty-title" = "Inga arkivsidor hittades.";
+"talk-pages-archives-view-title" = "Arkiv";
+"talk-pages-coffee-roll-read-more" = "Läs mer";
+"talk-pages-comment-added-alert-title" = "Din kommentar lades till";
+"talk-pages-compose-close-confirmation-keep" = "Fortsätt redigera";
+"talk-pages-empty-view-body-article" = "Diskussionssidor är platsen där folk diskuterar hur man gör innehåll på Wikipedia så bra som möjligt. **Börja med att lägga till ett nytt diskussionsämne** för att få kontakt och samarbeta med en gemenskap av wikipedianer.";
+"talk-pages-empty-view-body-user" = "Diskussionssidor är platsen där folk diskuterar hur man gör innehåll på Wikipedia så bra som möjligt. Inled en ny diskussion för att få kontakt och samarbeta med $1. Det du säger här kommer att vara offentligt för andra att se.";
+"talk-pages-empty-view-button-article-add-topic" = "Lägg till ett nytt ämne";
+"talk-pages-empty-view-button-user-start-discussion" = "Starta en diskussion";
+"talk-pages-empty-view-header-article" = "Konversationen börjar här";
+"talk-pages-empty-view-header-user" = "Starta en diskussion med $1";
 "talk-pages-reply-button-title" = "Svara på denna diskussion";
+"talk-pages-reply-compose-close-confirmation-title" = "Är du säker på att du vill slänga detta nya svar?";
+"talk-pages-topic-added-alert-title" = "Ditt ämne lades till";
+"talk-pages-topic-compose-body-placeholder" = "Beskrivning";
+"talk-pages-topic-compose-body-placeholder-accessibility" = "Ämnesbeskrivning";
+"talk-pages-topic-compose-close-confirmation-discard" = "Släng svaret";
+"talk-pages-topic-compose-close-confirmation-title" = "Är du säker på att du vill slänga detta ämne?";
+"talk-pages-topic-compose-navbar-title" = "Ämne";
+"talk-pages-topic-compose-title-placeholder" = "Ämnestitel";
+"talk-pages-topic-reply-onboarding-body" = "Diskussionssidor är platsen där folk diskuterar hur man gör innehåll på Wikipedia så bra som möjligt. Lägg till ett nytt diskussionsämne för att få kontakt och samarbeta med en gemenskap av wikipedianer.\n\nVar vänlig, vi är alla människor här.";
+"talk-pages-topic-reply-onboarding-body-ios15" = "Diskussionssidor är platsen där $1folk diskuterar hur man gör innehåll på Wikipedia så bra som möjligt.$1 Lägg till ett nytt diskussionsämne för att få kontakt och samarbeta med en gemenskap av wikipedianer.";
+"talk-pages-topic-reply-onboarding-body-note-ios15" = "Var snäll, vi är alla människor här.";
+"talk-pages-topic-reply-onboarding-title" = "Diskussionssidor";
+"talk-pages-user-groups" = "Användargrupper";
+"talk-pages-user-logs" = "Loggar";
+"talk-pages-view-title" = "Diskussion";
 "theme-black-display-name" = "Svart";
 "theme-dark-display-name" = "Mörkt";
 "theme-default-display-name" = "Standard";
 "theme-default-explanation" = "Matchar systemtemat";
 "theme-light-display-name" = "Ljust";
 "theme-sepia-display-name" = "Sepia";
-"top-read-header-generic" = "Wikipedia";
-"top-read-header-with-language" = "$1 Wikipedia";
-"top-read-see-more" = "Se fler populära artiklar";
 "top-read-widget-description" = "Ta reda på vad världen läser i dag på Wikipedia.";
 "top-read-widget-readers-count" = "$1 läsare";
 "top-read-widget-title" = "Populära läsningar";
@@ -1039,6 +1117,28 @@
 "unknown-generic-text" = "Okänd";
 "uzbek-variants-alert-body" = "Wikipediaappen stödjer följande uzbekiska varianter som primära eller sekundära språk i appen, vilket gör det enklare att läsa, söka och redigera på dina föredragna varianter:\n\noʻzbekcha lotin uzbekiska, latinska (uz-latin)\nўзбекча кирилл uzbekiska, kyrilliska (uz-cyrl)";
 "uzbek-variants-alert-title" = "Uppdaterades till stöd för uzbekiska varianter";
+"vanish-account-additional-information-field" = "Ytterligare information";
+"vanish-account-additional-information-placeholder" = "Valfritt";
+"vanish-account-back-confirm-discard" = "Släng begäran";
+"vanish-account-back-confirm-keep-editing" = "Fortsätt redigera";
+"vanish-account-back-confirm-title" = "Är du säker på att du vill slänga denna begäran om försvinnande?";
+"vanish-account-bottom-text" = "Konton raderas på Wikipedia genom att ändra kontonamnet så att man inte kan känna igen bidragen via en process som kallas kontoförsvinnande. Du kan använda formuläret nedan för att begära ett försvinnande. Detta garanterar inte fullständig anonymitet eller att bidrag tas bort från projekten.";
+"vanish-account-bottom-text-with-link" = "Konton raderas på Wikipedia genom att ändra kontonamnet så att man inte kan känna igen bidragen via en process som kallas kontoförsvinnande. Du kan använda formuläret nedan för att begära ett $1försvinnande$2$3. Detta garanterar inte fullständig anonymitet eller att bidrag tas bort från projekten.";
+"vanish-account-button-text" = "Skicka begäran";
+"vanish-account-continue-button-title" = "Fortsätt";
+"vanish-account-description" = "För att initiera försvinnandeprocessen, ange följande:";
+"vanish-account-email-text" = "Hej.\nDetta är en begäran att få mitt Wikipedia-konto att försvinna.";
+"vanish-account-learn-more-text" = "Läs mer";
+"vanish-account-title" = "Process för att försvinna";
+"vanish-account-username-field" = "Användarnamn och användarsida";
+"vanish-account-warning-body" = "Att försvinna är en **sista utväg** och bör **endast användas när du vill sluta redigera för alltid** och även för att dölja så många av dina tidigare associationer som möjligt.\n\nKonton raderas på Wikipedia genom att ändra kontonamnet för att göra så att andra inte kan känna igen bidragen i en process som kallas kontoförsvinnande. **Försvinnande garanterar inte fullständig anonymitet eller tar inte bort bidrag på projekten**.";
+"vanish-account-warning-title" = "Varning";
+"vanish-modal-item" = "Om du slutförde din begäran om att försvinna, vänta några dagar för begäran att behandlas av en administratör";
+"vanish-modal-item-2" = "Om du är osäker på om din begäran gick igenom, se din e-postapp";
+"vanish-modal-item-3" = "Om du har ytterligare frågor om att försvinna, besök Meta:Right_to_vanish";
+"vanish-modal-item-3-ios15" = "Om du har ytterligare frågor om att försvinna, besök $1Meta:Right_to_vanish$2$3";
+"vanish-modal-title" = "Begäran om att försvinna";
+"vanishing-request-email-title" = "Begäran om att försvinna";
 "variants-alert-dismiss-button" = "Nej tack";
 "variants-alert-preferences-button" = "Granska dina inställningar";
 "welcome-exploration-explore-feed-description" = "Dagens artiklar och lästips från vår gemenskap";
